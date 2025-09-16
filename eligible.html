@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharat Internship - Eligibility Check</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #1a3a8f 0%, #2a56b6 100%);
+      color: white;
+      padding: 15px 5%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .ministry {
+      font-size: 14px;
+      opacity: 0.9;
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      padding-left: 10px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 5px;
+    }
+
+    .nav-menu li {
+      margin: 0 5px;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /*Added banner image */
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-grow: 1;
+      padding: 40px 20px;
+    }
+
+    .eligibility-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .page-title {
+      color: #1a3a8f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .page-subtitle {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .criteria-section {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      color: #1a3a8f;
+      font-size: 20px;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f0f4ff;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #2a56b6;
+      box-shadow: 0 0 0 3px rgba(42, 86, 182, 0.2);
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-group input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .check-eligibility-btn {
+      background: linear-gradient(90deg, #1a3a8f 0%, #2a56b6 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .check-eligibility-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(42, 86, 182, 0.4);
+    }
+
+    .result-section {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .eligible {
+      background: #e7f4e4;
+      border: 1px solid #8bc34a;
+      color: #2e7d32;
+    }
+
+    .not-eligible {
+      background: #fde7e7;
+      border: 1px solid #ff8a8a;
+      color: #c62828;
+    }
+
+    .benefits-section {
+      background: #f0f4ff;
+      border-radius: 8px;
+      padding: 25px;
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .benefits-title {
+      color: #1a3a8f;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .benefit-item {
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+      color: #444;
+    }
+
+    .benefit-item:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #2a56b6;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .footer {
+      background: #1a3a8f;
+      color: white;
+      padding: 40px 5% 20px;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .footer-about {
+      flex-basis: 50%;
+      padding-right: 20px;
+    }
+
+    .footer-about h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .footer-about p {
+      line-height: 1.6;
+      opacity: 0.9;
+      max-width: 500px;
+    }
+
+    .quick-links {
+      flex-basis: 25%;
+    }
+
+    .quick-links h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .quick-links ul {
+      list-style: none;
+    }
+
+    .quick-links li {
+      margin-bottom: 10px;
+    }
+
+    .quick-links a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+    }
+
+    .quick-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="top-bar">
+      <div class="logo">
+        <div class="logo-text">Bharat Internship</div>
+        <div class="ministry">Ministry of Corporate Affairs</div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="./Home.html">Home</a></li>
+        <li><a href="./eligible.html" class="active">Eligibility</a></li>
+        <li><a href="companies_portal.html">For Industries</a></li>
+        <li><a href="./Loginpage.html">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ✅ Banner image added here -->
+  <div class="banner">
+    <img src="2.png" alt="Eligibility Banner">
+  </div>
+
+  <div class="container">
+    <div class="eligibility-card">
+      <h1 class="page-title">Are you Eligible?</h1>
+      <p class="page-subtitle">Check if you qualify for the PM Internship Scheme</p>
+
+      <form id="eligibilityForm">
+        <!-- Age Criteria -->
+        <div class="criteria-section">
+          <h3 class="section-title">Age</h3>
+          <div class="form-group">
+            <label for="ageInput">Enter your age:</label>
+            <input type="number" id="ageInput" min="18" max="40" placeholder="Enter your age" required>
+          </div>
+          <p class="form-text">Must be between 21-27 years</p>
+        </div>
+
+        <!-- Job Status -->
+        <div class="criteria-section">
+          <h3 class="section-title">Job Status</h3>
+          <div class="form-group">
+            <select id="jobStatus" required>
+              <option value="">Select your employment status</option>
+              <option value="notEmployed">Not Employed Full Time</option>
+              <option value="employed">Employed Full Time</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Education Status -->
+        <div class="criteria-section">
+          <h3 class="section-title">Education</h3>
+          <div class="form-group">
+            <select id="educationStatus" required>
+              <option value="">Select your education status</option>
+              <option value="notEnrolled">Not Enrolled Full Time</option>
+              <option value="enrolled">Enrolled Full Time</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Family Criteria -->
+        <div class="criteria-section">
+          <h3 class="section-title">Family (Self/Spouse/Parents)</h3>
+          <div class="checkbox-group">
+            <input type="checkbox" id="incomeCheck">
+            <label for="incomeCheck">No one in family is earning more than 6 Lakhs PA</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="postJobCheck">
+            <label for="postJobCheck">No Members have a Government-Job</label>
+          </div>
+        </div>
+
+        <button type="submit" class="check-eligibility-btn">Check Eligibility</button>
+
+        <div id="eligibleResult" class="result-section eligible">
+          <h3><i class="fas fa-check-circle"></i> Congratulations!</h3>
+          <p>You are eligible for the PM Internship Scheme.</p>
+        </div>
+
+        <div id="notEligibleResult" class="result-section not-eligible"></div>
+      </form>
+
+      <div class="benefits-section">
+        <h3 class="benefits-title">Core Benefits for PM Internship Scheme</h3>
+        <div class="benefit-item">12 months real-life experience in India's top companies</div>
+        <div class="benefit-item">One-time Grant of ₹6000 for incidentals</div>
+        <div class="benefit-item">Monthly assistance of ₹4500 by Government of India and ₹500 by Industry</div>
+        <div class="benefit-item">Select from Various Sectors and from top Companies</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Bharat Internship</h3>
+        <p>A Smart India Hackathon 2025 Project for the Ministry of Corporate Affairs. Our platform connects
+          students with meaningful internship opportunities across India.</p>
+      </div>
+
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Powered By <strong>Bharat Internship</strong></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('eligibilityForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const age = parseInt(document.getElementById('ageInput').value);
+      const jobStatus = document.getElementById('jobStatus').value;
+      const educationStatus = document.getElementById('educationStatus').value;
+      const incomeCheck = document.getElementById('incomeCheck').checked;
+      const postJobCheck = document.getElementById('postJobCheck').checked;
+
+      const isEligibleAge = age >= 21 && age <= 27;
+      const isEligibleJob = jobStatus === 'notEmployed';
+      const isEligibleEducation = educationStatus === 'notEnrolled';
+      const isEligibleFamily = incomeCheck && postJobCheck;
+
+      const isEligible = isEligibleAge && isEligibleJob && isEligibleEducation && isEligibleFamily;
+
+      let reasons = [];
+      if (!isEligibleAge) reasons.push("Age must be between 21 and 27 years.");
+      if (!isEligibleJob) reasons.push("You must not be employed full-time.");
+      if (!isEligibleEducation) reasons.push("You must not be enrolled full-time in education.");
+      if (!incomeCheck) reasons.push("Family income must be below ₹6 Lakhs per annum.");
+      if (!postJobCheck) reasons.push("No family member should have a government job.");
+
+      if (isEligible) {
+        document.getElementById('eligibleResult').style.display = 'block';
+        document.getElementById('notEligibleResult').style.display = 'none';
+        document.getElementById('eligibleResult').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        document.getElementById('eligibleResult').style.display = 'none';
+        const notEligibleDiv = document.getElementById('notEligibleResult');
+        notEligibleDiv.style.display = 'block';
+        notEligibleDiv.innerHTML = `
+          <h3><i class="fas fa-times-circle"></i> Sorry, you are not eligible</h3>
+          <p>You do not meet the eligibility criteria for the PM Internship Scheme.</p>
+          <ul style="margin-top:10px; text-align:left; color:#c62828;">
+            ${reasons.map(r => `<li>${r}</li>`).join('')}
+          </ul>
+        `;
+        notEligibleDiv.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  </script>
+</body>
+
+</html>

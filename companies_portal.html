@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 10px 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .registration-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-title {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+            outline: none;
+        }
+        
+        .btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .internship-details {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .details-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .details-content {
+            margin-bottom: 25px;
+        }
+        
+        .detail-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .detail-icon {
+            min-width: 30px;
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        
+        .companies-list {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            grid-column: 1 / -1;
+        }
+        
+        .companies-title {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .company-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .company-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .company-name {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .company-role {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .role-highlight {
+            background-color: #e3f2fd;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <h1>PM Internship Portal</h1>
+                </div>
+                <div class="header-info">
+                    <p>Connecting companies with talented interns</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="registration-form">
+                <h2 class="form-title">Company Registration</h2>
+                <form id="companyForm">
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" required placeholder="Enter your company name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cinNumber">CIN Number</label>
+                        <input type="text" id="cinNumber" required placeholder="Enter Company Identification Number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="Enter company email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="Create a secure password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="internshipRole">Internship Role</label>
+                        <select id="internshipRole" required onchange="updateRoleDetails()">
+                            <option value="">-- Select a Role --</option>
+                            <option value="Software Development Intern">Software Development Intern</option>
+                            <option value="Data Science / ML Intern">Data Science / ML Intern</option>
+                            <option value="Cybersecurity Intern">Cybersecurity Intern</option>
+                            <option value="UI/UX Design Intern">UI/UX Design Intern</option>
+                            <option value="Graphic Design Intern" selected>Graphic Design Intern</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="internshipDescription">Internship Description</label>
+                        <textarea id="internshipDescription" rows="4" placeholder="Describe the internship role and responsibilities">We are looking for enthusiastic and creative Graphic Design Interns to join our organization. This role is focused on creating impactful designs, videos, and posters that highlight our initiatives and campaigns on social media.</textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Register Company</button>
+                </form>
+            </div>
+            
+            <div class="internship-details">
+                <h2 class="details-title" id="roleTitle">Graphic Design Internship Details</h2>
+                
+                <div class="details-content">
+                    <div class="role-highlight" id="roleHighlight">
+                        Create visual concepts to communicate ideas that inspire, inform, and captivate consumers.
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h3>Role Description</h3>
+                            <p id="roleDescription">Graphic Design Intern responsible for creating impactful designs, videos, and posters for social media campaigns.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div>
+                            <h3>Responsibilities</h3>
+                            <p id="responsibilities">Design engaging posters, create visually appealing videos, develop social media graphics, and support branding efforts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Requirements</h3>
+                            <p id="requirements">Proficiency in Adobe Photoshop, Canva, creativity, and graphic design skills. Women wanting to start/restart their career are encouraged to apply.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h3>Benefits</h3>
+                            <p id="benefits">Certificate, Letter of Recommendation, Flexible work hours, Stipend based on performance, and special recognition for top performers.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <div>
+                        <h3>Work Details</h3>
+                        <p>Work from home • Start immediately • Duration: 2 weeks • Part-time • 5 days a week</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Updated Companies List -->
+            <div class="companies-list">
+                <h2 class="companies-title">Registered Companies for Internships</h2>
+                <div class="company-grid">
+                    <!-- Software Development (5) -->
+                    <div class="company-card"><h3 class="company-name">TechSolutions Inc</h3><p class="company-role">Software Development Intern</p><p><strong>CIN:</strong> U72900MH2021PTC123456</p></div>
+                    <div class="company-card"><h3 class="company-name">CodeCraft Pvt Ltd</h3><p class="company-role">Software Development Intern</p><p><strong>CIN:</strong> U72900DL2020PTC223344</p></div>
+                    <div class="company-card"><h3 class="company-name">NextGen Softwares</h3><p class="company-role">Software Development Intern</p><p><strong>CIN:</strong> U72900KA2019PTC998877</p></div>
+                    <div class="company-card"><h3 class="company-name">AlphaByte Technologies</h3><p class="company-role">Software Development Intern</p><p><strong>CIN:</strong> U72900TN2018PTC556677</p></div>
+                    <div class="company-card"><h3 class="company-name">Innovative Coders</h3><p class="company-role">Software Development Intern</p><p><strong>CIN:</strong> U72900GJ2021PTC112299</p></div>
+                    
+                    <!-- Data Science / ML (5) -->
+                    <div class="company-card"><h3 class="company-name">DataInsight Labs</h3><p class="company-role">Data Science / ML Intern</p><p><strong>CIN:</strong> U72200KA2020PTC345678</p></div>
+                    <div class="company-card"><h3 class="company-name">AIWorks Pvt Ltd</h3><p class="company-role">Data Science / ML Intern</p><p><strong>CIN:</strong> U72200MH2019PTC445566</p></div>
+                    <div class="company-card"><h3 class="company-name">BigData Analytics Co</h3><p class="company-role">Data Science / ML Intern</p><p><strong>CIN:</strong> U72200DL2021PTC778899</p></div>
+                    <div class="company-card"><h3 class="company-name">SmartML Systems</h3><p class="company-role">Data Science / ML Intern</p><p><strong>CIN:</strong> U72200TN2022PTC334455</p></div>
+                    <div class="company-card"><h3 class="company-name">DeepVision Technologies</h3><p class="company-role">Data Science / ML Intern</p><p><strong>CIN:</strong> U72200GJ2020PTC667788</p></div>
+                    
+                    <!-- Cybersecurity (5) -->
+                    <div class="company-card"><h3 class="company-name">SecureNet Systems</h3><p class="company-role">Cybersecurity Intern</p><p><strong>CIN:</strong> U72900TN2019PTC135790</p></div>
+                    <div class="company-card"><h3 class="company-name">CyberShield Pvt Ltd</h3><p class="company-role">Cybersecurity Intern</p><p><strong>CIN:</strong> U72900DL2021PTC112211</p></div>
+                    <div class="company-card"><h3 class="company-name">InfoSec Solutions</h3><p class="company-role">Cybersecurity Intern</p><p><strong>CIN:</strong> U72900MH2020PTC445522</p></div>
+                    <div class="company-card"><h3 class="company-name">SafeTech Global</h3><p class="company-role">Cybersecurity Intern</p><p><strong>CIN:</strong> U72900KA2022PTC778899</p></div>
+                    <div class="company-card"><h3 class="company-name">DigitalDefence Co</h3><p class="company-role">Cybersecurity Intern</p><p><strong>CIN:</strong> U72900GJ2019PTC556644</p></div>
+                    
+                    <!-- UI/UX (5) -->
+                    <div class="company-card"><h3 class="company-name">DesignCraft Studios</h3><p class="company-role">UI/UX Design Intern</p><p><strong>CIN:</strong> U74999DL2021PTC123456</p></div>
+                    <div class="company-card"><h3 class="company-name">UXVision Pvt Ltd</h3><p class="company-role">UI/UX Design Intern</p><p><strong>CIN:</strong> U74999MH2022PTC998877</p></div>
+                    <div class="company-card"><h3 class="company-name">CreativeUX Labs</h3><p class="company-role">UI/UX Design Intern</p><p><strong>CIN:</strong> U74999TN2020PTC556688</p></div>
+                    <div class="company-card"><h3 class="company-name">InterfaceWorks</h3><p class="company-role">UI/UX Design Intern</p><p><strong>CIN:</strong> U74999KA2021PTC112233</p></div>
+                    <div class="company-card"><h3 class="company-name">PixelPath Design</h3><p class="company-role">UI/UX Design Intern</p><p><strong>CIN:</strong> U74999GJ2022PTC445577</p></div>
+                    
+                    <!-- Graphic Design (5) -->
+                    <div class="company-card"><h3 class="company-name">CreativeMinds NGO</h3><p class="company-role">Graphic Design Intern</p><p><strong>CIN:</strong> U85300MH2020NPL345678</p></div>
+                    <div class="company-card"><h3 class="company-name">ArtVision Foundation</h3><p class="company-role">Graphic Design Intern</p><p><strong>CIN:</strong> U85300DL2021NPL223344</p></div>
+                    <div class="company-card"><h3 class="company-name">Design4Impact NGO</h3><p class="company-role">Graphic Design Intern</p><p><strong>CIN:</strong> U85300TN2019NPL556677</p></div>
+                    <div class="company-card"><h3 class="company-name">Colors of Hope</h3><p class="company-role">Graphic Design Intern</p><p><strong>CIN:</strong> U85300KA2021NPL778899</p></div>
+                    <div class="company-card"><h3 class="company-name">VisualAid Society</h3><p class="company-role">Graphic Design Intern</p><p><strong>CIN:</strong> U85300GJ2020NPL112233</p></div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; 2025 NGO Internship Portal. All Rights Reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        function updateRoleDetails() {
+            const role = document.getElementById("internshipRole").value;
+            const title = document.getElementById("roleTitle");
+            const highlight = document.getElementById("roleHighlight");
+            const desc = document.getElementById("roleDescription");
+            const resp = document.getElementById("responsibilities");
+            const req = document.getElementById("requirements");
+            const ben = document.getElementById("benefits");
+            
+            switch(role) {
+                case "Software Development Intern":
+                    title.textContent = "Software Development Internship Details";
+                    highlight.textContent = "Build and maintain software applications with real-world impact.";
+                    desc.textContent = "Software Development Intern responsible for designing, coding, and testing applications.";
+                    resp.textContent = "Work on coding projects, debug software, collaborate with developers, and deliver efficient solutions.";
+                    req.textContent = "Knowledge of programming languages (Java, Python, or C++), problem-solving skills, and teamwork.";
+                    ben.textContent = "Certificate, LoR, hands-on project experience, stipend based on performance.";
+                    break;
+                case "Data Science / ML Intern":
+                    title.textContent = "Data Science / ML Internship Details";
+                    highlight.textContent = "Analyze data and build predictive models to solve business challenges.";
+                    desc.textContent = "Intern will work on machine learning models, data preprocessing, and visualization.";
+                    resp.textContent = "Data cleaning, model training, performance evaluation, and business insights.";
+                    req.textContent = "Knowledge of Python, ML libraries (scikit-learn, TensorFlow), statistics, and problem-solving.";
+                    ben.textContent = "Certificate, LoR, real datasets to work with, stipend based on performance.";
+                    break;
+                case "Cybersecurity Intern":
+                    title.textContent = "Cybersecurity Internship Details";
+                    highlight.textContent = "Protect systems and networks from cyber threats and vulnerabilities.";
+                    desc.textContent = "Intern will work on penetration testing, security monitoring, and vulnerability analysis.";
+                    resp.textContent = "Monitor networks, conduct risk assessments, and implement security measures.";
+                    req.textContent = "Basic understanding of networking, ethical hacking, and security tools.";
+                    ben.textContent = "Certificate, LoR, exposure to cybersecurity tools, stipend based on performance.";
+                    break;
+                case "UI/UX Design Intern":
+                    title.textContent = "UI/UX Design Internship Details";
+                    highlight.textContent = "Design intuitive and user-friendly digital interfaces.";
+                    desc.textContent = "Intern will focus on creating wireframes, prototypes, and user testing.";
+                    resp.textContent = "Design UI screens, conduct UX research, collaborate with developers.";
+                    req.textContent = "Familiarity with Figma/Adobe XD, creativity, and user-centered design approach.";
+                    ben.textContent = "Certificate, LoR, real-world project exposure, stipend based on performance.";
+                    break;
+                case "Graphic Design Intern":
+                    title.textContent = "Graphic Design Internship Details";
+                    highlight.textContent = "Create visual concepts to communicate ideas that inspire, inform, and captivate consumers.";
+                    desc.textContent = "Graphic Design Intern responsible for creating impactful designs, videos, and posters for social media campaigns.";
+                    resp.textContent = "Design engaging posters, create visually appealing videos, develop social media graphics, and support branding efforts.";
+                    req.textContent = "Proficiency in Adobe Photoshop, Canva, creativity, and graphic design skills.";
+                    ben.textContent = "Certificate, LoR, flexible hours, stipend based on performance, recognition for top performers.";
+                    break;
+                default:
+                    title.textContent = "Internship Details";
+                    highlight.textContent = "Select a role to view details.";
+                    desc.textContent = "";
+                    resp.textContent = "";
+                    req.textContent = "";
+                    ben.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>

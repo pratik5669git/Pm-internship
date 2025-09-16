@@ -1,0 +1,1001 @@
+Student_ID,Name,Age,Gender,Qualification,Passout_Year,Institute,Family_Income,Status
+S0001,Mannat Bhattacharyya,21,F,ITI,2021,Deo and Sons Institute,277447,Eligible
+S0002,Miraan Lala,24,F,12th,2019,"Suri, Lata and Hegde Institute",634990,Eligible
+S0003,Aaina Walla,24,F,Diploma,2018,"Chhabra, Bawa and Warrior Institute",758637,Eligible
+S0004,Seher Sule,24,F,12th,2020,Gopal-Dyal Institute,246667,Eligible
+S0005,Ela Divan,21,F,BCA,2021,Datta-Behl Institute,329454,Eligible
+S0006,Purab Babu,23,F,12th,2023,Badal-Barad Institute,169996,Eligible
+S0007,Zara Balasubramanian,23,M,BPharma,2022,"D’Alia, Bedi and Keer Institute",595112,Eligible
+S0008,Abram Shetty,24,M,12th,2023,Lala-Reddy Institute,440491,Eligible
+S0009,Samarth Varkey,23,M,BCA,2018,Hayre-Bir Institute,269444,Eligible
+S0010,Anvi Sandhu,22,F,12th,2023,Badami Group Institute,186012,Eligible
+S0011,Divyansh Ram,24,F,BSc,2021,Khalsa-Bora Institute,346489,Eligible
+S0012,Ishita Singhal,23,F,12th,2023,Sandal-Barman Institute,216945,Eligible
+S0013,Indrans Magar,23,F,BA,2020,"Atwal, Kata and Manda Institute",467199,Eligible
+S0014,Renee Lalla,22,M,BA,2019,Ramakrishnan-Randhawa Institute,129742,Eligible
+S0015,Akarsh Kapoor,24,M,BCom,2023,Ramaswamy-Tailor Institute,765628,Eligible
+S0016,Baiju D’Alia,24,F,BBA,2018,"Cherian, Doshi and Sehgal Institute",650758,Eligible
+S0017,Vihaan Loyal,21,F,BSc,2020,Gill-Golla Institute,125862,Eligible
+S0018,Mahika Kala,23,M,BPharma,2023,"Yadav, Devan and Salvi Institute",475052,Eligible
+S0019,Zeeshan Kuruvilla,23,F,BPharma,2019,"Dass, Issac and Aurora Institute",264662,Eligible
+S0020,Kavya Kulkarni,24,F,ITI,2022,Mander PLC Institute,263854,Eligible
+S0021,Nehmat Mannan,22,F,BPharma,2020,Srinivas-Dewan Institute,706114,Eligible
+S0022,Saksham Arya,21,M,BPharma,2019,Gole Ltd Institute,176597,Eligible
+S0023,Khushi Mani,23,F,BCA,2023,Dayal-Manne Institute,734942,Eligible
+S0024,Shray Sabharwal,24,M,BPharma,2021,Ram-Shukla Institute,210998,Eligible
+S0025,Anaya Andra,21,F,12th,2023,Wable PLC Institute,369209,Eligible
+S0026,Bhamini Kurian,21,M,BBA,2018,Gole Group Institute,401554,Eligible
+S0027,Arhaan Madan,24,F,12th,2019,"Mahajan, Bhatt and Virk Institute",561552,Eligible
+S0028,Charvi Konda,22,F,BSc,2023,"Kashyap, Reddy and Taneja Institute",265177,Eligible
+S0029,Trisha Rana,22,M,BBA,2018,Thakkar PLC Institute,364406,Eligible
+S0030,Ivana Thakkar,22,M,BA,2023,Raja-Bajwa Institute,557675,Eligible
+S0031,Jayesh Bahri,22,F,BPharma,2020,Soman-Mani Institute,782944,Eligible
+S0032,Gatik Varkey,21,F,ITI,2022,"Samra, Sarkar and Kari Institute",231237,Eligible
+S0033,Vardaniya Sankaran,24,F,BCA,2023,"Saxena, Banerjee and Saran Institute",370481,Eligible
+S0034,Ishaan Dutt,21,M,Diploma,2019,"Dasgupta, Dyal and Lata Institute",273108,Eligible
+S0035,Chirag Mandal,23,M,BCA,2018,"Devi, Singh and Halder Institute",109391,Eligible
+S0036,Vritika Goswami,24,F,BCA,2021,"Tata, Sha and Dhingra Institute",655352,Eligible
+S0037,Yuvaan Dass,22,M,BCA,2022,Khurana-Mangal Institute,319816,Eligible
+S0038,Anvi Sani,22,M,12th,2023,Agarwal-Ganesan Institute,584759,Eligible
+S0039,Zaina Loke,22,M,BBA,2022,Kashyap and Sons Institute,288300,Eligible
+S0040,Uthkarsh Anand,24,F,Diploma,2019,Bhalla-Dugar Institute,383504,Eligible
+S0041,Reyansh Tak,22,M,BBA,2018,"Baral, Sha and Borde Institute",169558,Eligible
+S0042,Rania Samra,23,M,BPharma,2021,Bhasin LLC Institute,604472,Eligible
+S0043,Eshani Shroff,22,M,Diploma,2022,"Grover, Bal and Sandhu Institute",661595,Eligible
+S0044,Lakshit Kumer,22,M,BA,2021,Chatterjee-Madan Institute,330765,Eligible
+S0045,Jiya Cherian,24,F,ITI,2019,"Kalita, Chopra and Sankar Institute",185939,Eligible
+S0046,Anay Garde,23,M,BCom,2018,Agarwal-Bir Institute,488413,Eligible
+S0047,Jayant Barman,24,M,BSc,2019,Bail-Bhalla Institute,609295,Eligible
+S0048,Miraan Bhandari,24,F,BBA,2021,Johal LLC Institute,641395,Eligible
+S0049,Renee Boase,23,M,ITI,2022,Batta-Bora Institute,100958,Eligible
+S0050,Nayantara Sarraf,23,M,BCom,2023,Bhasin-Sampath Institute,229998,Eligible
+S0051,Veer Saran,22,M,Diploma,2023,"Upadhyay, Rana and Das Institute",698975,Eligible
+S0052,Seher Ray,22,M,BCA,2020,"Karpe, Trivedi and Bhagat Institute",232503,Eligible
+S0053,Reyansh Dani,21,F,ITI,2019,"Mandal, Dasgupta and Banerjee Institute",345296,Eligible
+S0054,Nitya Singh,22,M,BSc,2021,Tella-Mandal Institute,581146,Eligible
+S0055,Himmat Bhatnagar,22,F,BCA,2019,"Bhattacharyya, Goel and Ganesan Institute",365866,Eligible
+S0056,Zara Aurora,22,M,BBA,2021,Ghosh Inc Institute,220690,Eligible
+S0057,Zoya Sachdev,21,F,BA,2020,Deshpande-Shere Institute,157633,Eligible
+S0058,Yuvraj  Iyer,21,M,BCA,2023,"Chada, Khatri and Gola Institute",726183,Eligible
+S0059,Taran Sood,24,F,Diploma,2018,Subramaniam Group Institute,435192,Eligible
+S0060,Riaan Wali,23,M,BCom,2018,"Agrawal, Gola and Rattan Institute",196953,Eligible
+S0061,Hazel Mani,22,M,BCA,2022,"Baral, Bal and Dyal Institute",483511,Eligible
+S0062,Shanaya Tiwari,24,M,ITI,2019,"Tandon, Chada and Dara Institute",534637,Eligible
+S0063,Navya Char,21,F,ITI,2020,"Balakrishnan, Sodhi and Sachar Institute",492413,Eligible
+S0064,Tanya Ramachandran,23,M,BCA,2019,Bora-Chaudry Institute,652648,Eligible
+S0065,Rhea Aggarwal,23,F,BSc,2022,"Agrawal, Ghosh and Bali Institute",466522,Eligible
+S0066,Jiya Bhargava,24,M,BCA,2020,Rao-Sengupta Institute,559569,Eligible
+S0067,Divit Shetty,24,F,BSc,2019,"Comar, Deshpande and Dhar Institute",414969,Eligible
+S0068,Faiyaz Majumdar,24,M,BCA,2023,Wagle-Bose Institute,616706,Eligible
+S0069,Vaibhav Zachariah,22,F,BA,2018,"Acharya, Dani and Basak Institute",135042,Eligible
+S0070,Anahita Bora,23,M,Diploma,2023,Bajwa-Balan Institute,302314,Eligible
+S0071,Shray Raju,21,F,BBA,2022,"Samra, Ganesh and Bhakta Institute",742188,Eligible
+S0072,Badal Shan,21,F,Diploma,2020,Tara-Baral Institute,774148,Eligible
+S0073,Hridaan Choudhary,21,M,BSc,2018,Varty Inc Institute,194411,Eligible
+S0074,Kavya Bora,21,M,BCom,2020,"Savant, Bora and Tak Institute",744715,Eligible
+S0075,Priyansh Dhar,23,F,Diploma,2023,"Sarma, Roy and Ramanathan Institute",355388,Eligible
+S0076,Drishya Agarwal,24,M,BSc,2021,Raman-Dhawan Institute,768326,Eligible
+S0077,Neelofar Bhatti,24,M,BA,2022,Chaudhari Group Institute,590188,Eligible
+S0078,Khushi Chaudry,23,M,12th,2019,Chahal-Boase Institute,299381,Eligible
+S0079,Damini Bawa,23,F,BCom,2021,Yohannan Ltd Institute,442528,Eligible
+S0080,Chirag Sethi,23,M,BCA,2020,Shenoy-Dar Institute,395049,Eligible
+S0081,Heer Loyal,23,M,BCom,2022,"Dara, Wagle and Varughese Institute",672438,Eligible
+S0082,Ahana  Dhar,21,F,BA,2022,Barman Group Institute,418362,Eligible
+S0083,Prisha Ganguly,21,M,Diploma,2018,"Manne, Dayal and Ramakrishnan Institute",248744,Eligible
+S0084,Hridaan Ghosh,21,M,BBA,2020,Jayaraman-Lalla Institute,166597,Eligible
+S0085,Kiaan Swaminathan,24,M,Diploma,2018,"Dalal, Sandhu and Sankar Institute",124745,Eligible
+S0086,Shalv Dua,24,M,BCA,2022,Balan PLC Institute,176008,Eligible
+S0087,Vihaan Raman,21,F,BCA,2021,"Vig, Raja and Venkataraman Institute",457606,Eligible
+S0088,Ryan Datta,24,M,BSc,2019,Saraf and Sons Institute,312106,Eligible
+S0089,Ishaan Thakkar,22,M,ITI,2019,Verma Inc Institute,331870,Eligible
+S0090,Adira Dalal,22,F,BA,2022,Kashyap-Wable Institute,582454,Eligible
+S0091,Dharmajan Gokhale,21,M,BA,2021,Dyal LLC Institute,739440,Eligible
+S0092,Inaaya  Lala,21,F,BA,2022,Karpe Ltd Institute,390305,Eligible
+S0093,Aradhya Konda,23,M,BCom,2019,Saini-Anand Institute,750351,Eligible
+S0094,Piya Tara,22,M,BPharma,2019,Bhatti-Sha Institute,112919,Eligible
+S0095,Advik Ghosh,21,F,BSc,2019,Sheth Group Institute,454637,Eligible
+S0096,Nirvi Ratti,21,F,BSc,2019,"Magar, Borra and Das Institute",454087,Eligible
+S0097,Chirag Dhaliwal,23,F,Diploma,2020,Zachariah-Sharaf Institute,381193,Eligible
+S0098,Dhanuk Divan,24,M,BA,2021,Chanda-Dani Institute,199172,Eligible
+S0099,Gatik Barad,24,M,BCA,2019,Thakkar Group Institute,237446,Eligible
+S0100,Biju Master,21,M,BBA,2022,Dey Ltd Institute,500075,Eligible
+S0101,Rania Mallick,22,M,BCom,2022,"Samra, Kothari and Savant Institute",415395,Eligible
+S0102,Shray Devan,21,F,BA,2021,Sachar-Karan Institute,326161,Eligible
+S0103,Reyansh Chanda,23,F,ITI,2018,"Batta, Yohannan and Ramaswamy Institute",364369,Eligible
+S0104,Jivika Ramanathan,21,F,ITI,2020,Bala PLC Institute,595276,Eligible
+S0105,Indrajit Sood,24,M,BPharma,2023,Contractor-Viswanathan Institute,633954,Eligible
+S0106,Drishya Chahal,22,M,12th,2018,Babu-Roy Institute,736410,Eligible
+S0107,Inaaya  Gulati,21,M,BCA,2020,Gera LLC Institute,459105,Eligible
+S0108,Drishya Batta,22,M,Diploma,2020,Som and Sons Institute,306762,Eligible
+S0109,Purab Kannan,24,F,ITI,2018,"Shan, Dara and Din Institute",219518,Eligible
+S0110,Arhaan Tara,23,M,BCom,2023,Dey-Vora Institute,276242,Eligible
+S0111,Raunak Vohra,21,M,BA,2023,Vig-Lad Institute,189827,Eligible
+S0112,Anvi Shanker,23,M,ITI,2023,Barad Group Institute,191427,Eligible
+S0113,Saanvi Hegde,23,M,ITI,2021,"Kapoor, Swaminathan and Seth Institute",574123,Eligible
+S0114,Trisha Guha,21,F,Diploma,2019,"Dugar, Dugal and Shetty Institute",265383,Eligible
+S0115,Oorja Devan,22,M,BSc,2018,"Karan, Chopra and Basak Institute",644693,Eligible
+S0116,Shamik Varghese,22,M,BA,2021,Wali-Goel Institute,149704,Eligible
+S0117,Yakshit Mander,21,F,BBA,2021,"Vaidya, Kumar and Salvi Institute",633426,Eligible
+S0118,Aarav Kala,22,M,BCom,2022,Gokhale-Dalal Institute,655456,Eligible
+S0119,Kavya Shan,23,M,Diploma,2019,"Venkataraman, Bath and Bora Institute",400161,Eligible
+S0120,Nitara Tripathi,24,F,BCA,2022,Sidhu-Dube Institute,460884,Eligible
+S0121,Ira Dugar,22,F,BPharma,2019,Char Group Institute,676318,Eligible
+S0122,Jivika Sabharwal,24,M,12th,2018,Deshpande Ltd Institute,216443,Eligible
+S0123,Anahi Dhar,21,F,12th,2020,Goyal LLC Institute,320015,Eligible
+S0124,Hrishita Sen,22,M,ITI,2022,"Mane, Sekhon and Sule Institute",244898,Eligible
+S0125,Ahana  Mahal,24,F,BSc,2021,Taneja Group Institute,450496,Eligible
+S0126,Sumer Bains,21,M,BCom,2023,Kant Inc Institute,447993,Eligible
+S0127,Samaira Madan,24,F,ITI,2020,Kothari-Vora Institute,562811,Eligible
+S0128,Kavya Arora,24,M,BPharma,2022,Hayer Group Institute,560899,Eligible
+S0129,Tejas Kalita,22,F,BA,2019,Som Inc Institute,301807,Eligible
+S0130,Amani Behl,21,M,12th,2022,Swamy and Sons Institute,685882,Eligible
+S0131,Anvi Sani,22,F,BA,2018,Din and Sons Institute,713811,Eligible
+S0132,Darshit Dada,23,M,BBA,2019,Lad-Ram Institute,612251,Eligible
+S0133,Hazel Lall,24,M,BCA,2020,"Kala, Vala and Gera Institute",627196,Eligible
+S0134,Raunak Saraf,23,M,BPharma,2023,Reddy-Thaman Institute,697087,Eligible
+S0135,Zeeshan Singhal,23,F,BSc,2019,"Barad, Randhawa and Chacko Institute",355183,Eligible
+S0136,Shanaya Banik,22,F,BCA,2023,"Bir, Batra and Sagar Institute",370809,Eligible
+S0137,Anahita Luthra,23,F,12th,2021,"Chacko, Kothari and Acharya Institute",296495,Eligible
+S0138,Faiyaz Sankaran,21,F,BA,2023,"Sathe, Sehgal and Kari Institute",172061,Eligible
+S0139,Rati Joshi,24,M,BCA,2023,Sathe and Sons Institute,798158,Eligible
+S0140,Priyansh Ramanathan,23,F,BBA,2022,"Gupta, Kurian and Badal Institute",437771,Eligible
+S0141,Pari Sehgal,21,F,BCom,2019,"Anand, Bava and Varma Institute",192591,Eligible
+S0142,Madhav Arya,23,M,BA,2018,Iyer Group Institute,793871,Eligible
+S0143,Azad Sehgal,24,F,BPharma,2021,"Dhingra, Sharma and Ben Institute",471578,Eligible
+S0144,Mohanlal Doctor,22,F,BBA,2021,Suri and Sons Institute,749768,Eligible
+S0145,Emir Wali,23,F,BCA,2023,Date-Viswanathan Institute,760020,Eligible
+S0146,Jayan Vohra,21,M,ITI,2018,"Saraf, Ganesan and Dave Institute",408653,Eligible
+S0147,Diya Shah,22,F,Diploma,2023,Sehgal-Golla Institute,393572,Eligible
+S0148,Keya Gokhale,23,M,BPharma,2019,Deo-Char Institute,777820,Eligible
+S0149,Hansh Deol,21,F,Diploma,2018,Hegde-Sarma Institute,684142,Eligible
+S0150,Vanya Sodhi,21,F,BSc,2021,"Shukla, Warrior and Gade Institute",735511,Eligible
+S0151,Ishita Golla,21,M,BA,2023,"Dey, Zacharia and Seshadri Institute",262273,Eligible
+S0152,Tanya Kalita,21,M,ITI,2019,Dani Group Institute,737635,Eligible
+S0153,Ehsaan Seth,22,M,BCom,2022,Magar-Doshi Institute,551127,Eligible
+S0154,Neelofar Dutt,22,F,BCA,2019,Johal-Gala Institute,291485,Eligible
+S0155,Ojas Hayre,23,M,BBA,2022,Hari-Dewan Institute,752508,Eligible
+S0156,Ritvik Kapadia,22,M,BCom,2023,Banerjee-Divan Institute,459146,Eligible
+S0157,Aaryahi Anne,22,F,BSc,2019,Gupta-Ratti Institute,252970,Eligible
+S0158,Neelofar Rajagopal,23,M,BPharma,2022,Sethi Group Institute,461719,Eligible
+S0159,Vritika Ramachandran,24,F,Diploma,2021,Wali-Iyer Institute,234377,Eligible
+S0160,Darshit Tara,22,M,BCom,2020,Viswanathan-Sandhu Institute,671014,Eligible
+S0161,Jayan Ratta,22,F,BSc,2023,"Kapadia, Wadhwa and Acharya Institute",521766,Eligible
+S0162,Dhruv Hans,22,F,12th,2022,"Kibe, Brahmbhatt and Dara Institute",799215,Eligible
+S0163,Faiyaz Chowdhury,22,M,12th,2023,"Mani, Dhar and Thakkar Institute",264539,Eligible
+S0164,Neysa Chandran,21,F,BCA,2019,Bhatnagar-Chad Institute,436893,Eligible
+S0165,Abram Kannan,24,F,BSc,2019,Garde PLC Institute,379094,Eligible
+S0166,Emir Manne,24,M,Diploma,2018,"Bhargava, Lata and Sehgal Institute",274837,Eligible
+S0167,Amani Saxena,23,M,ITI,2021,Sachar-Kata Institute,150276,Eligible
+S0168,Gatik Bahri,22,M,BBA,2023,"Kalla, Dugar and Shan Institute",710766,Eligible
+S0169,Faiyaz Thaker,21,M,BCA,2022,Kaul LLC Institute,320792,Eligible
+S0170,Oorja Sangha,23,M,12th,2019,Shankar Ltd Institute,223088,Eligible
+S0171,Navya Sandhu,24,M,BBA,2019,Desai-Kulkarni Institute,364470,Eligible
+S0172,Miraan Vora,24,M,BCom,2023,Hayer and Sons Institute,612733,Eligible
+S0173,Shamik Acharya,21,F,BSc,2023,"Sekhon, Rana and Din Institute",786434,Eligible
+S0174,Sana Dube,24,F,BBA,2023,Sahota Ltd Institute,700224,Eligible
+S0175,Yuvaan Garde,23,M,12th,2022,"Sehgal, Walla and Hayer Institute",796818,Eligible
+S0176,Zara Sarkar,22,M,ITI,2022,"Bhalla, Edwin and Krishna Institute",116967,Eligible
+S0177,Ehsaan Gade,23,M,BCom,2021,Singhal-Dugar Institute,626886,Eligible
+S0178,Dhanush Loyal,24,M,BCom,2022,Tak PLC Institute,523010,Eligible
+S0179,Jivin Saxena,21,F,BCom,2022,"Wadhwa, Behl and Dhar Institute",635899,Eligible
+S0180,Anika Rao,22,M,BPharma,2019,"Sridhar, Sathe and Kunda Institute",549081,Eligible
+S0181,Bhavin Kalla,23,M,12th,2021,Soni Group Institute,669394,Eligible
+S0182,Elakshi Sood,23,M,BSc,2022,Warrior Inc Institute,357807,Eligible
+S0183,Yakshit Dugar,24,M,BBA,2019,Sangha-Deol Institute,600789,Eligible
+S0184,Madhav Rao,22,F,Diploma,2022,Chauhan Ltd Institute,383696,Eligible
+S0185,Saira Karnik,24,F,BBA,2021,Dey Ltd Institute,599941,Eligible
+S0186,Jayesh Chacko,21,F,12th,2019,"Babu, Dhawan and Sur Institute",389278,Eligible
+S0187,Hrishita Goel,24,M,BCA,2020,Tank-Kari Institute,728985,Eligible
+S0188,Reyansh Mane,22,F,12th,2022,Chaudhari PLC Institute,298757,Eligible
+S0189,Anaya Gade,23,M,BPharma,2020,Divan-Sengupta Institute,418721,Eligible
+S0190,Hunar Lanka,23,M,BCA,2021,Bora Inc Institute,260578,Eligible
+S0191,Parinaaz Ravi,24,M,BBA,2023,"Chacko, Kapoor and Anand Institute",550661,Eligible
+S0192,Tushar Thaker,23,F,Diploma,2022,"Handa, Thaman and Ramakrishnan Institute",456762,Eligible
+S0193,Azad Bhat,21,F,BSc,2021,Madan LLC Institute,682985,Eligible
+S0194,Vritika Sachdeva,22,M,BSc,2019,"Venkataraman, Dhillon and Konda Institute",288284,Eligible
+S0195,Tiya Chokshi,23,M,ITI,2022,Sule Ltd Institute,517620,Eligible
+S0196,Nirvi Sheth,21,M,BCom,2021,Edwin and Sons Institute,571702,Eligible
+S0197,Baiju Wable,22,F,BCom,2020,Jaggi and Sons Institute,198852,Eligible
+S0198,Parinaaz Bali,23,F,BSc,2020,Kala PLC Institute,409833,Eligible
+S0199,Riaan Issac,23,M,BPharma,2019,Shankar-Mammen Institute,437266,Eligible
+S0200,Lakshit Thakur,24,M,BPharma,2023,"Magar, Grover and Ramaswamy Institute",334523,Eligible
+S0201,Seher Banerjee,23,M,BSc,2018,Ganesan Group Institute,797096,Eligible
+S0202,Zoya Bahl,23,M,BBA,2018,Deshmukh LLC Institute,715605,Eligible
+S0203,Seher Khanna,24,M,ITI,2018,Bhat and Sons Institute,486253,Eligible
+S0204,Kabir Kakar,24,M,BSc,2023,Boase Group Institute,122021,Eligible
+S0205,Prisha Majumdar,21,F,ITI,2019,Subramanian LLC Institute,343527,Eligible
+S0206,Misha Dara,23,F,Diploma,2022,"Mandal, Mall and Balasubramanian Institute",565147,Eligible
+S0207,Aaina Kant,24,M,BPharma,2019,"Sidhu, Gera and Chaudhuri Institute",395159,Eligible
+S0208,Ranbir Rajan,24,M,BSc,2023,"Sen, Brar and Tripathi Institute",278020,Eligible
+S0209,Zoya Ben,24,F,BBA,2023,"Dey, Sastry and Date Institute",290161,Eligible
+S0210,Purab Tata,22,F,BA,2021,Chaudhuri-Wali Institute,437022,Eligible
+S0211,Shaan Seth,21,F,BSc,2022,Sibal Inc Institute,337708,Eligible
+S0212,Trisha Banerjee,21,M,BPharma,2023,Kuruvilla and Sons Institute,797774,Eligible
+S0213,Amira Basak,23,F,BBA,2020,Choudhury-Sem Institute,773324,Eligible
+S0214,Ivan Balan,22,F,ITI,2022,Lalla Ltd Institute,184415,Eligible
+S0215,Yuvraj  Buch,24,M,BCA,2020,Bir-Jha Institute,532782,Eligible
+S0216,Kismat Bhandari,21,M,Diploma,2020,Bhargava Ltd Institute,287694,Eligible
+S0217,Chirag Rao,24,M,BCom,2021,"Rout, Bumb and Kumer Institute",386599,Eligible
+S0218,Damini Bawa,22,F,ITI,2019,Dhar-Sengupta Institute,429271,Eligible
+S0219,Zaina Khatri,22,M,ITI,2020,"Tripathi, Gole and Mammen Institute",109109,Eligible
+S0220,Ryan Char,24,M,12th,2019,"Lanka, Gulati and Sidhu Institute",744593,Eligible
+S0221,Shamik Baral,23,F,Diploma,2023,"Sharaf, Varma and Karpe Institute",438014,Eligible
+S0222,Riya Chanda,21,F,BA,2020,Babu Group Institute,554861,Eligible
+S0223,Neelofar Rana,24,M,12th,2018,Sangha-Iyer Institute,257156,Eligible
+S0224,Aarush Ahuja,21,M,Diploma,2023,"Bahri, Banerjee and Bobal Institute",479511,Eligible
+S0225,Keya Anand,21,F,12th,2023,Ray Ltd Institute,549400,Eligible
+S0226,Eva Batta,24,M,BPharma,2021,"Majumdar, Tella and Kala Institute",449722,Eligible
+S0227,Trisha Kunda,23,F,BBA,2020,"Bobal, Suresh and Chana Institute",774731,Eligible
+S0228,Bhamini Agate,23,M,BCom,2020,Rout-Bains Institute,241952,Eligible
+S0229,Pihu Hari,24,M,BSc,2022,Kadakia-Deep Institute,134298,Eligible
+S0230,Diya Saraf,23,F,BCA,2018,"Grover, Keer and Varkey Institute",283114,Eligible
+S0231,Akarsh Doshi,22,F,BA,2019,"Bhandari, Sabharwal and Chad Institute",595294,Eligible
+S0232,Adah Srinivas,22,F,BBA,2019,Raja Group Institute,437152,Eligible
+S0233,Sara Soman,22,F,BBA,2021,"Dugar, Gade and Madan Institute",591637,Eligible
+S0234,Shalv Sethi,22,M,Diploma,2022,Deo-Sunder Institute,384875,Eligible
+S0235,Shlok Thaman,24,F,Diploma,2019,"Saxena, Yogi and Venkataraman Institute",440029,Eligible
+S0236,Shlok Deo,22,M,BBA,2018,"Srinivas, Soman and Viswanathan Institute",167768,Eligible
+S0237,Hridaan Chandra,22,F,Diploma,2018,Mani-Saxena Institute,495645,Eligible
+S0238,Anahita Brahmbhatt,24,M,ITI,2023,Dutta PLC Institute,126094,Eligible
+S0239,Hiran Rajagopalan,21,F,ITI,2018,"Bali, Dhaliwal and Deshpande Institute",478437,Eligible
+S0240,Sana Ray,24,M,BA,2022,Din-Sanghvi Institute,558019,Eligible
+S0241,Raghav Dua,22,M,BSc,2021,"Sarna, Tandon and Thakur Institute",467579,Eligible
+S0242,Amani Dayal,24,M,Diploma,2019,Kashyap-Bail Institute,339076,Eligible
+S0243,Umang Chand,22,F,ITI,2020,Shere LLC Institute,540564,Eligible
+S0244,Inaaya  Bora,21,F,12th,2021,Garg Group Institute,472990,Eligible
+S0245,Ivan Kant,24,F,BCom,2018,Magar-Ramaswamy Institute,417832,Eligible
+S0246,Nirvaan Kapoor,22,M,Diploma,2020,"Mallick, Loyal and Suresh Institute",529440,Eligible
+S0247,Mehul Boase,24,M,BBA,2022,"Bhavsar, Chandra and Dora Institute",367476,Eligible
+S0248,Trisha Chaudhry,23,F,BCom,2023,Thakur PLC Institute,390184,Eligible
+S0249,Jivika Bedi,23,F,12th,2018,Golla-Devan Institute,560308,Eligible
+S0250,Aarush Ghose,22,F,BCA,2022,Guha-Sur Institute,664389,Eligible
+S0251,Mahika Thakur,22,M,BCA,2019,Sharaf and Sons Institute,556222,Eligible
+S0252,Nitara Tank,21,F,BPharma,2019,"Sabharwal, Barad and Krishnan Institute",326111,Eligible
+S0253,Yakshit Seshadri,24,F,BBA,2022,"Sodhi, Bassi and Bail Institute",343212,Eligible
+S0254,Pranay Kakar,21,F,BCom,2022,Wali-Tiwari Institute,291639,Eligible
+S0255,Piya Bansal,23,F,BA,2021,Bains PLC Institute,527702,Eligible
+S0256,Faiyaz Guha,21,M,12th,2022,"Thaman, Shere and Tiwari Institute",462309,Eligible
+S0257,Kanav Varty,21,M,BCom,2023,"Kurian, Devi and Lanka Institute",703368,Eligible
+S0258,Rania Gill,22,M,BPharma,2021,Viswanathan-Kunda Institute,346299,Eligible
+S0259,Shaan Jani,22,F,Diploma,2019,Gokhale and Sons Institute,106052,Eligible
+S0260,Eva Mandal,21,M,ITI,2022,Bhatt-Bhargava Institute,734120,Eligible
+S0261,Sara Dar,23,M,ITI,2018,Korpal-Bains Institute,450850,Eligible
+S0262,Inaaya  Hayer,21,F,Diploma,2021,Agarwal-Lall Institute,616431,Eligible
+S0263,Fateh Aurora,22,F,BCom,2022,"Khalsa, Ray and Sinha Institute",686809,Eligible
+S0264,Bhamini Sood,21,F,BA,2022,"Randhawa, Walia and Babu Institute",793357,Eligible
+S0265,Nitara Gulati,23,F,BBA,2021,Ravi-Dutta Institute,522517,Eligible
+S0266,Pari Gokhale,21,M,BPharma,2018,"Edwin, Ganesh and Kalita Institute",491257,Eligible
+S0267,Ahana  Manda,24,F,BBA,2018,Chokshi PLC Institute,409817,Eligible
+S0268,Farhan Choudhary,23,M,12th,2021,"Jani, Sangha and Thaker Institute",326668,Eligible
+S0269,Shamik Suresh,21,M,BBA,2019,"Chadha, Swaminathan and Reddy Institute",201706,Eligible
+S0270,Faiyaz Samra,22,F,BCA,2023,"Chada, Lalla and Som Institute",622090,Eligible
+S0271,Hazel Khare,22,F,ITI,2022,Krish Group Institute,199751,Eligible
+S0272,Dishani Bakshi,24,M,BCA,2019,Bhattacharyya-Vala Institute,610432,Eligible
+S0273,Zoya Bhalla,22,M,BCom,2021,Kannan and Sons Institute,126382,Eligible
+S0274,Azad Upadhyay,24,F,ITI,2020,Ratta Inc Institute,423372,Eligible
+S0275,Abram Mannan,21,F,ITI,2019,Varughese-Raval Institute,546164,Eligible
+S0276,Shayak Toor,21,M,BCA,2021,Agrawal LLC Institute,535833,Eligible
+S0277,Reyansh Guha,24,F,BCA,2018,"Thaker, Ram and Cherian Institute",242634,Eligible
+S0278,Vivaan Chatterjee,24,M,BPharma,2023,Samra Inc Institute,326504,Eligible
+S0279,Zara Hayre,22,M,BA,2019,Thaker LLC Institute,334747,Eligible
+S0280,Jayesh Aggarwal,21,F,BA,2023,"Keer, Shere and Kapoor Institute",240241,Eligible
+S0281,Jayan Kakar,24,F,ITI,2022,Rastogi Ltd Institute,389672,Eligible
+S0282,Kiara Doctor,24,M,BPharma,2023,Mane PLC Institute,268094,Eligible
+S0283,Kabir Lal,23,F,BSc,2022,Rajan PLC Institute,797937,Eligible
+S0284,Nirvaan Sura,21,M,12th,2023,Thakkar Ltd Institute,387787,Eligible
+S0285,Navya Kakar,24,M,BBA,2020,Sahni PLC Institute,653000,Eligible
+S0286,Aarav Tiwari,24,F,BCom,2023,Vaidya-Rastogi Institute,574408,Eligible
+S0287,Trisha Sengupta,23,M,BPharma,2021,"Bajwa, Bhatnagar and Chaudhry Institute",266555,Eligible
+S0288,Umang Deol,24,M,Diploma,2018,Mall-Gera Institute,770768,Eligible
+S0289,Aradhya Behl,23,F,BCA,2020,"Krishnan, Walla and Mander Institute",364153,Eligible
+S0290,Oorja Krish,23,M,BA,2023,Balan PLC Institute,739041,Eligible
+S0291,Alisha Chaudhary,24,M,BBA,2021,"Bava, Sathe and Mani Institute",301151,Eligible
+S0292,Mohanlal Barad,23,M,BBA,2021,"Wadhwa, Sami and Gandhi Institute",207842,Eligible
+S0293,Vritika Din,24,F,BPharma,2023,"Kalita, Mall and Sood Institute",142051,Eligible
+S0294,Kashvi Subramaniam,23,F,Diploma,2019,Bassi Ltd Institute,290871,Eligible
+S0295,Veer Jha,22,F,ITI,2022,"Kohli, Chander and Suri Institute",520798,Eligible
+S0296,Anvi Sarraf,21,F,BA,2019,Bhargava-Dey Institute,205307,Eligible
+S0297,Indrans Dutt,24,F,BCom,2021,"Majumdar, Vig and Borah Institute",537120,Eligible
+S0298,Shlok Varkey,21,F,BBA,2018,Mammen-Zacharia Institute,104918,Eligible
+S0299,Divit Datta,24,F,BCA,2023,"Edwin, Bahri and Chada Institute",608787,Eligible
+S0300,Hridaan Dixit,23,M,BCom,2020,Lal-Sangha Institute,700648,Eligible
+S0301,Nitara Ravel,23,F,BCA,2019,Uppal-Sami Institute,754570,Eligible
+S0302,Ishita Dhawan,21,M,ITI,2021,"Sibal, Taneja and Yogi Institute",516121,Eligible
+S0303,Urvi Hayre,23,F,BCom,2019,"Loke, Yogi and Bhagat Institute",395344,Eligible
+S0304,Hiran Thakkar,23,F,BA,2020,"Kari, Sani and Borra Institute",186045,Eligible
+S0305,Hiran Raman,21,F,BBA,2018,Bhat Inc Institute,658828,Eligible
+S0306,Shlok Dixit,24,M,BCA,2023,Mall-Seshadri Institute,646297,Eligible
+S0307,Adira Trivedi,22,F,BBA,2023,Handa-Majumdar Institute,104450,Eligible
+S0308,Taimur Sarin,24,F,12th,2021,Barad PLC Institute,335169,Eligible
+S0309,Ehsaan Khare,24,F,BCom,2019,"Lata, Cheema and Banerjee Institute",371797,Eligible
+S0310,Madhup Chana,23,M,BSc,2020,Gokhale-Datta Institute,100192,Eligible
+S0311,Khushi Vig,23,F,BCom,2018,"Bala, Gill and Karan Institute",554734,Eligible
+S0312,Yuvaan Dugal,23,M,BSc,2021,"Gara, Sodhi and Hari Institute",263507,Eligible
+S0313,Parinaaz Koshy,24,F,ITI,2023,Hora PLC Institute,260158,Eligible
+S0314,Jayesh Shroff,21,F,BPharma,2023,"Bhakta, Hari and Ghose Institute",722009,Eligible
+S0315,Piya Iyer,24,M,BCA,2018,Bhavsar-Gour Institute,601991,Eligible
+S0316,Azad Bal,22,M,BA,2022,Chana-Boase Institute,359061,Eligible
+S0317,Sumer Gara,24,F,BCom,2021,Thaman Ltd Institute,617785,Eligible
+S0318,Myra Rattan,21,F,12th,2021,Venkataraman-Kunda Institute,140767,Eligible
+S0319,Kiaan Doshi,24,M,BBA,2021,Dutta PLC Institute,607698,Eligible
+S0320,Vaibhav Vyas,24,M,BCA,2018,Agrawal and Sons Institute,141619,Eligible
+S0321,Nayantara Mander,22,F,BSc,2021,Balasubramanian PLC Institute,499023,Eligible
+S0322,Elakshi Devan,22,M,BSc,2018,Dhaliwal-Zacharia Institute,743437,Eligible
+S0323,Neelofar Mahal,22,F,Diploma,2023,"Ratti, Uppal and Bora Institute",786787,Eligible
+S0324,Tiya Kara,24,F,BSc,2020,Tata-Dubey Institute,215709,Eligible
+S0325,Adira Khatri,22,M,BA,2020,Sathe-Gulati Institute,152205,Eligible
+S0326,Yasmin Sunder,24,F,BA,2019,"Koshy, Grover and Chacko Institute",219975,Eligible
+S0327,Aarav Sachdeva,23,M,ITI,2019,"Khurana, Chowdhury and Gulati Institute",416779,Eligible
+S0328,Hazel Thaman,22,M,BBA,2021,Khurana-Golla Institute,229030,Eligible
+S0329,Himmat Sood,21,M,12th,2021,Shukla PLC Institute,239592,Eligible
+S0330,Vihaan Chaudhari,22,M,12th,2020,Dhar-Khanna Institute,491472,Eligible
+S0331,Ehsaan Varkey,24,M,BA,2022,"Borde, Salvi and Din Institute",101268,Eligible
+S0332,Riaan Mall,23,M,ITI,2022,Behl Inc Institute,471312,Eligible
+S0333,Vivaan Vohra,24,F,BSc,2020,Dey-Gill Institute,738183,Eligible
+S0334,Divyansh Brar,21,M,BSc,2020,Chad Group Institute,131711,Eligible
+S0335,Fateh Madan,24,F,BSc,2019,"Bhargava, Bava and Dayal Institute",262964,Eligible
+S0336,Shray Raval,24,M,12th,2022,Bora-Varkey Institute,170093,Eligible
+S0337,Ahana  Dubey,21,F,BA,2019,"Swamy, Mammen and Devi Institute",340536,Eligible
+S0338,Mahika Shenoy,23,M,BBA,2020,"Comar, Mall and Gopal Institute",327561,Eligible
+S0339,Nehmat Raju,24,M,BBA,2018,"Keer, Mangal and Kar Institute",662377,Eligible
+S0340,Zara Dhar,22,M,12th,2019,Desai-Gupta Institute,619440,Eligible
+S0341,Mamooty Khurana,23,F,BCA,2022,"Sabharwal, Ray and Kapoor Institute",573010,Eligible
+S0342,Tarini Bahri,22,M,BCom,2022,Bansal PLC Institute,725549,Eligible
+S0343,Kashvi Amble,21,F,BCom,2020,Borra LLC Institute,739164,Eligible
+S0344,Sara Mammen,24,M,BBA,2023,"Venkatesh, Ramakrishnan and Gaba Institute",506791,Eligible
+S0345,Zain Bhatia,24,F,12th,2019,Dora Group Institute,130995,Eligible
+S0346,Damini Choudhary,23,F,12th,2018,Hans and Sons Institute,320715,Eligible
+S0347,Mishti Maharaj,21,F,ITI,2020,"Chopra, Vohra and Golla Institute",184266,Eligible
+S0348,Krish Bala,21,M,BPharma,2023,Sule Ltd Institute,393269,Eligible
+S0349,Neysa Rana,24,M,12th,2021,"Bail, Wason and Reddy Institute",680280,Eligible
+S0350,Umang Chacko,24,F,12th,2022,Rastogi-Batra Institute,733125,Eligible
+S0351,Kabir Ghose,24,M,BA,2023,Bansal Inc Institute,292004,Eligible
+S0352,Hrishita Srivastava,22,F,Diploma,2021,Deo-Ben Institute,150270,Eligible
+S0353,Charvi Bajwa,21,M,BA,2020,Buch LLC Institute,482877,Eligible
+S0354,Biju Sandhu,22,F,BSc,2018,Johal-Bassi Institute,470834,Eligible
+S0355,Nishith Manne,21,M,12th,2019,Sankaran-Bhatti Institute,120529,Eligible
+S0356,Gokul Sha,21,F,BCom,2020,"Bhargava, Rattan and Tella Institute",419558,Eligible
+S0357,Hrishita Chaudry,22,M,BA,2020,Sangha Ltd Institute,472399,Eligible
+S0358,Emir Vyas,24,F,ITI,2020,Jayaraman-Wagle Institute,209770,Eligible
+S0359,Indrajit Mand,22,M,BCom,2021,"Hans, Sabharwal and Kohli Institute",423526,Eligible
+S0360,Hansh Brahmbhatt,21,F,12th,2021,Agrawal-Kar Institute,488722,Eligible
+S0361,Misha Salvi,22,M,12th,2018,Kanda-Bera Institute,285578,Eligible
+S0362,Jayesh Kapur,23,M,12th,2020,"Choudhary, Acharya and Kar Institute",389328,Eligible
+S0363,Hansh Seth,23,F,Diploma,2018,Kota-Chhabra Institute,339308,Eligible
+S0364,Samiha Buch,24,F,BCom,2020,Grover Inc Institute,496913,Eligible
+S0365,Elakshi Lad,22,F,Diploma,2019,Trivedi Inc Institute,167317,Eligible
+S0366,Samarth Deo,23,M,Diploma,2020,Thaker-Suresh Institute,234484,Eligible
+S0367,Madhav Madan,23,M,BPharma,2020,"Sant, Raval and Mani Institute",102723,Eligible
+S0368,Lagan Dara,21,M,BA,2019,Raman-Bahl Institute,258856,Eligible
+S0369,Drishya Issac,24,M,BCA,2022,Chandra-Madan Institute,179216,Eligible
+S0370,Kavya Lanka,24,M,BSc,2020,Tata Inc Institute,267117,Eligible
+S0371,Piya Subramaniam,24,F,BPharma,2022,Deep PLC Institute,416902,Eligible
+S0372,Neysa Kant,24,M,ITI,2020,"Wason, Singh and Jaggi Institute",588926,Eligible
+S0373,Vivaan Andra,23,M,12th,2022,Gola-Master Institute,450977,Eligible
+S0374,Elakshi Sekhon,23,F,BBA,2020,Loke-Buch Institute,382918,Eligible
+S0375,Divyansh Dugar,22,F,ITI,2023,Lala Ltd Institute,369081,Eligible
+S0376,Ivan Lanka,23,M,Diploma,2019,"Butala, Vasa and Dass Institute",395424,Eligible
+S0377,Miraan Deo,22,F,BCA,2021,Zacharia-Bose Institute,689336,Eligible
+S0378,Keya Chhabra,22,F,BBA,2021,Cheema LLC Institute,733559,Eligible
+S0379,Anya Chacko,22,F,BBA,2022,Subramanian-Sarraf Institute,450805,Eligible
+S0380,Jayan Vohra,21,M,BPharma,2022,Mammen-Bava Institute,407970,Eligible
+S0381,Anahita Kashyap,23,M,BSc,2019,Lad-D’Alia Institute,552698,Eligible
+S0382,Vanya Koshy,23,F,BCA,2023,Handa and Sons Institute,691147,Eligible
+S0383,Seher Rege,23,F,12th,2023,Rao Ltd Institute,766926,Eligible
+S0384,Suhana Borah,21,F,Diploma,2019,Karan LLC Institute,730549,Eligible
+S0385,Suhana Ghosh,24,M,12th,2022,Kalla PLC Institute,579695,Eligible
+S0386,Vaibhav Verma,21,F,Diploma,2023,Lal-Kapoor Institute,770235,Eligible
+S0387,Hrishita Choudhury,23,F,BBA,2023,Trivedi-Kapadia Institute,263864,Eligible
+S0388,Eshani Lalla,21,F,BA,2021,"Das, Thakkar and Guha Institute",357284,Eligible
+S0389,Tiya Kadakia,24,F,Diploma,2021,"Chaudhary, Rattan and Bala Institute",784281,Eligible
+S0390,Sahil Desai,21,F,BSc,2021,Lad-Talwar Institute,269136,Eligible
+S0391,Anya Dey,22,M,Diploma,2022,"Ramakrishnan, Mangal and Shanker Institute",469579,Eligible
+S0392,Amani Choudhary,23,F,BCom,2023,"Divan, Shah and Deshmukh Institute",349089,Eligible
+S0393,Shalv Kar,22,F,ITI,2019,"Vig, Cherian and Ganesh Institute",477625,Eligible
+S0394,Zara Krish,24,F,Diploma,2020,Kota-Ben Institute,726007,Eligible
+S0395,Renee Cheema,22,M,Diploma,2018,"Som, Mammen and Sem Institute",471951,Eligible
+S0396,Ivana Chaudry,21,F,Diploma,2022,"Gole, Dube and Guha Institute",443922,Eligible
+S0397,Charvi Seth,21,F,12th,2022,Bath-Sachar Institute,770375,Eligible
+S0398,Tejas Sabharwal,23,M,BBA,2019,Sarna LLC Institute,607992,Eligible
+S0399,Arhaan Shanker,22,M,BBA,2020,"Sura, Bhasin and Issac Institute",716518,Eligible
+S0400,Diya Mani,22,M,BBA,2020,Kakar Inc Institute,473962,Eligible
+S0401,Diya Ranganathan,24,M,BA,2023,"Venkataraman, Tata and Buch Institute",797923,Eligible
+S0402,Madhav Sankar,21,M,BBA,2023,"Sant, Kalita and Vaidya Institute",154971,Eligible
+S0403,Lavanya Char,21,F,12th,2021,Bhatti-Mani Institute,529711,Eligible
+S0404,Hazel Walla,24,M,BCA,2023,"Dugar, Sharma and Choudhary Institute",253293,Eligible
+S0405,Khushi Golla,21,M,12th,2022,"Kanda, Dhawan and Kadakia Institute",582226,Eligible
+S0406,Kavya Kannan,21,F,BBA,2022,"Kapadia, Bahri and Saxena Institute",789422,Eligible
+S0407,Taimur Divan,21,M,BSc,2018,Iyengar-Rau Institute,451929,Eligible
+S0408,Seher Bedi,24,M,BCom,2019,Keer Inc Institute,203346,Eligible
+S0409,Suhana Badal,23,M,BBA,2019,"Mammen, Mander and Chandran Institute",693133,Eligible
+S0410,Bhamini Srinivasan,23,F,12th,2022,"Bal, Comar and Saha Institute",668557,Eligible
+S0411,Pari Kapur,23,F,BSc,2023,Jain Inc Institute,560034,Eligible
+S0412,Devansh Kalita,23,M,ITI,2019,Sarraf PLC Institute,130384,Eligible
+S0413,Lakshit Aggarwal,21,F,BSc,2020,Banerjee-Walla Institute,794157,Eligible
+S0414,Jiya Aggarwal,24,F,BCA,2023,"Bahri, Bhandari and Kalla Institute",786734,Eligible
+S0415,Aradhya Chaudry,24,M,BPharma,2021,Mannan LLC Institute,565796,Eligible
+S0416,Ishaan Deol,22,M,Diploma,2019,"Dutta, Toor and Jayaraman Institute",507592,Eligible
+S0417,Shaan Garde,23,F,BCA,2023,Rastogi Inc Institute,796824,Eligible
+S0418,Dhanuk Sethi,23,F,BA,2018,Aurora LLC Institute,294432,Eligible
+S0419,Madhav Dave,23,F,BA,2018,Tank-Sani Institute,766190,Eligible
+S0420,Divit Venkataraman,23,F,BBA,2019,Deep-Chada Institute,335529,Eligible
+S0421,Ivana Dayal,24,M,BA,2021,"Mani, Kapoor and Sami Institute",717438,Eligible
+S0422,Zara Lad,24,M,BCA,2021,Sem PLC Institute,533371,Eligible
+S0423,Manikya Madan,23,M,BCom,2018,"Kuruvilla, Setty and Kale Institute",370724,Eligible
+S0424,Zoya Dalal,22,M,ITI,2020,Virk-Hari Institute,347418,Eligible
+S0425,Lakshit Chander,22,F,BSc,2020,"Dora, Bava and Brahmbhatt Institute",562365,Eligible
+S0426,Reyansh Bhatti,21,F,Diploma,2019,Thaker Ltd Institute,761634,Eligible
+S0427,Hrishita Rajan,21,F,BPharma,2018,Khare Ltd Institute,451396,Eligible
+S0428,Anvi Bandi,23,F,BA,2018,Sarkar Group Institute,775894,Eligible
+S0429,Advika Sibal,23,M,12th,2018,Chada Ltd Institute,149201,Eligible
+S0430,Siya Karpe,23,M,BPharma,2021,"Sachdev, Saran and Singhal Institute",489062,Eligible
+S0431,Samiha Chander,23,M,BPharma,2022,Lall LLC Institute,258118,Eligible
+S0432,Kanav Hayer,23,F,BBA,2019,Bali and Sons Institute,708730,Eligible
+S0433,Ira Borra,21,F,12th,2019,"Vala, Som and Ghose Institute",190527,Eligible
+S0434,Madhav Kanda,23,F,BSc,2023,Kuruvilla LLC Institute,702145,Eligible
+S0435,Miraan Kapadia,21,F,BPharma,2020,"Sandal, Gara and Yadav Institute",418773,Eligible
+S0436,Parinaaz Tailor,22,M,BPharma,2019,"Kannan, Arora and Guha Institute",124013,Eligible
+S0437,Ayesha Soman,22,F,BPharma,2021,Sekhon and Sons Institute,283735,Eligible
+S0438,Miraya Swaminathan,24,M,BA,2022,"Brar, Raman and Shan Institute",407093,Eligible
+S0439,Darshit Chhabra,21,M,BSc,2020,Bava-Soman Institute,296403,Eligible
+S0440,Pranay Shah,21,F,12th,2023,Dayal PLC Institute,128119,Eligible
+S0441,Ayesha Rajagopal,23,F,12th,2022,Wason-Jani Institute,400610,Eligible
+S0442,Lagan Basu,22,F,BCA,2023,"Dara, Krishna and Basak Institute",481333,Eligible
+S0443,Dharmajan Kibe,22,M,BCom,2023,"Ray, Ben and Khanna Institute",732216,Eligible
+S0444,Aniruddh Kata,23,F,Diploma,2018,"Rana, Venkataraman and Bhatti Institute",243712,Eligible
+S0445,Biju Suri,21,M,BSc,2023,Amble LLC Institute,580280,Eligible
+S0446,Saanvi Bora,22,M,BPharma,2019,"Goel, Subramanian and Korpal Institute",627790,Eligible
+S0447,Sara Balasubramanian,22,F,BA,2018,"Chawla, Sethi and Jayaraman Institute",578289,Eligible
+S0448,Azad Bassi,21,F,BCom,2020,"Chanda, Varma and Wali Institute",139434,Eligible
+S0449,Prisha Shan,21,M,ITI,2020,Bera-Apte Institute,203392,Eligible
+S0450,Pihu Bhatt,23,M,12th,2018,Deshpande-Tara Institute,362107,Eligible
+S0451,Advika Lala,23,M,BSc,2023,Chaudhari Inc Institute,501048,Eligible
+S0452,Nirvaan Borde,23,M,Diploma,2020,"Bains, Devi and Arya Institute",235397,Eligible
+S0453,Anika Iyengar,23,F,12th,2019,Malhotra-Ramachandran Institute,435717,Eligible
+S0454,Pihu Lata,22,F,BCom,2023,"Mani, Swamy and Wable Institute",570825,Eligible
+S0455,Biju Srinivas,21,F,Diploma,2018,Lalla Inc Institute,206459,Eligible
+S0456,Alia Batra,22,F,BPharma,2019,Chaudry LLC Institute,551032,Eligible
+S0457,Darshit Baria,22,F,BBA,2020,Shukla-Tailor Institute,471864,Eligible
+S0458,Arhaan Jain,24,F,Diploma,2023,Golla LLC Institute,546525,Eligible
+S0459,Trisha Cherian,21,F,BCom,2023,Kuruvilla Inc Institute,575637,Eligible
+S0460,Arhaan Saini,24,F,BCom,2022,Goyal Ltd Institute,334290,Eligible
+S0461,Aayush Sule,22,M,BA,2020,Hayre-Ravi Institute,287264,Eligible
+S0462,Aayush Swaminathan,23,M,BCom,2023,Dara-Baria Institute,633655,Eligible
+S0463,Sara Chopra,23,M,BBA,2021,Banik-Vyas Institute,743805,Eligible
+S0464,Gatik Sharma,22,M,12th,2019,"Chatterjee, Halder and Kurian Institute",259876,Eligible
+S0465,Krish Dhaliwal,23,M,BPharma,2021,"Kalla, Jain and Sarma Institute",773472,Eligible
+S0466,Heer Vohra,23,F,BBA,2018,Hayre-Vasa Institute,246561,Eligible
+S0467,Aarush Deo,24,M,BCom,2019,"Venkataraman, Bhatnagar and Dutt Institute",162505,Eligible
+S0468,Eshani Amble,22,M,ITI,2020,Arora-Buch Institute,183941,Eligible
+S0469,Yuvaan Chander,23,M,BCA,2022,Chandra Ltd Institute,192099,Eligible
+S0470,Inaaya  Dutt,22,M,BCom,2019,Goel Inc Institute,757882,Eligible
+S0471,Yasmin Sarna,22,M,BSc,2022,"Chana, Deo and Basu Institute",396769,Eligible
+S0472,Divit Bandi,24,M,BCom,2020,Gour-Hora Institute,379646,Eligible
+S0473,Nirvi Ramanathan,23,F,12th,2022,"Char, Gera and Grover Institute",183221,Eligible
+S0474,Hridaan Thaker,24,F,BCom,2021,"Deshmukh, Kari and Kuruvilla Institute",674906,Eligible
+S0475,Vanya Saxena,23,F,BBA,2019,Sarna-Sura Institute,647427,Eligible
+S0476,Krish Dubey,24,F,BPharma,2023,Chandran PLC Institute,667885,Eligible
+S0477,Tiya Sarraf,23,F,BCom,2021,Dua and Sons Institute,589300,Eligible
+S0478,Amani Din,22,M,BSc,2020,Aurora Group Institute,227999,Eligible
+S0479,Zoya Char,23,M,BCom,2023,"Kant, Dani and Sarna Institute",242864,Eligible
+S0480,Taran Chana,22,F,BA,2022,"Mall, Thakkar and Sundaram Institute",658794,Eligible
+S0481,Akarsh Babu,21,M,12th,2018,Sinha-Dugal Institute,103262,Eligible
+S0482,Zoya Raval,24,M,BA,2018,"Mane, Madan and Kata Institute",113497,Eligible
+S0483,Jayant Buch,24,M,BCA,2020,Majumdar LLC Institute,690338,Eligible
+S0484,Shaan Kashyap,24,F,BBA,2020,"Agate, Mane and Barad Institute",146378,Eligible
+S0485,Lakshay Rout,23,F,ITI,2020,Seshadri-Kohli Institute,491526,Eligible
+S0486,Rasha Behl,24,M,BCA,2020,Varty-Warrior Institute,215511,Eligible
+S0487,Heer Ranganathan,23,F,BCom,2022,Behl-Mahajan Institute,674918,Eligible
+S0488,Divij Boase,22,M,ITI,2021,"Babu, Keer and Sinha Institute",481146,Eligible
+S0489,Bhavin Kashyap,22,F,BCom,2021,Bera-Halder Institute,520519,Eligible
+S0490,Vidur Bains,22,M,BSc,2019,Venkataraman-Handa Institute,417877,Eligible
+S0491,Vaibhav Hari,21,F,ITI,2022,Khare PLC Institute,412532,Eligible
+S0492,Hazel Gala,22,F,BCA,2020,Saxena-Ram Institute,213825,Eligible
+S0493,Anvi Wali,23,F,BSc,2020,Kaur-Zachariah Institute,517811,Eligible
+S0494,Amani Bandi,21,F,BBA,2018,Choudhry-Sethi Institute,295537,Eligible
+S0495,Navya Vasa,21,M,BBA,2021,Sarin LLC Institute,790882,Eligible
+S0496,Raunak Dugar,21,M,12th,2019,Chanda-Sahni Institute,476150,Eligible
+S0497,Jayan Wagle,24,F,BBA,2020,Bajwa-Warrior Institute,255674,Eligible
+S0498,Kavya Gokhale,23,F,BSc,2019,D’Alia Ltd Institute,709112,Eligible
+S0499,Biju Brahmbhatt,23,F,BA,2020,"Mangal, Varkey and Dasgupta Institute",777754,Eligible
+S0500,Rasha Kamdar,21,F,Diploma,2022,"Kuruvilla, Walia and Venkatesh Institute",205427,Eligible
+S0501,Vanya Kata,22,F,BPharma,2022,Lata-Shanker Institute,660971,Eligible
+S0502,Khushi Ganesh,22,F,BA,2018,Bath Group Institute,253109,Eligible
+S0503,Shalv Badal,24,F,BA,2021,"Raval, Lata and Talwar Institute",302213,Eligible
+S0504,Pari Comar,23,F,BSc,2020,"Sarkar, Barad and Venkatesh Institute",401912,Eligible
+S0505,Parinaaz Shroff,22,F,BPharma,2022,Lata-Dugal Institute,488874,Eligible
+S0506,Vardaniya Bir,23,M,Diploma,2021,"Vyas, Deo and Anand Institute",501242,Eligible
+S0507,Anya Bahri,22,F,BPharma,2020,Mallick-Khalsa Institute,103420,Eligible
+S0508,Ojas Chandran,23,M,12th,2018,Subramanian Inc Institute,229885,Eligible
+S0509,Armaan Roy,23,F,BSc,2023,Raj Group Institute,527852,Eligible
+S0510,Saksham Lal,24,F,BBA,2022,"Sodhi, Shan and Setty Institute",587422,Eligible
+S0511,Hansh Johal,21,F,BCom,2018,Gupta and Sons Institute,226013,Eligible
+S0512,Stuvan Kibe,22,M,ITI,2018,Lanka LLC Institute,119644,Eligible
+S0513,Jiya Rama,23,F,BPharma,2018,Buch-Banik Institute,186969,Eligible
+S0514,Riaan Batra,23,F,BCom,2019,"Arora, Maharaj and Bandi Institute",164554,Eligible
+S0515,Nakul Madan,23,F,Diploma,2020,Sachdev Ltd Institute,550423,Eligible
+S0516,Mannat Chaudhary,22,F,BCA,2020,"Rout, Contractor and Handa Institute",629678,Eligible
+S0517,Ela Mahal,21,F,12th,2021,Karpe-Iyengar Institute,594907,Eligible
+S0518,Hridaan Lata,22,M,BPharma,2022,Dada Group Institute,299496,Eligible
+S0519,Ishita Sachar,21,M,BCom,2022,"Mahajan, Goel and Ahluwalia Institute",738569,Eligible
+S0520,Umang Dhingra,24,M,BPharma,2018,Kakar-Dubey Institute,124110,Eligible
+S0521,Tara Loyal,21,F,12th,2019,"Sachar, Yadav and Tara Institute",501546,Eligible
+S0522,Aradhya Kala,21,F,Diploma,2019,Sharma-Yohannan Institute,176753,Eligible
+S0523,Raghav Kapur,23,F,12th,2022,Bakshi and Sons Institute,788542,Eligible
+S0524,Drishya Bahri,24,M,BCom,2022,Reddy PLC Institute,159719,Eligible
+S0525,Dishani Wable,21,F,BA,2022,Dugar-Deshpande Institute,451277,Eligible
+S0526,Vanya Aurora,21,M,BSc,2023,Viswanathan-Varma Institute,664870,Eligible
+S0527,Ira Date,24,M,BCom,2020,"Sinha, Dara and Dora Institute",476406,Eligible
+S0528,Neysa Datta,22,F,BA,2023,Goel-Basak Institute,731356,Eligible
+S0529,Anika Dhar,21,M,BBA,2021,Keer-Vig Institute,724093,Eligible
+S0530,Vaibhav Khanna,24,M,ITI,2018,"Ray, Mangal and Basu Institute",527300,Eligible
+S0531,Vritika Khalsa,22,M,ITI,2021,"Bahri, Ramaswamy and Chaudhary Institute",595863,Eligible
+S0532,Mohanlal Kari,22,F,ITI,2020,Ratti-Kapoor Institute,364798,Eligible
+S0533,Nitya Zacharia,24,F,Diploma,2022,"Mandal, Yadav and Dewan Institute",618216,Eligible
+S0534,Samaira Madan,21,M,Diploma,2019,"Saha, Ganguly and Garg Institute",211002,Eligible
+S0535,Tanya Srivastava,22,F,BPharma,2023,Sachdeva-Tata Institute,361396,Eligible
+S0536,Kartik Shah,23,M,Diploma,2018,"Shah, Sami and Ghose Institute",635040,Eligible
+S0537,Anya Sibal,21,M,Diploma,2021,Chaudhuri-Grover Institute,443628,Eligible
+S0538,Ishita Chaudhuri,23,M,BCom,2022,Lala Group Institute,406159,Eligible
+S0539,Aarna Andra,24,M,12th,2023,Aurora PLC Institute,502808,Eligible
+S0540,Nitara Srivastava,23,F,Diploma,2022,Goyal Ltd Institute,133864,Eligible
+S0541,Keya Manne,22,F,Diploma,2018,Deshpande PLC Institute,530716,Eligible
+S0542,Kabir Sha,22,F,Diploma,2021,Bahl and Sons Institute,660900,Eligible
+S0543,Amani Bawa,21,M,BA,2021,Acharya-Sule Institute,778065,Eligible
+S0544,Advika Kannan,22,M,12th,2023,Maharaj Inc Institute,148091,Eligible
+S0545,Elakshi Bhakta,21,F,Diploma,2020,"Cherian, Dar and Mannan Institute",362938,Eligible
+S0546,Anay Sandal,21,M,Diploma,2022,Bahl Group Institute,535572,Eligible
+S0547,Mahika Deep,22,M,Diploma,2018,"Rana, Reddy and Viswanathan Institute",695408,Eligible
+S0548,Anay Uppal,23,M,BPharma,2022,Dass-Raju Institute,128023,Eligible
+S0549,Nitya Halder,23,M,ITI,2021,Golla PLC Institute,364779,Eligible
+S0550,Ranbir Agarwal,22,F,BSc,2021,Garde Inc Institute,233600,Eligible
+S0551,Madhav Sanghvi,22,M,BSc,2021,"Mahajan, Goyal and Basu Institute",177061,Eligible
+S0552,Ehsaan Tandon,21,F,BCom,2020,Khatri LLC Institute,592326,Eligible
+S0553,Amani Korpal,23,M,BSc,2020,Mahajan-Behl Institute,431759,Eligible
+S0554,Faiyaz Ray,21,F,12th,2021,"Handa, Korpal and Goyal Institute",525095,Eligible
+S0555,Manjari Lata,21,F,Diploma,2018,"Desai, Sharma and Kade Institute",746087,Eligible
+S0556,Nirvaan Chad,21,M,BPharma,2021,Bumb Group Institute,182865,Eligible
+S0557,Amani Shanker,21,M,BSc,2019,"Sankaran, Brahmbhatt and Bhardwaj Institute",356043,Eligible
+S0558,Anika Bedi,24,F,BBA,2023,Devan Inc Institute,162651,Eligible
+S0559,Riya Cherian,21,F,BBA,2022,"Tara, Sarraf and Thakur Institute",292593,Eligible
+S0560,Indrans Grewal,23,M,ITI,2018,"Din, Sarma and Soni Institute",578694,Eligible
+S0561,Pranay Dugar,24,M,ITI,2023,Chaudry Ltd Institute,780613,Eligible
+S0562,Gatik Bedi,21,F,BPharma,2023,"Baria, Dass and Badal Institute",529802,Eligible
+S0563,Dhanuk Johal,21,M,BCA,2022,Mahal Ltd Institute,646059,Eligible
+S0564,Nakul Lal,22,F,BBA,2022,Johal-Garde Institute,394032,Eligible
+S0565,Tushar Chacko,21,M,BCA,2019,"Sami, Sundaram and Dubey Institute",146646,Eligible
+S0566,Tiya Divan,21,M,BCom,2019,"Dalal, Koshy and Sami Institute",694463,Eligible
+S0567,Kabir Bala,22,M,BBA,2019,Khare Group Institute,679528,Eligible
+S0568,Saira Venkataraman,23,F,12th,2022,Lalla Inc Institute,277011,Eligible
+S0569,Ojas Iyer,23,F,BBA,2019,Gokhale PLC Institute,275460,Eligible
+S0570,Sana Apte,22,M,ITI,2021,Kunda Ltd Institute,701610,Eligible
+S0571,Madhav Mane,24,F,BCom,2021,Bhandari PLC Institute,453434,Eligible
+S0572,Jiya Dhaliwal,23,F,BCom,2022,"Karnik, Kalla and Sankar Institute",133419,Eligible
+S0573,Yasmin Ranganathan,23,M,BBA,2023,Hari-Shan Institute,336239,Eligible
+S0574,Myra Khatri,22,F,BBA,2023,Sane-Ramesh Institute,451779,Eligible
+S0575,Piya Sarraf,24,F,Diploma,2019,"Gole, Reddy and Bhatia Institute",687932,Eligible
+S0576,Tara Sood,23,F,ITI,2022,Bora-Solanki Institute,749684,Eligible
+S0577,Abram Johal,21,M,Diploma,2019,Chanda-Baria Institute,259998,Eligible
+S0578,Hansh Baria,24,M,BBA,2020,Saran-Wadhwa Institute,496974,Eligible
+S0579,Nakul Handa,24,F,ITI,2020,"Rao, Master and Ramanathan Institute",167827,Eligible
+S0580,Shayak Swaminathan,21,M,BPharma,2022,"Sheth, Dutta and Srinivasan Institute",407087,Eligible
+S0581,Faiyaz Varty,21,M,BSc,2023,Gour-Khosla Institute,478546,Eligible
+S0582,Riya Ramanathan,24,F,ITI,2019,Chowdhury Inc Institute,587905,Eligible
+S0583,Saanvi Thakur,24,M,ITI,2022,"Dutt, Kaul and Konda Institute",633358,Eligible
+S0584,Alisha Apte,24,M,BCA,2023,"Chad, Shetty and Deo Institute",428526,Eligible
+S0585,Yakshit Dhaliwal,24,F,BA,2022,Desai-Bhavsar Institute,564421,Eligible
+S0586,Pihu Khatri,24,F,BPharma,2022,"Apte, Kale and Yogi Institute",316077,Eligible
+S0587,Vritika Kuruvilla,21,F,BSc,2020,"Bhakta, Jayaraman and Tara Institute",415282,Eligible
+S0588,Elakshi Thaker,22,F,12th,2021,Solanki PLC Institute,491357,Eligible
+S0589,Aarna Joshi,24,M,ITI,2019,Sarraf-Sagar Institute,363628,Eligible
+S0590,Vidur Madan,24,M,BBA,2018,Gade-Kannan Institute,793502,Eligible
+S0591,Veer Dewan,22,F,BBA,2023,"Manne, Biswas and Atwal Institute",751437,Eligible
+S0592,Vaibhav Sarin,24,M,Diploma,2022,"Chandra, Banik and Tella Institute",609360,Eligible
+S0593,Manjari Bhalla,24,M,BBA,2018,Batra-Rao Institute,439871,Eligible
+S0594,Tara Karpe,22,M,Diploma,2020,Bhat-Hans Institute,736037,Eligible
+S0595,Jayant Setty,23,M,BA,2020,"Lad, Kothari and Sodhi Institute",285115,Eligible
+S0596,Lakshit Virk,24,M,ITI,2019,"Jhaveri, Shroff and Mann Institute",462257,Eligible
+S0597,Yuvraj  Dara,23,F,BCom,2023,Ramachandran-Wali Institute,337372,Eligible
+S0598,Neysa Dhillon,24,F,BA,2018,Dhar LLC Institute,488998,Eligible
+S0599,Tanya Varty,21,M,BBA,2019,"Sachar, Dave and Mani Institute",181961,Eligible
+S0600,Shalv Gara,24,M,Diploma,2023,"Sathe, Bhalla and Ramesh Institute",496928,Eligible
+S0601,Hridaan Ramachandran,21,M,BA,2019,"Swamy, Dara and Setty Institute",175507,Eligible
+S0602,Dhruv Gola,23,M,BA,2019,"Garg, Sekhon and Bora Institute",154618,Eligible
+S0603,Anvi Mandal,22,F,BA,2023,Date-Ramachandran Institute,350189,Eligible
+S0604,Dishani Trivedi,23,M,BBA,2021,"Loyal, Bansal and Raju Institute",100370,Eligible
+S0605,Purab Ganguly,22,F,BCA,2022,"Jaggi, Mahal and Varughese Institute",662559,Eligible
+S0606,Dishani Sani,23,M,Diploma,2023,Mangal Group Institute,414020,Eligible
+S0607,Neelofar Sengupta,24,F,Diploma,2019,"Randhawa, Varma and Lata Institute",397830,Eligible
+S0608,Emir Saxena,22,F,12th,2022,Sant-Andra Institute,633686,Eligible
+S0609,Tejas Chaudhry,21,F,12th,2019,Solanki-Bava Institute,789023,Eligible
+S0610,Miraan Jaggi,22,F,12th,2020,Chandra-Sawhney Institute,297096,Eligible
+S0611,Vidur Vohra,23,M,BPharma,2020,Singh PLC Institute,133209,Eligible
+S0612,Nirvaan Goel,23,M,12th,2019,"Karan, Dara and Cheema Institute",727257,Eligible
+S0613,Mohanlal Ramanathan,21,M,ITI,2018,"Ahuja, Singhal and Sood Institute",659646,Eligible
+S0614,Tushar Madan,24,M,BA,2019,"Dalal, Basu and Rout Institute",175238,Eligible
+S0615,Umang Mammen,24,F,BPharma,2018,"Bhandari, Soman and Wali Institute",486685,Eligible
+S0616,Romil Kade,24,M,BA,2022,Badal-Johal Institute,700031,Eligible
+S0617,Ishita Grover,24,M,ITI,2019,"Rajan, Suresh and Chacko Institute",679810,Eligible
+S0618,Armaan Desai,24,M,BSc,2018,Sant LLC Institute,613763,Eligible
+S0619,Pranay Bobal,22,F,BSc,2023,"Rajagopal, Gole and Jha Institute",281868,Eligible
+S0620,Nirvaan Shanker,23,M,BBA,2020,Kaul and Sons Institute,556300,Eligible
+S0621,Tarini Swamy,22,F,ITI,2020,Bhavsar-Hans Institute,628104,Eligible
+S0622,Samar Dayal,22,F,BCA,2018,Bedi LLC Institute,599136,Eligible
+S0623,Nitara Magar,21,F,BCA,2019,"Soni, Savant and Bail Institute",222654,Eligible
+S0624,Bhavin Shan,22,M,ITI,2020,Jaggi-Kunda Institute,406466,Eligible
+S0625,Kabir Shere,23,F,BSc,2021,Shenoy LLC Institute,476933,Eligible
+S0626,Jayant Ganesh,23,M,BA,2018,Rajagopalan Inc Institute,307654,Eligible
+S0627,Kiara Jhaveri,21,M,BCA,2021,Sunder-Verma Institute,490833,Eligible
+S0628,Dhanuk Behl,21,F,BCom,2021,"Bawa, Hegde and Varma Institute",264477,Eligible
+S0629,Rhea Kannan,23,F,BPharma,2019,Chand Group Institute,611899,Eligible
+S0630,Shamik Desai,24,F,BSc,2019,Mangal-Keer Institute,608025,Eligible
+S0631,Taran Kara,22,F,BSc,2018,Basu-Rama Institute,345547,Eligible
+S0632,Divit Soni,21,F,BSc,2022,Krishnamurthy PLC Institute,468785,Eligible
+S0633,Jivin Gill,21,F,Diploma,2018,Salvi Ltd Institute,239630,Eligible
+S0634,Manikya Karan,22,F,BCA,2021,Uppal Inc Institute,670591,Eligible
+S0635,Advik Magar,21,F,ITI,2020,Sodhi Ltd Institute,214837,Eligible
+S0636,Anaya Korpal,23,F,BCA,2022,Madan-Dugar Institute,663513,Eligible
+S0637,Ranbir Devi,24,F,BCA,2023,Bir-Thakur Institute,724567,Eligible
+S0638,Aradhya Tella,21,F,BA,2021,Suri-Chauhan Institute,476523,Eligible
+S0639,Riya Grover,24,F,BSc,2018,Karnik-Rajagopal Institute,404605,Eligible
+S0640,Bhavin Dey,23,M,BBA,2021,"Kant, Kale and Dar Institute",631618,Eligible
+S0641,Advika Chandran,21,F,BPharma,2018,"Walia, Balay and Bhatti Institute",264654,Eligible
+S0642,Parinaaz Karnik,23,F,BCA,2021,Dara-Gara Institute,760629,Eligible
+S0643,Veer Hora,24,M,BBA,2020,"Kade, Dhaliwal and Baria Institute",192167,Eligible
+S0644,Samar Bahl,21,F,BBA,2018,"Butala, Tiwari and Sachdev Institute",659455,Eligible
+S0645,Darshit Chaudry,23,M,BCA,2023,"Sagar, Khalsa and Singhal Institute",519996,Eligible
+S0646,Raghav Wali,21,M,12th,2018,Shankar Group Institute,200019,Eligible
+S0647,Sahil Suresh,22,M,BA,2022,Ramakrishnan Inc Institute,198555,Eligible
+S0648,Alia Wable,21,M,BSc,2022,Thakur and Sons Institute,111353,Eligible
+S0649,Kavya Srinivas,23,F,12th,2021,Singhal-Mahal Institute,228790,Eligible
+S0650,Rhea Bath,21,F,ITI,2023,"Gole, Ratta and Loke Institute",690416,Eligible
+S0651,Misha Manne,21,F,BBA,2023,Sridhar-Sane Institute,777421,Eligible
+S0652,Advik Datta,23,M,BSc,2018,"Sengupta, Biswas and Sami Institute",328249,Eligible
+S0653,Lagan Bajaj,22,F,BA,2022,"Sundaram, Din and Chakrabarti Institute",486223,Eligible
+S0654,Mishti Gokhale,21,M,BBA,2019,Kothari-Sundaram Institute,468889,Eligible
+S0655,Nitara Garde,23,M,BPharma,2020,Srivastava and Sons Institute,366722,Eligible
+S0656,Drishya Majumdar,23,M,ITI,2022,"Chaudry, Kamdar and Chahal Institute",395411,Eligible
+S0657,Lakshit Lala,21,F,Diploma,2020,Sachdeva-Lad Institute,483292,Eligible
+S0658,Neelofar Sampath,21,M,BPharma,2020,Datta-Balan Institute,725375,Eligible
+S0659,Veer Dewan,24,F,BSc,2018,"Mahal, Batta and Khurana Institute",219781,Eligible
+S0660,Pari Bera,23,M,BBA,2022,"Sankar, Chopra and Dubey Institute",502992,Eligible
+S0661,Damini Vohra,24,M,BBA,2021,Kibe PLC Institute,720362,Eligible
+S0662,Sumer Soni,22,F,BBA,2018,Tandon-Bath Institute,428521,Eligible
+S0663,Riaan Dutt,24,M,12th,2022,"Sama, Dora and Barad Institute",328010,Eligible
+S0664,Anika Shanker,22,M,BA,2022,"Ben, Gupta and Sem Institute",603038,Eligible
+S0665,Shamik Rao,24,M,BBA,2021,"Venkataraman, Bhatt and Bava Institute",563628,Eligible
+S0666,Aradhya Chokshi,22,M,BPharma,2022,"Salvi, Mallick and Shah Institute",344645,Eligible
+S0667,Indrans Mannan,21,F,BSc,2020,"Chakraborty, Malhotra and Lad Institute",356301,Eligible
+S0668,Drishya Karan,23,F,BBA,2023,Vasa PLC Institute,514247,Eligible
+S0669,Dhanuk Sangha,23,F,ITI,2022,"Mannan, Sha and Toor Institute",224723,Eligible
+S0670,Myra Chokshi,21,M,BPharma,2022,"Gala, Bains and Rajan Institute",177617,Eligible
+S0671,Vihaan Kohli,21,F,BBA,2019,Tara-Savant Institute,438506,Eligible
+S0672,Jivin Kohli,24,M,BBA,2019,"Sood, Suresh and Kumer Institute",765254,Eligible
+S0673,Anvi Hayre,23,F,BPharma,2021,Baria Ltd Institute,770244,Eligible
+S0674,Kanav Dhingra,21,F,BA,2019,Mangal LLC Institute,252112,Eligible
+S0675,Rohan Uppal,21,M,BCom,2019,"Hayre, Luthra and Andra Institute",743638,Eligible
+S0676,Siya Subramaniam,22,M,BA,2021,Sangha LLC Institute,185655,Eligible
+S0677,Anahi Khanna,24,F,BSc,2018,Ray-Dutt Institute,330950,Eligible
+S0678,Lavanya Vohra,23,F,BCom,2020,Char Ltd Institute,555353,Eligible
+S0679,Miraya Ram,23,M,ITI,2023,Chakrabarti Group Institute,221606,Eligible
+S0680,Ryan Raja,24,F,BCom,2021,Sethi LLC Institute,274355,Eligible
+S0681,Riaan Venkatesh,22,F,BPharma,2021,"Khurana, Chandran and Vaidya Institute",385476,Eligible
+S0682,Jayesh Kunda,21,M,BA,2022,Sibal-Sule Institute,645471,Eligible
+S0683,Sahil Kohli,22,M,Diploma,2019,Madan Group Institute,478482,Eligible
+S0684,Pihu Dhillon,21,F,BBA,2021,Sem-Shroff Institute,622928,Eligible
+S0685,Heer Dhingra,22,F,BA,2020,"Mallick, Srinivas and Kala Institute",473247,Eligible
+S0686,Ehsaan Bassi,21,M,ITI,2019,Bhatia Inc Institute,320077,Eligible
+S0687,Sumer Chada,22,F,BSc,2018,"Raval, Acharya and Devan Institute",408655,Eligible
+S0688,Romil Dugar,24,M,BBA,2022,Srinivasan Inc Institute,559446,Eligible
+S0689,Badal Taneja,24,M,ITI,2020,Hayer-Mall Institute,205142,Eligible
+S0690,Lakshit Batra,22,F,BBA,2019,"Warrior, Gopal and Sangha Institute",712700,Eligible
+S0691,Ahana  Comar,22,F,Diploma,2022,Subramanian Inc Institute,276659,Eligible
+S0692,Darshit Comar,22,F,BA,2022,"Vala, Loke and Choudhury Institute",320974,Eligible
+S0693,Lagan Thakkar,21,F,BCA,2020,Bora-Dalal Institute,277009,Eligible
+S0694,Shaan Kumar,24,F,ITI,2020,"Shetty, Savant and Sangha Institute",727586,Eligible
+S0695,Riaan Wali,24,M,12th,2020,Grover-Shan Institute,748880,Eligible
+S0696,Faiyaz Chokshi,24,M,Diploma,2021,"Devi, Ahluwalia and Kibe Institute",700567,Eligible
+S0697,Indranil Bhasin,23,F,BPharma,2022,"Vasa, Wadhwa and Walia Institute",395958,Eligible
+S0698,Hunar Divan,23,M,BCA,2019,"Chada, Dada and Lanka Institute",310968,Eligible
+S0699,Ranbir Zacharia,22,F,BCA,2021,"Hayre, Char and Ramachandran Institute",785855,Eligible
+S0700,Jayan Bhatt,22,M,12th,2018,"Lala, Gandhi and Ramachandran Institute",404021,Eligible
+S0701,Samar Gade,22,M,12th,2023,Loyal Inc Institute,249192,Eligible
+S0702,Jayesh Comar,21,F,BPharma,2022,Soman Group Institute,133549,Eligible
+S0703,Veer Tailor,22,M,BSc,2022,Bhargava Ltd Institute,465374,Eligible
+S0704,Uthkarsh Kant,22,F,BSc,2018,Dhar Group Institute,417525,Eligible
+S0705,Ranbir Kamdar,23,F,BSc,2018,Bir-Choudhary Institute,420295,Eligible
+S0706,Dishani Sidhu,24,M,BCom,2018,Suresh-Gokhale Institute,536654,Eligible
+S0707,Onkar De,24,M,BCA,2019,"Iyengar, Shroff and Badal Institute",181926,Eligible
+S0708,Tiya Singh,23,M,12th,2022,"Ratti, Goswami and Sani Institute",761545,Eligible
+S0709,Tanya Mangal,24,M,Diploma,2022,"Balay, Batra and Yohannan Institute",544999,Eligible
+S0710,Yashvi Bhatia,21,F,BA,2022,"Gokhale, Loke and Tandon Institute",228309,Eligible
+S0711,Farhan Jha,24,F,BBA,2020,Kannan-Manne Institute,101640,Eligible
+S0712,Jayan Bhattacharyya,21,M,BA,2018,"Ganguly, Mannan and Chander Institute",603400,Eligible
+S0713,Tushar Sarkar,22,F,BPharma,2022,"Kapur, Mani and Saraf Institute",233145,Eligible
+S0714,Uthkarsh Sen,22,F,12th,2023,Manda Group Institute,456451,Eligible
+S0715,Kavya Subramaniam,24,M,BBA,2022,Anne PLC Institute,208166,Eligible
+S0716,Vardaniya Dutta,24,F,Diploma,2022,Bhavsar Inc Institute,626178,Eligible
+S0717,Lavanya Kalita,22,M,ITI,2023,Balakrishnan Group Institute,723090,Eligible
+S0718,Advika Choudhury,22,M,BSc,2020,Halder Ltd Institute,124765,Eligible
+S0719,Onkar Kata,23,M,BSc,2021,Thaman-Tella Institute,705523,Eligible
+S0720,Jhanvi Chandran,21,M,Diploma,2019,Taneja-Anand Institute,316140,Eligible
+S0721,Alia Goda,23,F,BA,2020,Suresh-Ram Institute,279207,Eligible
+S0722,Arhaan Yadav,22,M,BCom,2020,Sachar Group Institute,267785,Eligible
+S0723,Stuvan Chaudhuri,22,F,BSc,2023,Manda-Kale Institute,408390,Eligible
+S0724,Yuvraj  Luthra,24,F,BCA,2021,"Bhasin, Khare and Dave Institute",310943,Eligible
+S0725,Misha Dada,23,F,BCom,2021,Luthra-Shere Institute,466622,Eligible
+S0726,Yuvraj  Vora,23,M,BSc,2023,Gaba-Hari Institute,471924,Eligible
+S0727,Vedika Srivastava,22,F,BPharma,2021,Saran-Sant Institute,122929,Eligible
+S0728,Tejas Madan,21,M,BBA,2023,"Basu, Saraf and Jayaraman Institute",127211,Eligible
+S0729,Kavya Rattan,21,F,BBA,2020,Anne Inc Institute,404233,Eligible
+S0730,Kiara Sen,21,M,BA,2022,Dara Inc Institute,240824,Eligible
+S0731,Nayantara Date,22,M,BBA,2021,Khare-Arya Institute,554426,Eligible
+S0732,Ishaan Jha,24,F,Diploma,2022,"Issac, Bhardwaj and Sule Institute",447544,Eligible
+S0733,Ishaan Bhattacharyya,24,F,Diploma,2019,Manda-Sule Institute,180194,Eligible
+S0734,Aniruddh Lad,21,M,ITI,2023,"Sabharwal, Sathe and Korpal Institute",451377,Eligible
+S0735,Seher Barad,23,M,BCom,2023,Lanka LLC Institute,332601,Eligible
+S0736,Shlok Rajagopal,22,M,BSc,2023,Bahri Inc Institute,796054,Eligible
+S0737,Anahita Chahal,21,F,BCA,2020,Rajan-Arora Institute,758097,Eligible
+S0738,Kaira Johal,23,M,12th,2020,Kala LLC Institute,774224,Eligible
+S0739,Darshit Lata,21,M,ITI,2023,Gandhi Inc Institute,726221,Eligible
+S0740,Advika Mani,23,F,BCA,2023,Buch-Zachariah Institute,527188,Eligible
+S0741,Hridaan Deshmukh,24,M,BCA,2021,Dhar Group Institute,195215,Eligible
+S0742,Alisha Sabharwal,24,M,BPharma,2020,Rajagopalan Group Institute,785194,Eligible
+S0743,Ela Zacharia,21,F,ITI,2019,Wadhwa-Kashyap Institute,285912,Eligible
+S0744,Akarsh Khare,22,F,ITI,2018,Chokshi-Saxena Institute,140203,Eligible
+S0745,Zara Chakraborty,24,M,Diploma,2023,Master-Chhabra Institute,231677,Eligible
+S0746,Aarna Bava,21,F,BBA,2019,"Bera, Sood and Dayal Institute",147515,Eligible
+S0747,Nakul Lata,22,F,BA,2022,"Bhatnagar, Deshmukh and Shukla Institute",431517,Eligible
+S0748,Advik Chandran,24,F,BCA,2020,Halder-Varghese Institute,538880,Eligible
+S0749,Baiju Dhar,24,M,ITI,2018,Chacko LLC Institute,344647,Eligible
+S0750,Mehul Chakraborty,21,M,12th,2019,Gera and Sons Institute,585291,Eligible
+S0751,Sana Buch,24,F,BSc,2022,"Bains, Gupta and Bassi Institute",757502,Eligible
+S0752,Zain Virk,23,M,12th,2018,"Kalla, Hari and Babu Institute",788038,Eligible
+S0753,Manikya Chana,21,M,12th,2018,Malhotra Group Institute,562991,Eligible
+S0754,Parinaaz Sahni,23,M,BPharma,2023,Gour LLC Institute,294621,Eligible
+S0755,Prerak Dhar,21,F,ITI,2022,Gade-Bahl Institute,327288,Eligible
+S0756,Sana Subramanian,21,M,BBA,2018,Dora Ltd Institute,756258,Eligible
+S0757,Mohanlal Guha,22,F,BPharma,2018,Manne Inc Institute,500468,Eligible
+S0758,Saanvi Vyas,21,M,BPharma,2019,Thaker-Din Institute,570553,Eligible
+S0759,Biju Chada,24,M,Diploma,2021,Johal-Dara Institute,321213,Eligible
+S0760,Samar Barman,23,F,BCA,2020,Bassi-Mane Institute,703916,Eligible
+S0761,Ivana Mangat,22,M,BA,2023,Bhavsar-Deshmukh Institute,240842,Eligible
+S0762,Samarth Raj,21,M,BA,2020,Manda-Hayre Institute,290312,Eligible
+S0763,Arnav Sen,21,M,BCA,2023,Barman Group Institute,776779,Eligible
+S0764,Saksham Dugar,22,F,BCA,2018,Dyal PLC Institute,135612,Eligible
+S0765,Divit Ratta,21,F,BSc,2018,Seth Ltd Institute,632429,Eligible
+S0766,Shray Deshpande,21,F,BSc,2022,Solanki LLC Institute,531513,Eligible
+S0767,Ojas Saxena,24,F,BA,2019,"Char, Dhar and Atwal Institute",785733,Eligible
+S0768,Dhanush Bhatti,21,F,BPharma,2019,Dani PLC Institute,246500,Eligible
+S0769,Onkar Grewal,23,F,BCom,2019,"Bhalla, Hari and Sandal Institute",218935,Eligible
+S0770,Azad Sachdeva,21,M,ITI,2021,Grewal and Sons Institute,326708,Eligible
+S0771,Aayush Jhaveri,22,F,12th,2022,Ahuja Group Institute,728969,Eligible
+S0772,Indrajit Zachariah,24,M,BCom,2021,Borra-Handa Institute,568692,Eligible
+S0773,Bhavin Buch,23,M,Diploma,2023,Vaidya-Chad Institute,512632,Eligible
+S0774,Myra Bawa,23,F,ITI,2018,Bahri Group Institute,175309,Eligible
+S0775,Aarav Kunda,23,F,BBA,2021,"Reddy, Dey and Varty Institute",642668,Eligible
+S0776,Aaryahi Agrawal,24,M,BA,2021,"Chander, Khalsa and Kapoor Institute",429282,Eligible
+S0777,Suhana Golla,21,M,BA,2019,"Sridhar, Tandon and Anand Institute",438843,Eligible
+S0778,Farhan Sankar,24,M,12th,2018,Dugal PLC Institute,488387,Eligible
+S0779,Lavanya Desai,24,M,12th,2018,"Gara, Sane and Mani Institute",747328,Eligible
+S0780,Saira Bhatnagar,24,M,12th,2019,Ahuja LLC Institute,657075,Eligible
+S0781,Jivin Lanka,21,M,12th,2018,Doctor and Sons Institute,332393,Eligible
+S0782,Hansh Sanghvi,24,M,BBA,2021,"Jain, Kadakia and Aggarwal Institute",358456,Eligible
+S0783,Trisha Sahni,22,F,BCom,2018,"Mander, Chauhan and Rattan Institute",325410,Eligible
+S0784,Samaira Seshadri,21,F,BPharma,2020,Doctor Inc Institute,283575,Eligible
+S0785,Siya Garde,22,F,BA,2021,Goel LLC Institute,538368,Eligible
+S0786,Sumer Madan,23,M,12th,2020,"Shere, Acharya and Dalal Institute",635908,Eligible
+S0787,Ryan Vora,24,F,BSc,2018,Babu-Walla Institute,733931,Eligible
+S0788,Hunar Buch,22,M,BPharma,2019,"Anne, Gupta and Basak Institute",287057,Eligible
+S0789,Lagan Ganesan,23,M,BBA,2023,Thakur Group Institute,370148,Eligible
+S0790,Riaan Bhalla,23,M,BCA,2021,"Balakrishnan, Dhar and Savant Institute",769309,Eligible
+S0791,Alia Dua,23,F,BA,2022,Issac Group Institute,509467,Eligible
+S0792,Vedika Sama,24,M,BPharma,2021,"Karan, Karan and Warrior Institute",552006,Eligible
+S0793,Sumer Saha,24,F,ITI,2020,"Walia, Sehgal and Comar Institute",586222,Eligible
+S0794,Pranay Sastry,21,F,12th,2021,Choudhary-Dasgupta Institute,281805,Eligible
+S0795,Manjari Bala,21,M,BA,2022,Divan-Singhal Institute,148417,Eligible
+S0796,Faiyaz Sekhon,23,M,BCA,2019,"Krishnan, Randhawa and Kunda Institute",133992,Eligible
+S0797,Pihu Dayal,24,M,ITI,2023,"Doshi, Ganguly and Sawhney Institute",723255,Eligible
+S0798,Vardaniya Gola,24,M,BSc,2020,"Solanki, Roy and Karan Institute",120069,Eligible
+S0799,Aradhya Mand,24,M,BA,2018,Sekhon-Mani Institute,460058,Eligible
+S0800,Emir Bala,24,F,12th,2020,Swamy Group Institute,670423,Eligible
+S0801,Jayant Tata,21,M,BBA,2021,Yadav-Kulkarni Institute,435220,Eligible
+S0802,Nehmat Sem,21,M,BA,2018,Borde LLC Institute,575950,Eligible
+S0803,Madhav Borde,24,M,BSc,2021,Dash Inc Institute,767193,Eligible
+S0804,Aayush Mahal,21,M,BBA,2018,Basu Group Institute,634393,Eligible
+S0805,Aarna Kunda,24,M,BCom,2023,Bhat-Sem Institute,354283,Eligible
+S0806,Chirag Uppal,21,M,BA,2021,"Sampath, Saini and Butala Institute",355084,Eligible
+S0807,Bhamini Ahluwalia,24,F,BPharma,2019,Trivedi Ltd Institute,545552,Eligible
+S0808,Bhavin Walia,24,F,Diploma,2021,Dube Ltd Institute,682169,Eligible
+S0809,Farhan Madan,21,M,BCom,2021,Basu-Uppal Institute,706867,Eligible
+S0810,Akarsh Shankar,24,M,BCA,2021,Jaggi PLC Institute,631564,Eligible
+S0811,Rasha Dara,22,F,BCom,2022,Hegde-Sama Institute,323379,Eligible
+S0812,Seher Tak,22,M,BSc,2021,Guha Group Institute,148161,Eligible
+S0813,Amani Chadha,22,F,BCom,2021,"Chaudhry, Cherian and Sahni Institute",236287,Eligible
+S0814,Sana Savant,22,F,BCA,2018,"Divan, Wali and Dubey Institute",261781,Eligible
+S0815,Aaina Lata,21,F,ITI,2018,Dugal-Bal Institute,718907,Eligible
+S0816,Onkar Sagar,21,M,BA,2020,Mannan Ltd Institute,760445,Eligible
+S0817,Azad Yadav,21,F,BBA,2019,Chada-Sem Institute,168307,Eligible
+S0818,Anahita Taneja,24,F,BPharma,2022,"Mannan, Ramesh and Bora Institute",575304,Eligible
+S0819,Oorja Sundaram,22,M,Diploma,2018,Barad LLC Institute,399567,Eligible
+S0820,Yakshit Vig,23,M,BCA,2018,Mangal-Sura Institute,409155,Eligible
+S0821,Shamik Konda,24,F,BA,2023,Wali PLC Institute,557469,Eligible
+S0822,Abram Sheth,21,M,BCom,2020,Bhagat LLC Institute,110855,Eligible
+S0823,Inaaya  Srivastava,22,M,BBA,2018,Soni-Seshadri Institute,637188,Eligible
+S0824,Onkar Mallick,22,M,BCom,2018,"Bora, Sachdev and Korpal Institute",706427,Eligible
+S0825,Dhanush Srinivas,22,M,BCom,2019,Sekhon LLC Institute,461311,Eligible
+S0826,Raunak Ram,21,M,BSc,2021,Uppal-Kashyap Institute,320905,Eligible
+S0827,Nayantara Kara,23,F,Diploma,2018,Kadakia Inc Institute,337516,Eligible
+S0828,Emir Shukla,24,M,12th,2023,Verma-Chopra Institute,259131,Eligible
+S0829,Arhaan Bobal,24,M,BCom,2021,"Badal, Mand and Kumar Institute",536063,Eligible
+S0830,Uthkarsh Yogi,21,F,BCA,2023,Cheema-Bhatt Institute,441982,Eligible
+S0831,Sana Soni,22,F,Diploma,2022,"Majumdar, Gour and Yadav Institute",614285,Eligible
+S0832,Stuvan Manne,21,F,BA,2022,Mann-Joshi Institute,675343,Eligible
+S0833,Hridaan Doshi,24,F,Diploma,2020,"Butala, Subramaniam and Banik Institute",107128,Eligible
+S0834,Jhanvi Shetty,22,M,BCA,2023,Kothari-Dasgupta Institute,327251,Eligible
+S0835,Drishya Srivastava,24,M,BBA,2023,Banik PLC Institute,400642,Eligible
+S0836,Pari Venkatesh,22,F,BCom,2022,Saran Group Institute,543707,Eligible
+S0837,Onkar Datta,24,F,BBA,2023,Mahajan-Sandal Institute,507709,Eligible
+S0838,Indranil Dass,24,F,BA,2018,Jhaveri-Raja Institute,646968,Eligible
+S0839,Riaan Joshi,22,M,BPharma,2020,Shenoy-Talwar Institute,292777,Eligible
+S0840,Aaina Butala,23,F,ITI,2023,Ghosh-Basak Institute,267013,Eligible
+S0841,Arnav Kota,24,F,BCA,2023,Chaudhuri-Goswami Institute,687372,Eligible
+S0842,Aradhya Toor,21,F,BSc,2020,"Gade, Ratta and Saha Institute",565417,Eligible
+S0843,Arnav Singh,23,M,Diploma,2022,"Gokhale, Chad and Gara Institute",410132,Eligible
+S0844,Shaan Gole,22,M,BSc,2021,Goel-Raval Institute,713539,Eligible
+S0845,Eva Sur,23,F,Diploma,2022,Varma LLC Institute,539316,Eligible
+S0846,Kaira Singhal,21,M,BCom,2023,Gara-Dash Institute,485687,Eligible
+S0847,Vardaniya Taneja,24,F,BA,2019,"Rajan, Din and Dhar Institute",159403,Eligible
+S0848,Rhea Rajagopalan,23,F,Diploma,2022,Kaul-Kuruvilla Institute,440439,Eligible
+S0849,Anahi Batra,23,M,BSc,2021,"Manda, Mane and Mahal Institute",784970,Eligible
+S0850,Shayak Zachariah,22,M,BCA,2019,Agarwal-Bath Institute,218568,Eligible
+S0851,Ayesha Dayal,23,M,BPharma,2020,"Suresh, Sangha and Jayaraman Institute",146640,Eligible
+S0852,Madhup Singh,22,F,BPharma,2020,"Bava, Ratti and Dhillon Institute",543810,Eligible
+S0853,Vaibhav Mammen,23,M,BPharma,2023,Bedi Group Institute,209197,Eligible
+S0854,Misha Ramachandran,22,M,Diploma,2020,"Salvi, Rastogi and Desai Institute",189380,Eligible
+S0855,Neysa Keer,21,F,Diploma,2022,"Mani, Mallick and Sagar Institute",242327,Eligible
+S0856,Aarna Wali,24,F,ITI,2022,Dey-Iyengar Institute,314922,Eligible
+S0857,Indrans Kakar,21,M,BBA,2022,"Mammen, Sem and Kant Institute",704912,Eligible
+S0858,Vaibhav Mallick,22,F,Diploma,2021,Krishnamurthy-Suri Institute,366233,Eligible
+S0859,Zara Chanda,23,M,12th,2018,Kothari-Krishnan Institute,255452,Eligible
+S0860,Saksham Zacharia,23,M,BCA,2018,"Varkey, Krishna and Rout Institute",285035,Eligible
+S0861,Ivana Vora,21,F,BSc,2021,Uppal PLC Institute,739836,Eligible
+S0862,Bhamini Sastry,21,M,12th,2022,Edwin Group Institute,373677,Eligible
+S0863,Nitara Chhabra,21,M,BCom,2019,Sahota Inc Institute,188998,Eligible
+S0864,Alia Sachar,22,M,BCom,2021,"Gala, Desai and Grewal Institute",381851,Eligible
+S0865,Zain Sodhi,22,M,BSc,2018,Ghose-Rout Institute,725722,Eligible
+S0866,Kartik Bhavsar,21,F,Diploma,2023,Thaker LLC Institute,153755,Eligible
+S0867,Tarini Khurana,21,M,Diploma,2018,Bandi and Sons Institute,181386,Eligible
+S0868,Devansh Khosla,21,F,Diploma,2018,"Sani, Varughese and Seth Institute",534440,Eligible
+S0869,Drishya Varty,21,M,12th,2022,Tiwari-Kata Institute,360811,Eligible
+S0870,Mishti Srinivas,21,F,12th,2018,Shukla-Sharaf Institute,501141,Eligible
+S0871,Ivana Balasubramanian,21,M,BBA,2021,"Apte, Saxena and Ramakrishnan Institute",316178,Eligible
+S0872,Shayak Joshi,24,M,BSc,2023,"Brahmbhatt, Bumb and Gola Institute",646119,Eligible
+S0873,Shanaya Doctor,22,M,BCom,2019,Varkey-Bassi Institute,383848,Eligible
+S0874,Ehsaan Dutt,22,M,BA,2020,"Dass, Baral and Ghosh Institute",765541,Eligible
+S0875,Himmat Comar,23,F,BCom,2019,Madan Group Institute,343509,Eligible
+S0876,Mehul Krishnan,21,F,BSc,2018,Shankar-Deshmukh Institute,109187,Eligible
+S0877,Emir Dada,23,M,BPharma,2023,Toor-Date Institute,178055,Eligible
+S0878,Bhavin Sem,21,M,BSc,2022,"Sabharwal, Badal and Choudhry Institute",566071,Eligible
+S0879,Elakshi Sood,24,M,ITI,2018,Badami PLC Institute,259256,Eligible
+S0880,Azad Kala,22,F,Diploma,2021,"Rana, Madan and Goda Institute",697776,Eligible
+S0881,Yuvraj  Dara,22,F,BBA,2019,Bhandari-Brahmbhatt Institute,656444,Eligible
+S0882,Miraan Wali,24,M,12th,2023,Jha and Sons Institute,197463,Eligible
+S0883,Chirag Ganesan,23,F,12th,2018,Tripathi LLC Institute,108324,Eligible
+S0884,Ira Saran,22,M,BA,2023,"Thakur, Garde and Vora Institute",240572,Eligible
+S0885,Anika Mahal,21,M,BA,2021,Sridhar Inc Institute,724888,Eligible
+S0886,Advik Kashyap,22,F,ITI,2022,Gala-Sachdeva Institute,363967,Eligible
+S0887,Biju Shroff,21,M,BCA,2018,Krishnamurthy-Bassi Institute,331813,Eligible
+S0888,Charvi Master,23,F,12th,2019,Sathe-Apte Institute,283397,Eligible
+S0889,Prerak Ganesh,22,F,BCom,2021,"Dugal, Lal and Dass Institute",237143,Eligible
+S0890,Baiju Koshy,22,F,BPharma,2023,"Biswas, Golla and Dhar Institute",336778,Eligible
+S0891,Vritika Mahal,24,M,BSc,2019,Tripathi and Sons Institute,230416,Eligible
+S0892,Shray Gera,22,F,12th,2021,Chaudhari Ltd Institute,373074,Eligible
+S0893,Nayantara Datta,21,M,BA,2019,"Basak, Dhar and Chandra Institute",293419,Eligible
+S0894,Mahika Chakrabarti,22,F,BCA,2023,Ramachandran-Bora Institute,499595,Eligible
+S0895,Amani Srinivas,23,M,12th,2020,"Srivastava, Raman and Apte Institute",606493,Eligible
+S0896,Pranay Shroff,22,F,BA,2018,Balan Inc Institute,383883,Eligible
+S0897,Indrajit Joshi,21,F,BPharma,2019,Bhagat-Kibe Institute,747589,Eligible
+S0898,Jivika Ranganathan,21,M,Diploma,2019,Baral-Rajan Institute,577912,Eligible
+S0899,Badal Chandra,21,M,Diploma,2018,Thaker-Sabharwal Institute,219557,Eligible
+S0900,Neysa Dube,21,M,BCA,2021,Kapoor-Ratta Institute,390236,Eligible
+S0901,Anahi Kapadia,24,F,Diploma,2023,Chadha and Sons Institute,144535,Eligible
+S0902,Arnav Dass,21,M,Diploma,2018,Shan-Maharaj Institute,587253,Eligible
+S0903,Armaan Dani,22,F,BCA,2018,Rama Group Institute,182076,Eligible
+S0904,Darshit Sengupta,21,F,BA,2022,"Tak, Behl and Sheth Institute",255423,Eligible
+S0905,Eshani Gour,21,F,BCA,2019,Gulati Ltd Institute,736950,Eligible
+S0906,Taimur Shetty,22,F,BCA,2021,Lalla Inc Institute,710978,Eligible
+S0907,Saira Chauhan,24,M,BPharma,2022,Bajaj Ltd Institute,292359,Eligible
+S0908,Shray Raja,21,M,BSc,2021,Bera-Dayal Institute,316647,Eligible
+S0909,Tara Rana,22,M,BCom,2018,Kibe Inc Institute,287454,Eligible
+S0910,Hazel Rajagopal,23,F,BBA,2022,Bora-Bhargava Institute,460174,Eligible
+S0911,Dishani Rajagopal,24,M,12th,2022,"Ravel, Kara and Bhavsar Institute",561743,Eligible
+S0912,Charvi Arya,22,F,BCom,2020,Khurana PLC Institute,667665,Eligible
+S0913,Saira Lad,21,F,BPharma,2019,Dave PLC Institute,177459,Eligible
+S0914,Ojas Sachdev,22,F,BCA,2023,Mall-Bala Institute,264430,Eligible
+S0915,Advik Suresh,24,F,12th,2018,"Bahri, Sami and Dayal Institute",516359,Eligible
+S0916,Kabir Acharya,22,F,12th,2021,"Edwin, Seshadri and Basak Institute",602296,Eligible
+S0917,Romil Wagle,23,M,BBA,2023,Anne and Sons Institute,716876,Eligible
+S0918,Advik Desai,23,F,BA,2018,"Soman, Chad and Kota Institute",659162,Eligible
+S0919,Khushi Basak,24,F,ITI,2022,"Kar, Subramaniam and Brar Institute",655954,Eligible
+S0920,Shray Mangat,24,F,BCom,2020,Shukla Inc Institute,503862,Eligible
+S0921,Biju Atwal,23,F,BCom,2019,Bhakta-Vaidya Institute,365446,Eligible
+S0922,Divyansh Bali,23,F,BCA,2023,Devan-Iyengar Institute,445134,Eligible
+S0923,Bhavin Chandra,23,M,BCom,2019,Kaul and Sons Institute,171371,Eligible
+S0924,Bhamini Behl,21,F,BSc,2023,Lata-Bal Institute,430430,Eligible
+S0925,Chirag Sangha,21,M,BCom,2023,Cheema Ltd Institute,451964,Eligible
+S0926,Ela Koshy,21,M,12th,2021,Arya-Tara Institute,291330,Eligible
+S0927,Ranbir Bhat,21,F,Diploma,2018,Madan PLC Institute,360245,Eligible
+S0928,Kaira Bath,23,F,12th,2021,Rastogi PLC Institute,657917,Eligible
+S0929,Purab Agate,22,F,BPharma,2018,"Sibal, Behl and Bhagat Institute",726028,Eligible
+S0930,Yashvi Gopal,22,M,BBA,2020,Baria-Upadhyay Institute,127927,Eligible
+S0931,Parinaaz Mangat,22,F,BSc,2018,"Khalsa, Bava and Sachar Institute",369377,Eligible
+S0932,Jayant Choudhary,22,M,Diploma,2018,Sanghvi Inc Institute,113008,Eligible
+S0933,Renee Thaker,21,M,BCom,2021,Dar LLC Institute,573322,Eligible
+S0934,Rania Dash,24,M,BA,2021,Rama-Batta Institute,798790,Eligible
+S0935,Ryan Yogi,24,M,BSc,2021,"Chand, Rajagopalan and Sengupta Institute",602919,Eligible
+S0936,Lakshay Sastry,22,M,BA,2019,Kannan Ltd Institute,687885,Eligible
+S0937,Hiran Badal,24,M,BPharma,2019,Cherian Ltd Institute,757443,Eligible
+S0938,Lagan Kala,24,M,BCom,2018,Singh-Thakkar Institute,661487,Eligible
+S0939,Misha Ravel,24,F,BCA,2022,"Goel, Ganesan and Bedi Institute",222193,Eligible
+S0940,Chirag Brahmbhatt,22,F,BSc,2023,Mand Ltd Institute,354537,Eligible
+S0941,Sumer Karan,24,F,BBA,2022,Dey Inc Institute,180713,Eligible
+S0942,Miraan Chacko,22,F,Diploma,2019,"Hans, Savant and Sahni Institute",281870,Eligible
+S0943,Ryan Dube,23,M,Diploma,2023,Taneja-Baria Institute,291130,Eligible
+S0944,Vihaan Dugar,22,M,BBA,2021,Bhargava-Dey Institute,289862,Eligible
+S0945,Shaan Kale,22,F,BCom,2023,"Shanker, Keer and Khalsa Institute",438881,Eligible
+S0946,Dharmajan Kapur,22,M,12th,2018,Agrawal-Arora Institute,787140,Eligible
+S0947,Tanya Grewal,23,F,BSc,2019,Malhotra-Garg Institute,145820,Eligible
+S0948,Misha Tandon,23,F,Diploma,2022,Tailor LLC Institute,212950,Eligible
+S0949,Hrishita Bhalla,21,M,BCA,2021,Roy Inc Institute,624593,Eligible
+S0950,Kabir Ahuja,22,F,BSc,2019,Konda-Kalla Institute,389492,Eligible
+S0951,Taran Gandhi,24,F,BCom,2020,Wali Inc Institute,589439,Eligible
+S0952,Azad Barad,23,M,Diploma,2018,Tella Inc Institute,761948,Eligible
+S0953,Kashvi Sachar,24,M,BA,2022,Roy-Dhingra Institute,365243,Eligible
+S0954,Gatik Mane,22,M,Diploma,2022,Chaudhuri PLC Institute,389476,Eligible
+S0955,Tanya Ramanathan,21,M,Diploma,2019,Ahluwalia Inc Institute,492120,Eligible
+S0956,Uthkarsh Tandon,23,F,BBA,2019,Chowdhury-Sankar Institute,248768,Eligible
+S0957,Faiyaz Bora,24,M,BPharma,2018,"Seshadri, Ramesh and Sachar Institute",727955,Eligible
+S0958,Nakul Dhillon,24,F,ITI,2022,Gaba Ltd Institute,333422,Eligible
+S0959,Kashvi Chaudhary,22,F,Diploma,2020,"Raman, Dubey and Ganesh Institute",118340,Eligible
+S0960,Emir Bose,24,M,BPharma,2022,"Cherian, Chacko and Karpe Institute",257854,Eligible
+S0961,Yuvraj  Venkataraman,23,M,BPharma,2022,"Raju, Ratti and Sama Institute",251052,Eligible
+S0962,Yuvraj  Walia,21,F,ITI,2021,Varma-Borra Institute,205789,Eligible
+S0963,Nehmat Choudhary,22,M,12th,2021,"Date, Kala and Gokhale Institute",533670,Eligible
+S0964,Eshani Sankar,21,F,BCom,2022,"Sampath, Bahri and Saraf Institute",618294,Eligible
+S0965,Parinaaz Sandhu,22,F,BCom,2018,"Dua, Vala and Kakar Institute",687847,Eligible
+S0966,Charvi Dass,24,F,Diploma,2019,"Gulati, Goda and Garg Institute",159519,Eligible
+S0967,Kartik Cherian,23,F,BSc,2023,"Chaudhary, Deol and Chaudry Institute",450230,Eligible
+S0968,Samiha Sem,21,F,BCA,2020,"Atwal, Dhar and Chanda Institute",554004,Eligible
+S0969,Divyansh Dani,22,F,Diploma,2023,Jaggi LLC Institute,326562,Eligible
+S0970,Mehul Bhakta,21,M,12th,2023,Gokhale Group Institute,717239,Eligible
+S0971,Suhana Halder,23,M,BA,2021,Sankar-Bhatti Institute,399621,Eligible
+S0972,Reyansh Sood,22,M,12th,2019,Bath-Solanki Institute,564834,Eligible
+S0973,Raunak Varma,23,F,Diploma,2021,Seth-Rajagopalan Institute,769420,Eligible
+S0974,Kismat Guha,22,F,BA,2021,Shroff Group Institute,622922,Eligible
+S0975,Ira Bedi,24,F,BA,2022,"Chokshi, Grewal and Bansal Institute",230081,Eligible
+S0976,Amira Agate,23,F,BBA,2022,Tailor-Vora Institute,153950,Eligible
+S0977,Yasmin Brahmbhatt,24,M,BCA,2023,Bhardwaj Group Institute,234198,Eligible
+S0978,Divij Choudhary,21,M,ITI,2020,Baral-Badami Institute,741059,Eligible
+S0979,Aaryahi Wable,21,F,BA,2023,Bal-Soni Institute,734495,Eligible
+S0980,Badal Ratta,22,F,BA,2020,"Gole, Dubey and Chhabra Institute",117742,Eligible
+S0981,Kiaan Lal,23,F,BA,2023,Aurora Group Institute,229935,Eligible
+S0982,Aarna Deo,24,F,BPharma,2022,Seshadri-Borah Institute,719444,Eligible
+S0983,Hansh Kunda,23,F,Diploma,2019,Borra-Wable Institute,377097,Eligible
+S0984,Hansh Edwin,22,M,BPharma,2023,"Kar, Bhavsar and Ravi Institute",760451,Eligible
+S0985,Darshit Wali,23,F,Diploma,2021,Dar and Sons Institute,419890,Eligible
+S0986,Dharmajan Sibal,24,F,BCom,2018,Issac Inc Institute,409333,Eligible
+S0987,Advika Bhavsar,24,M,ITI,2019,Srinivas Inc Institute,309178,Eligible
+S0988,Ahana  Dhar,22,F,ITI,2021,Raju PLC Institute,599206,Eligible
+S0989,Akarsh Singh,23,M,12th,2018,Chhabra-De Institute,211341,Eligible
+S0990,Pihu Thakkar,24,F,BPharma,2018,"Som, Sidhu and Raja Institute",625265,Eligible
+S0991,Zoya Dey,22,F,BPharma,2019,Bhatt PLC Institute,768227,Eligible
+S0992,Ishita Bains,21,F,BA,2021,Garg Group Institute,552268,Eligible
+S0993,Arhaan Kaur,23,M,BBA,2020,Sami-Kumer Institute,285971,Eligible
+S0994,Ojas Chopra,21,F,BPharma,2020,Sarraf Group Institute,452009,Eligible
+S0995,Manikya Sathe,24,F,ITI,2019,Chakraborty and Sons Institute,479238,Eligible
+S0996,Uthkarsh Bail,24,F,Diploma,2020,Shan Group Institute,302521,Eligible
+S0997,Biju Ben,24,F,BSc,2019,"Saha, Gaba and Ganguly Institute",528557,Eligible
+S0998,Jivika Rattan,23,M,BA,2019,"Salvi, Lanka and Kar Institute",132351,Eligible
+S0999,Pari Banerjee,22,M,BCom,2023,Goswami-Mannan Institute,594606,Eligible
+S1000,Uthkarsh Agate,22,F,ITI,2020,Sekhon-Chaudhari Institute,525478,Eligible

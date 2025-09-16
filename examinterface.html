@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bharat Internship - Exam Interface (Monitored)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: linear-gradient(135deg,#f5f7fa 0%,#e4e8f0 100%); color:#333; min-height:100vh; }
+    .header { background: linear-gradient(90deg,#1a3a8f 0%,#2a56b6 100%); color:white; padding:15px 5%; box-shadow:0 2px 10px rgba(0,0,0,.2); display:flex; justify-content:space-between; align-items:center; gap:10px; }
+    .logo-text { font-size:24px; font-weight:700; }
+    .exam-info { text-align:right; }
+    .exam-role { font-size:18px; font-weight:600; }
+    .exam-category { font-size:14px; opacity:.9; }
+    .timer-container { background:white; color:#1a3a8f; padding:10px 20px; border-radius:8px; font-weight:700; box-shadow:0 2px 5px rgba(0,0,0,.1); display:flex; align-items:center; gap:8px; }
+    .main-container { display:flex; padding:20px; max-width:1400px; margin:20px auto; gap:20px; align-items:flex-start; }
+    .question-panel { flex:7; background:white; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,.1); padding:24px; min-width:300px; }
+    .question-number { color:#1a3a8f; font-size:18px; margin-bottom:16px; font-weight:600; }
+    .question-text { font-size:20px; line-height:1.5; margin-bottom:18px; min-height:56px; }
+    .options-container { margin-bottom:18px; }
+    .option { padding:12px; border:1px solid #ddd; border-radius:8px; margin-bottom:10px; cursor:pointer; transition:all .18s ease; }
+    .option:hover { background:#f8f9fa; border-color:#c0c6cf; }
+    .option.selected { background:#e8f0fe; border-color:#2a56b6; }
+    .navigation-buttons { display:flex; justify-content:space-between; gap:12px; margin-top:6px; }
+    .nav-btn { padding:10px 18px; border:none; border-radius:8px; font-weight:600; cursor:pointer; transition:all .2s ease; }
+    .prev-btn { background:#f8f9fa; color:#333; }
+    .next-btn { background:#1a3a8f; color:white; }
+    .submit-btn { background:linear-gradient(90deg,#28a745 0%,#20c997 100%); color:white; }
+    .sidebar { flex:3; display:flex; flex-direction:column; gap:16px; min-width:250px; }
+    .question-palette, .exam-controls, .instructions { background:white; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,.1); padding:16px; }
+    .palette-title { color:#1a3a8f; font-size:18px; margin-bottom:12px; font-weight:600; }
+    .question-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+    .question-index { width:36px; height:36px; display:flex; align-items:center; justify-content:center; border:1px solid #ddd; border-radius:6px; cursor:pointer; font-weight:600; }
+    .question-index.current { background:#1a3a8f; color:white; border-color:#1a3a8f; }
+    .question-index.answered { background:#28a745; color:white; border-color:#28a745; }
+    .question-index.marked { background:#fd7e14; color:white; border-color:#fd7e14; }
+    .legend { display:flex; justify-content:space-between; margin-top:10px; font-size:12px; }
+    .legend-item { display:flex; align-items:center; gap:6px; }
+    .legend-color { width:12px; height:12px; border-radius:2px; }
+    .legend-current { background:#1a3a8f; } .legend-answered { background:#28a745; } .legend-marked { background:#fd7e14; }
+    .control-btn { display:block; width:100%; padding:10px; margin-bottom:8px; border-radius:8px; border:none; font-weight:600; cursor:pointer; }
+    .mark-btn { background:#fff4e6; color:#fd7e14; border:1px solid #fd7e14; }
+    .clear-btn { background:#f8f9fa; color:#6c757d; border:1px solid #6c757d; }
+    .submit-exam-btn { background:linear-gradient(90deg,#dc3545 0%,#c82333 100%); color:white; }
+    .instructions h3 { color:#1a3a8f; margin-bottom:10px; }
+    .instructions ul { padding-left:18px; font-size:14px; }
+    .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.45); z-index:9999; justify-content:center; align-items:center; }
+    .modal-content { background:white; border-radius:12px; padding:22px; width:92%; max-width:560px; text-align:center; box-shadow:0 6px 30px rgba(0,0,0,.25); }
+    .modal-buttons { display:flex; justify-content:center; gap:12px; margin-top:14px; }
+    .modal-btn { padding:10px 18px; border-radius:8px; border:none; font-weight:600; cursor:pointer; }
+    .modal-cancel { background:#f8f9fa; color:#333; }
+    .modal-confirm { background:#dc3545; color:white; }
+    .eligibility-badge { display:inline-block; padding:6px 12px; border-radius:20px; font-weight:700; margin-top:8px; }
+    .eligible { background:#d4edda; color:#155724; } .not-eligible { background:#f8d7da; color:#721c24; }
+    /* Camera section */
+    .camera-section { margin-top:20px; text-align:center; background:#fff; padding:14px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+    video#video { width:320px; height:240px; border-radius:10px; border:2px solid #1a3a8f; background:#000; }
+    #warningMessage { color:#c82333; font-weight:700; margin-top:10px; }
+    #downloadImagesBtn { margin-top:14px; padding:10px 16px; background:#1a3a8f; color:#fff; border:none; border-radius:8px; cursor:pointer; display:none; }
+    @media (max-width:992px){ .main-container{flex-direction:column;} .question-grid{grid-template-columns:repeat(4,1fr);} }
+    @media (max-width:576px){ .header{flex-direction:column; text-align:center; gap:10px;} .question-grid{grid-template-columns:repeat(3,1fr);} .navigation-buttons{flex-direction:column;} .nav-btn{width:100%;} video#video{width:240px;height:180px;} }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><div class="logo-text">Bharat Internship Exam</div></div>
+    <div class="exam-info">
+      <div class="exam-role" id="examRoleDisplay">Software Development Intern</div>
+      <div class="exam-category" id="examCategoryDisplay">Tech & Development</div>
+    </div>
+    <div class="timer-container"><i class="fas fa-clock"></i><span id="timer">00:30</span></div>
+  </header>
+
+  <div class="main-container">
+    <div class="question-panel">
+      <div class="question-number">Question <span id="currentQuestionNumber">1</span> of 10</div>
+      <div class="question-text" id="questionText">Loading...</div>
+      <div class="options-container" id="optionsContainer"></div>
+
+      <div class="navigation-buttons">
+        <button class="nav-btn prev-btn" onclick="navigateQuestion(-1)"><i class="fas fa-arrow-left"></i> Previous</button>
+        <div style="flex:1"></div>
+        <button class="nav-btn next-btn" onclick="navigateQuestion(1)">Next <i class="fas fa-arrow-right"></i></button>
+        <button class="nav-btn submit-btn" onclick="showSubmitConfirmation()">Submit Exam</button>
+      </div>
+
+      <!-- Camera Monitoring Section (below question panel) -->
+      <div class="camera-section" aria-live="polite">
+        <h3 style="margin-bottom:10px;">Camera Monitoring</h3>
+        <video id="video" autoplay playsinline muted></video>
+        <p id="warningMessage" aria-atomic="true"></p>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="question-palette">
+        <div class="palette-title">Question Palette</div>
+        <div class="question-grid" id="questionGrid"></div>
+        <div class="legend">
+          <div class="legend-item"><div class="legend-color legend-current"></div><span>Current</span></div>
+          <div class="legend-item"><div class="legend-color legend-answered"></div><span>Answered</span></div>
+          <div class="legend-item"><div class="legend-color legend-marked"></div><span>Marked</span></div>
+        </div>
+      </div>
+
+      <div class="exam-controls">
+        <button class="control-btn mark-btn" onclick="markQuestion()"><i class="fas fa-bookmark"></i> Mark for Review</button>
+        <button class="control-btn clear-btn" onclick="clearResponse()"><i class="fas fa-eraser"></i> Clear Response</button>
+        <button class="control-btn submit-exam-btn" onclick="showSubmitConfirmation()"><i class="fas fa-paper-plane"></i> Submit Exam</button>
+      </div>
+
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <ul>
+          <li>Total questions: 10</li>
+          <li>Time per question: 30 seconds</li>
+          <li>Each question carries 1 mark</li>
+          <li>No negative marking</li>
+          <li>Use "Mark for Review" to revisit a question</li>
+          <li>Minimum 75% score required to proceed with registration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Confirmation Modal -->
+  <div class="modal" id="submitModal">
+    <div class="modal-content">
+      <h2>Submit Exam</h2>
+      <p>Are you sure you want to submit? You will not be able to change your answers after submission.</p>
+      <div class="modal-buttons">
+        <button class="modal-btn modal-cancel" onclick="closeModal('submitModal')">Cancel</button>
+        <button class="modal-btn modal-confirm" onclick="submitExam()">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results Modal -->
+  <div class="modal" id="resultsModal">
+    <div class="modal-content">
+      <h2>Exam Submitted Successfully!</h2>
+      <div id="resultsContent" style="text-align:left; margin-top:12px;">
+        <p>Your exam has been submitted. Results:</p>
+        <div style="margin:12px 0; padding:12px; background:#f8f9fa; border-radius:8px;">
+          <p><strong>Role:</strong> <span id="resultRole"></span></p>
+          <p><strong>Category:</strong> <span id="resultCategory"></span></p>
+          <p><strong>Total Questions:</strong> 10</p>
+          <p><strong>Answered:</strong> <span id="resultAnswered"></span></p>
+          <p><strong>Correct:</strong> <span id="resultCorrect"></span></p>
+          <p><strong>Score:</strong> <span id="resultScore"></span>/10 (<span id="resultPercentage"></span>%)</p>
+          <p><strong>Status:</strong> <span id="eligibilityStatus"></span></p>
+        </div>
+      </div>
+
+      <div style="margin-top:8px;">
+        <button id="downloadImagesBtn" onclick="downloadImages()">Download Captured Images (.zip)</button>
+        <button class="modal-btn modal-confirm" style="margin-left:10px;" onclick="closeResults()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script>
+    /* ---------- Exam core data & UI ---------- */
+    const examData = {
+      role: "Software Development Intern",
+      category: "Tech & Development",
+      timePerQuestion: 30, // seconds per question
+      questions: [],
+      currentQuestionIndex: 0,
+      answers: [],
+      markedQuestions: [],
+      timerInterval: null,
+      timeLeftForCurrent: 30
+    };
+
+    const questionBanks = {
+      "Software Development Intern": [
+        { question: "Which of the following is NOT an OOP principle?", options: ["Encapsulation","Abstraction","Compilation","Inheritance"], correctAnswer: 2 },
+        { question: "Which keyword in Java is used to create an object?", options: ["class","this","new","void"], correctAnswer: 2 },
+        { question: "In Python, what is the output of: print(type([]))?", options: ["<class 'tuple'>","<class 'list'>","<class 'dict'>","<class 'set'>"], correctAnswer: 1 },
+        { question: "Time complexity of searching in a balanced BST?", options: ["O(n)","O(log n)","O(1)","O(n log n)"], correctAnswer: 1 },
+        { question: "Which structure works on FIFO?", options: ["Stack","Queue","Linked List","Tree"], correctAnswer: 1 },
+        { question: "Best average case sorting algorithm?", options: ["Bubble Sort","Insertion Sort","Merge Sort","Selection Sort"], correctAnswer: 2 },
+        { question: "Which data structure is used in recursion?", options: ["Queue","Stack","Graph","Hashmap"], correctAnswer: 1 },
+        { question: "Which is a relational DB?", options: ["MongoDB","Cassandra","MySQL","Neo4j"], correctAnswer: 2 },
+        { question: "What does SQL JOIN do?", options: ["Combines rows","Deletes duplicates","Encrypts data","Creates index"], correctAnswer: 0 },
+        { question: "Which Git command shows commit history?", options: ["git log","git status","git commit -m","git init"], correctAnswer: 0 }
+      ],
+      "Data Science / ML Intern": [
+        { question: "Python library for data manipulation?", options: ["NumPy","Pandas","Matplotlib","TensorFlow"], correctAnswer: 1 },
+        { question: "Which is supervised?", options: ["K-Means","Logistic Regression","PCA","Apriori"], correctAnswer: 1 },
+        { question: "Overfitting means?", options: ["Model generalizes","Memorizes data","Underfits","Ignores data"], correctAnswer: 1 },
+        { question: "Best metric for classification?", options: ["MSE","Accuracy","RMSE","R²"], correctAnswer: 1 },
+        { question: "Which is unsupervised?", options: ["KNN","K-Means","Logistic Regression","Decision Tree"], correctAnswer: 1 },
+        { question: "Dimensionality reduction?", options: ["Gradient Boosting","PCA","Random Forest","Naive Bayes"], correctAnswer: 1 },
+        { question: "Which is a neural network?", options: ["KNN","CNN","K-Means","SVM"], correctAnswer: 1 },
+        { question: "Which is a regression model?", options: ["K-Means","Linear Regression","KNN","SVM"], correctAnswer: 1 },
+        { question: "What is cross-validation?", options: ["Model evaluation","Data cleaning","Feature engineering","Visualization"], correctAnswer: 0 },
+        { question: "Which is a classification model?", options: ["Linear Regression","Decision Tree","Lasso Regression","Ridge Regression"], correctAnswer: 1 }
+      ],
+      "UI/UX Design Intern": [
+        { question: "What does UI stand for?", options: ["User Interaction","User Interface","User Integration","User Input"], correctAnswer: 1 },
+        { question: "Primary goal of UX?", options: ["Visual appeal","User satisfaction","Fast loading","Responsive design"], correctAnswer: 1 },
+        { question: "Which is a prototyping tool?", options: ["Figma","Photoshop","Illustrator","InDesign"], correctAnswer: 0 },
+        { question: "What is wireframing?", options: ["Visual design","Layout blueprint","Color scheme","Typography"], correctAnswer: 1 },
+        { question: "Which is a design principle?", options: ["Hierarchy","Programming","Debugging","Testing"], correctAnswer: 0 },
+        { question: "What is a persona?", options: ["Color palette","User representation","Navigation menu","Icon set"], correctAnswer: 1 },
+        { question: "What is usability testing?", options: ["Visual design","User feedback","Code testing","Performance check"], correctAnswer: 1 },
+        { question: "Which is a color model?", options: ["RGB","JPG","PNG","SVG"], correctAnswer: 0 },
+        { question: "What is responsive design?", options: ["Adapts to devices","Fast loading","Minimalist","Colorful"], correctAnswer: 0 },
+        { question: "What is accessibility?", options: ["Design for all","Visual appeal","Animation","Typography"], correctAnswer: 0 }
+      ]
+    };
+
+    // warnings & camera capture store
+    let warningCount = 0;
+    const maxWarnings = 5;
+    let capturedImages = []; // base64 strings
+    let captureIntervalId = null;
+    let motionCheckIntervalId = null;
+    let lastFrameData = null;
+    const motionThreshold = 450000; // tuned threshold for pixel-diff
+
+    /* ---------- Initialize exam ---------- */
+    function initializeExam() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const role = urlParams.get('role') || "Software Development Intern";
+      const category = urlParams.get('category') || "Tech & Development";
+
+      examData.role = role;
+      examData.category = category;
+      examData.questions = questionBanks[role] || questionBanks["Software Development Intern"];
+
+      document.getElementById('examRoleDisplay').textContent = role;
+      document.getElementById('examCategoryDisplay').textContent = category;
+
+      examData.answers = new Array(examData.questions.length).fill(null);
+      examData.markedQuestions = new Array(examData.questions.length).fill(false);
+
+      createQuestionGrid();
+      displayQuestion(0);
+      startPerQuestionTimer();
+    }
+
+    function createQuestionGrid() {
+      const grid = document.getElementById('questionGrid');
+      grid.innerHTML = '';
+      examData.questions.forEach((_,index) => {
+        const idx = document.createElement('div');
+        idx.className = 'question-index';
+        idx.textContent = index+1;
+        idx.onclick = () => displayQuestion(index);
+        grid.appendChild(idx);
+      });
+    }
+
+    function displayQuestion(index) {
+      if(index < 0 || index >= examData.questions.length) return;
+      examData.currentQuestionIndex = index;
+      const q = examData.questions[index];
+      document.getElementById('currentQuestionNumber').textContent = index+1;
+      document.getElementById('questionText').textContent = q.question;
+
+      const container = document.getElementById('optionsContainer');
+      container.innerHTML = '';
+      q.options.forEach((opt,optIndex) => {
+        const div = document.createElement('div');
+        div.className = 'option';
+        if(examData.answers[index] === optIndex) div.classList.add('selected');
+        div.textContent = opt;
+        div.onclick = () => { selectOption(optIndex); };
+        container.appendChild(div);
+      });
+
+      updateQuestionGrid();
+    }
+
+    function selectOption(optionIndex) {
+      examData.answers[examData.currentQuestionIndex] = optionIndex;
+      displayQuestion(examData.currentQuestionIndex);
+    }
+
+    function navigateQuestion(direction) {
+      const newIndex = examData.currentQuestionIndex + direction;
+      if(newIndex >=0 && newIndex < examData.questions.length) {
+        displayQuestion(newIndex);
+      }
+    }
+
+    function markQuestion() {
+      examData.markedQuestions[examData.currentQuestionIndex] = !examData.markedQuestions[examData.currentQuestionIndex];
+      updateQuestionGrid();
+    }
+
+    function clearResponse() {
+      examData.answers[examData.currentQuestionIndex] = null;
+      displayQuestion(examData.currentQuestionIndex);
+    }
+
+    function updateQuestionGrid() {
+      const elems = document.querySelectorAll('.question-index');
+      elems.forEach((el, idx) => {
+        el.classList.remove('current','answered','marked');
+        if(idx === examData.currentQuestionIndex) el.classList.add('current');
+        if(examData.answers[idx] !== null) el.classList.add('answered');
+        if(examData.markedQuestions[idx]) el.classList.add('marked');
+      });
+    }
+
+    /* ---------- Timer: per-question ---------- */
+    function startPerQuestionTimer() {
+      stopPerQuestionTimer();
+      examData.timeLeftForCurrent = examData.timePerQuestion;
+      document.getElementById('timer').textContent = formatTime(examData.timeLeftForCurrent);
+      examData.timerInterval = setInterval(() => {
+        examData.timeLeftForCurrent--;
+        document.getElementById('timer').textContent = formatTime(examData.timeLeftForCurrent);
+        if(examData.timeLeftForCurrent <= 10) {
+          document.getElementById('timer').classList.add('time-warning');
+        } else {
+          document.getElementById('timer').classList.remove('time-warning');
+        }
+        if(examData.timeLeftForCurrent <= 0) {
+          // auto move to next question or auto-submit if last
+          if(examData.currentQuestionIndex < examData.questions.length - 1) {
+            navigateQuestion(1);
+            examData.timeLeftForCurrent = examData.timePerQuestion;
+          } else {
+            autoSubmit();
+          }
+        }
+      }, 1000);
+    }
+
+    function stopPerQuestionTimer() {
+      if(examData.timerInterval) clearInterval(examData.timerInterval);
+    }
+
+    function formatTime(seconds) {
+      const m = Math.floor(seconds/60).toString().padStart(2,'0');
+      const s = (seconds%60).toString().padStart(2,'0');
+      return `${m}:${s}`;
+    }
+
+    /* ---------- Submit / Results ---------- */
+    function showSubmitConfirmation() {
+      document.getElementById('submitModal').style.display = 'flex';
+    }
+    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+
+    function submitExam() {
+      closeModal('submitModal');
+      // stop timers & camera intervals
+      stopPerQuestionTimer();
+      stopCameraCapture();
+      computeAndShowResults();
+    }
+
+    function computeAndShowResults() {
+      const answeredCount = examData.answers.filter(a=>a!==null).length;
+      const correctCount = examData.answers.reduce((cnt, ans, idx) => cnt + (ans === examData.questions[idx].correctAnswer ? 1 : 0), 0);
+      const scorePercentage = (correctCount / examData.questions.length) * 100;
+      const isEligible = scorePercentage >= 75;
+
+      document.getElementById('resultRole').textContent = examData.role;
+      document.getElementById('resultCategory').textContent = examData.category;
+      document.getElementById('resultAnswered').textContent = answeredCount;
+      document.getElementById('resultCorrect').textContent = correctCount;
+      document.getElementById('resultScore').textContent = correctCount;
+      document.getElementById('resultPercentage').textContent = scorePercentage.toFixed(1);
+
+      const el = document.getElementById('eligibilityStatus');
+      if(isEligible) {
+        el.textContent = "ELIGIBLE";
+        el.className = "eligibility-badge eligible";
+      } else {
+        el.textContent = "NOT ELIGIBLE";
+        el.className = "eligibility-badge not-eligible";
+      }
+
+      // show results modal and enable download button if images exist
+      document.getElementById('resultsModal').style.display = 'flex';
+      if(capturedImages.length > 0) {
+        document.getElementById('downloadImagesBtn').style.display = 'inline-block';
+      }
+    }
+
+    function closeResults() {
+      document.getElementById('resultsModal').style.display = 'none';
+      // Redirect based on eligibility
+      const percent = parseFloat(document.getElementById('resultPercentage').textContent);
+      if(percent >= 65) {
+        window.location.href = "./sih";
+      } else {
+        window.location.href = "Home.html?message=not_eligible";
+      }
+    }
+
+    function autoSubmit() {
+      // if no answers at all, leave as-is; still submit
+      stopPerQuestionTimer();
+      stopCameraCapture();
+      computeAndShowResults();
+    }
+
+    /* ---------- Camera monitoring: capture & motion detection ---------- */
+    async function startCameraMonitoring() {
+      try {
+        const constraints = { video: { width: 640, height: 480 }, audio: false };
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        const video = document.getElementById('video');
+        video.srcObject = stream;
+        video.play();
+
+        // take first snapshot after short delay to allow camera warmup
+        setTimeout(() => capturePhoto(), 800);
+
+        // capture images every 10 seconds
+        captureIntervalId = setInterval(capturePhoto, 10000);
+
+        // start motion detection using smaller canvas to reduce CPU
+        motionCheckIntervalId = setInterval(checkMotion, 3000);
+
+        // detect visibility/tab switches -> warnings
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        window.addEventListener('blur', handleWindowBlur);
+
+      } catch (err) {
+        alert("Camera access is required. Exam will be submitted.");
+        // force submit if camera denied
+        autoSubmit();
+      }
+    }
+
+    function stopCameraCapture() {
+      // stop capture intervals
+      if(captureIntervalId) { clearInterval(captureIntervalId); captureIntervalId = null; }
+      if(motionCheckIntervalId) { clearInterval(motionCheckIntervalId); motionCheckIntervalId = null; }
+      // stop video tracks
+      const video = document.getElementById('video');
+      if(video && video.srcObject) {
+        const tracks = video.srcObject.getTracks();
+        tracks.forEach(t => t.stop());
+        video.srcObject = null;
+      }
+      // remove event listeners for visibility
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('blur', handleWindowBlur);
+    }
+
+    function capturePhoto() {
+      const video = document.getElementById('video');
+      if(!video || video.readyState < 2) return;
+      const canvas = document.createElement('canvas');
+      canvas.width = 640; canvas.height = 480;
+      const ctx = canvas.getContext('2d');
+      try {
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const dataURL = canvas.toDataURL('image/png');
+        capturedImages.push({ ts: Date.now(), data: dataURL });
+      } catch(e) {
+        // sometimes drawing fails if video not ready; ignore
+        console.warn('capturePhoto failed', e);
+      }
+    }
+
+    function checkMotion() {
+      const video = document.getElementById('video');
+      if(!video || video.readyState < 2) return;
+      const canvas = document.createElement('canvas');
+      canvas.width = 160; canvas.height = 120;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const frame = ctx.getImageData(0,0,canvas.width,canvas.height);
+
+      if(lastFrameData) {
+        // compute simple sum of absolute differences across red channel (fast)
+        let diff = 0;
+        for(let i=0;i<frame.data.length;i+=4) {
+          diff += Math.abs(frame.data[i] - lastFrameData[i]);
+        }
+        if(diff > motionThreshold) {
+          issueWarning("Significant head/movement detected!");
+        }
+      }
+      lastFrameData = frame.data.slice(0); // copy
+    }
+
+    /* ---------- Visibility / focus warnings ---------- */
+    function handleVisibilityChange() {
+      if(document.hidden) {
+        issueWarning("You switched tabs or minimized the window!");
+      }
+    }
+    function handleWindowBlur() {
+      // blur often signals user moved away
+      issueWarning("Window lost focus (possible tab switch)!");
+    }
+
+    function issueWarning(message) {
+      warningCount++;
+      const msgEl = document.getElementById('warningMessage');
+      msgEl.textContent = `⚠️ ${message} — Warning ${warningCount}/${maxWarnings}`;
+      // small alert popup as well
+      try { window.navigator.vibrate && window.navigator.vibrate(200); } catch(e){}
+      // show native alert as secondary
+      setTimeout(()=>{ alert(`Warning ${warningCount}/${maxWarnings}: ${message}`); }, 50);
+
+      if(warningCount >= maxWarnings) {
+        // after reaching max warnings, auto-submit exam
+        setTimeout(()=> {
+          alert("Too many warnings — exam will be auto-submitted.");
+          autoSubmit();
+        }, 200);
+      }
+    }
+
+    /* ---------- Download captured images as ZIP ---------- */
+    async function downloadImages() {
+      if(capturedImages.length === 0) {
+        alert("No captured images to download.");
+        return;
+      }
+      const zip = new JSZip();
+      // add images with timestamped filenames
+      capturedImages.forEach((item, idx) => {
+        const base64 = item.data.split(',')[1];
+        zip.file(`photo_${idx+1}_${new Date(item.ts).toISOString().replace(/[:.]/g,'-')}.png`, base64, {base64:true});
+      });
+      const content = await zip.generateAsync({type:"blob"});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(content);
+      a.download = 'captured_images.zip';
+      a.click();
+    }
+
+    /* ---------- Safety: prevent navigation away during exam (gentle) ---------- */
+    window.addEventListener('beforeunload', function(e) {
+      // if exam active (not yet submitted) warn user
+      if(document.getElementById('resultsModal').style.display !== 'flex') {
+        const message = "Your exam is in progress. Leaving will submit the exam.";
+        e.returnValue = message;
+        return message;
+      }
+    });
+
+    /* ---------- Wiring up initialization ---------- */
+    window.onload = function() {
+      initializeExam();
+      startCameraMonitoring();
+    };
+
+    // expose some functions to global for modal buttons
+    window.showSubmitConfirmation = showSubmitConfirmation;
+    window.closeModal = closeModal;
+    window.submitExam = submitExam;
+    window.closeResults = closeResults;
+    window.navigateQuestion = navigateQuestion;
+    window.markQuestion = markQuestion;
+    window.clearResponse = clearResponse;
+    window.downloadImages = downloadImages;
+
+  </script>
+</body>
+</html>

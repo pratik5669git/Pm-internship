@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Internship - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2a56b6 100%);
+            color: white;
+            padding: 15px 5%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .ministry {
+            font-size: 14px;
+            opacity: 0.9;
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            padding-left: 10px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin: 0 10px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover, .nav-menu a.active {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(186, 120, 22, 0.6), rgba(26, 58, 143, 0.8)), url("1.png") no-repeat center center/cover;
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff9e1b;
+            color: #1a3a8f;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 158, 27, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 158, 27, 0.6);
+        }
+        
+        .section {
+            padding: 30px 5%;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .process {
+            background: white;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 300px;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-icon {
+            background: #1a3a8f;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            font-size: 1.4rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .step p {
+            color: #666;
+        }
+        
+        .stats {
+            background: white;
+            text-align: center;
+        }
+        
+        .charts-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .chart-wrapper {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .small-chart {
+            width: 300px;   
+            height: 300px;  
+            margin: 0 auto;
+        }
+        
+        .bar-chart-container {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+        
+        .footer {
+            background: #0f2a69;
+            color: white;
+            padding: 60px 5% 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-about {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .footer-about h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ff9e1b;
+        }
+        
+        .footer-about p {
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 500px;
+        }
+        
+        .quick-links {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .quick-links h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ff9e1b;
+        }
+        
+        .quick-links ul {
+            list-style: none;
+        }
+        
+        .quick-links li {
+            margin-bottom: 12px;
+        }
+        
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        
+        .quick-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .powered-by {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .india-symbol {
+            font-size: 32px;
+            color: #ff9e1b;
+        }
+        
+        .copyright {
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .process-steps, .charts-container {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo">
+                <div class="logo-text">Bharat Internship</div>
+                <div class="ministry">Ministry of Corporate Affairs</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="./Home.html" class="active">Home</a></li>
+                <li><a href="./eligible.html">Eligibility</a></li>
+                <li><a href="./Loginpage.html">Login/Signup</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Connecting India's Talent with Tomorrow's Opportunities</h1>
+        <p>Our AI-powered engine intelligently matches aspiring interns with premier opportunities, fostering skill development and nation-building.</p>
+        <a href="./Loginpage.html" class="cta-button">Get Started</a>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>A Simple Path to Your Future</h2>
+            <p>Our streamlined process makes it easy for students to find their ideal internship and for industries to discover top talent.</p>
+        </div>
+    </section>
+
+    <section class="section process">
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h3>Check Eligibility</h3>
+                <p>Verify if you meet the criteria for the PM Internship Scheme before proceeding.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3>Create Account</h3>
+                <p>Sign up for a student account to access the exam portal and internship opportunities.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Take Exam</h3>
+                <p>Complete the assessment to demonstrate your skills and knowledge in your chosen field.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Get Matched</h3>
+                <p>Our AI system will match you with the best internship opportunities based on your exam results.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section stats">
+        <div class="section-title">
+            <h2>Internship Statistics</h2>
+            <p>See how our platform is performing and where interns are getting placed</p>
+        </div>
+        
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <div class="chart-title">Registration vs Placement Rate</div>
+                <canvas id="registrationChart" class="small-chart"></canvas>
+            </div>
+            
+            <div class="chart-wrapper">
+                <div class="chart-title">Internships by Department</div>
+                <canvas id="departmentChart" class="small-chart"></canvas>
+            </div>
+        </div>
+        
+        <div class="section-title" style="margin-top: 60px;">
+            <h2>Company-wise Internship Postings</h2>
+            <p>Top companies offering internships through our platform</p>
+        </div>
+        
+        <div class="chart-wrapper" style="max-width: 800px; margin: 0 auto;">
+            <div class="chart-title">Internships Posted by Companies</div>
+            <div class="bar-chart-container">
+                <canvas id="companyChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Bharat Internship</h3>
+                <p>A Smart India Hackathon 2025 Project for the Ministry of Corporate Affairs. Our platform connects students with meaningful internship opportunities across India.</p>
+            </div>
+            
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./Home.html">Home</a></li>
+                    <li><a href="./eligible.html">Eligibility</a></li>
+                    <li><a href="./Loginpage.html">Login/Signup</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="powered-by">
+                <span>Powered By</span>
+                <div class="india-symbol">
+                    <i class="fas fa-lion"></i>
+                </div>
+                <span>Smart India Hackathon</span>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Bharat Internship. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Registration vs Placement Pie Chart
+            const registrationCtx = document.getElementById('registrationChart').getContext('2d');
+            const registrationChart = new Chart(registrationCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Registered Students', 'Placed Interns'],
+                    datasets: [{
+                        data: [250000, 175000],
+                        backgroundColor: [
+                            '#1a3a8f',
+                            '#ff9e1b'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += context.raw.toLocaleString();
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Internships by Department Pie Chart
+            const departmentCtx = document.getElementById('departmentChart').getContext('2d');
+            const departmentChart = new Chart(departmentCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['IT & Software', 'Marketing', 'Finance', 'Design', 'Education'],
+                    datasets: [{
+                        data: [65000, 35000, 30000, 25000, 20000],
+                        backgroundColor: [
+                            '#1a3a8f',
+                            '#2a56b6',
+                            '#3a72dd',
+                            '#4a8eff',
+                            '#5aaaff'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += context.raw.toLocaleString();
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Company-wise Internship Bar Chart
+            const companyCtx = document.getElementById('companyChart').getContext('2d');
+            const companyChart = new Chart(companyCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Tata Group', 'Infosys', 'Reliance', 'Wipro', 'HDFC Bank', 'Tech Mahindra', 'Adani Group'],
+                    datasets: [{
+                        label: 'Internships Posted',
+                        data: [12000, 10500, 9800, 8500, 7200, 6800, 5500],
+                        backgroundColor: [
+                            '#1a3a8f',
+                            '#2a56b6',
+                            '#3a72dd',
+                            '#4a8eff',
+                            '#ff9e1b',
+                            '#ffae3f',
+                            '#ffbe63'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value.toLocaleString();
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

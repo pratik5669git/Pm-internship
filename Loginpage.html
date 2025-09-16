@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharat Internship - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); color: #333; min-height: 100vh; display: flex; flex-direction: column; }
+    .header { background: linear-gradient(90deg, #1a3a8f 0%, #2a56b6 100%); color: white; padding: 15px 5%; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+    .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .logo { display: flex; align-items: center; }
+    .logo-text { font-size: 24px; font-weight: 700; margin-right: 10px; }
+    .ministry { font-size: 14px; opacity: 0.9; border-left: 1px solid rgba(255, 255, 255, 0.3); padding-left: 10px; }
+    .nav-menu { display: flex; list-style: none; background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 5px; }
+    .nav-menu li { margin: 0 5px; }
+    .nav-menu a { color: white; text-decoration: none; padding: 8px 15px; border-radius: 6px; font-weight: 500; transition: all 0.3s ease; }
+    .nav-menu a:hover, .nav-menu a.active { background: rgba(255, 255, 255, 0.2); }
+    .container { display: flex; justify-content: center; align-items: center; flex-grow: 1; padding: 40px 20px; }
+    .login-card { background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); width: 100%; max-width: 450px; padding: 40px; text-align: center; }
+    .login-toggle { display: flex; background: #f0f4ff; border-radius: 8px; padding: 5px; margin-bottom: 30px; }
+    .toggle-btn { flex: 1; padding: 12px; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; color: #555; }
+    .toggle-btn.active { background: #2a56b6; color: white; box-shadow: 0 2px 8px rgba(42, 86, 182, 0.3); }
+    .welcome-text { margin-bottom: 30px; }
+    .welcome-text h2 { color: #1a3a8f; font-size: 28px; margin-bottom: 10px; }
+    .welcome-text p { color: #666; font-size: 16px; }
+    .form-group { margin-bottom: 20px; text-align: left; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #444; }
+    .form-group input { width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; transition: all 0.3s ease; }
+    .form-group input:focus { outline: none; border-color: #2a56b6; box-shadow: 0 0 0 3px rgba(42, 86, 182, 0.2); }
+    .login-btn { background: linear-gradient(90deg, #1a3a8f 0%, #2a56b6 100%); color: white; border: none; border-radius: 8px; padding: 15px; font-size: 18px; font-weight: 600; width: 100%; cursor: pointer; transition: all 0.3s ease; margin-top: 10px; }
+    .login-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(42, 86, 182, 0.4); }
+    .signup-link { margin-top: 25px; color: #666; }
+    .signup-link a { color: #2a56b6; text-decoration: none; font-weight: 600; cursor: pointer; }
+    .footer { background: #1a3a8f; color: white; padding: 40px 5% 20px; }
+    .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 30px; }
+    .footer-about { flex-basis: 50%; padding-right: 20px; }
+    .footer-about h3 { font-size: 20px; margin-bottom: 15px; }
+    .footer-about p { line-height: 1.6; opacity: 0.9; max-width: 500px; }
+    .quick-links { flex-basis: 25%; }
+    .quick-links h3 { font-size: 20px; margin-bottom: 15px; }
+    .quick-links ul { list-style: none; }
+    .quick-links li { margin-bottom: 10px; }
+    .quick-links a { color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease; }
+    .quick-links a:hover { opacity: 1; text-decoration: underline; }
+    .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="top-bar">
+      <div class="logo">
+        <div class="logo-text">Bharat Internship</div>
+        <div class="ministry">Ministry of Corporate Affairs</div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="./Home.html">Home</a></li>
+        <li><a href="./eligible.html">Eligiblity</a></li>
+        <li><a href="./Loginpage.html" class="active">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="login-card">
+      <div class="login-toggle">
+        <div class="toggle-btn active" id="student-toggle">Student Login</div>
+        <div class="toggle-btn" id="company-toggle">Company Login</div>
+      </div>
+      
+      <div class="welcome-text">
+        <h2 id="login-title">Welcome Back Student</h2>
+        <p id="login-subtitle">Login to continue to Bharat Internship</p>
+      </div>
+      
+      <!-- Login Form -->
+      <form id="login-form">
+        <div class="form-group" id="company-id-field" style="display: none;">
+          <label for="company-id">Company ID</label>
+          <input type="text" id="company-id" placeholder="Enter your company ID">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <div class="signup-link">
+          Don't have an account? <a id="show-signup">Sign Up</a>
+        </div>
+      </form>
+
+      <!-- Signup Form (Hidden) -->
+      <form id="signup-form" style="display:none; margin-top:30px;">
+        <h3>Create Account</h3>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group" id="signup-company-id-field" style="display:none;">
+          <label for="signup-company-id">Company ID</label>
+          <input type="text" id="signup-company-id" placeholder="Enter company ID (if company)">
+        </div>
+        <button type="submit" class="login-btn">Sign Up</button>
+        <div class="signup-link">
+          Already have an account? <a id="show-login">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Bharat Internship</h3>
+        <p>A Smart India Hackathon 2025 Project for the Ministry of Corporate Affairs. Our platform connects students with meaningful internship opportunities across India.</p>
+      </div>
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./Home.html">Home</a></li>
+          <li><a href="./eligible.html">Eligibility</a></li>
+          <li><a href="./Loginpage.html">Login/Signup</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Powered By <strong>Bharat Internship</strong></p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const studentToggle = document.getElementById('student-toggle');
+      const companyToggle = document.getElementById('company-toggle');
+      const loginTitle = document.getElementById('login-title');
+      const loginSubtitle = document.getElementById('login-subtitle');
+      const companyIdField = document.getElementById('company-id-field');
+      const signupCompanyIdField = document.getElementById('signup-company-id-field');
+      let loginType = "student";
+
+      // Toggle Student/Company
+      studentToggle.addEventListener('click', function() {
+        loginType = "student";
+        studentToggle.classList.add('active');
+        companyToggle.classList.remove('active');
+        loginTitle.textContent = 'Welcome Back Student';
+        loginSubtitle.textContent = 'Login to continue to Bharat Internship';
+        companyIdField.style.display = 'none';
+        signupCompanyIdField.style.display = 'none';
+      });
+      
+      companyToggle.addEventListener('click', function() {
+        loginType = "company";
+        companyToggle.classList.add('active');
+        studentToggle.classList.remove('active');
+        loginTitle.textContent = 'Company Login';
+        loginSubtitle.textContent = 'Access your company dashboard';
+        companyIdField.style.display = 'block';
+        signupCompanyIdField.style.display = 'block';
+      });
+
+      // Switch Login/Signup forms
+      document.getElementById("show-signup").addEventListener("click", function(e) {
+        e.preventDefault();
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("signup-form").style.display = "block";
+      });
+      document.getElementById("show-login").addEventListener("click", function(e) {
+        e.preventDefault();
+        document.getElementById("signup-form").style.display = "none";
+        document.getElementById("login-form").style.display = "block";
+      });
+
+      // 🔹 Login submit
+      document.getElementById("login-form").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const companyId = document.getElementById("company-id").value;
+
+        const res = await fetch("http://127.0.0.1:5000/login", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({ email, password, company_id: companyId, login_type: loginType })
+        });
+
+        const result = await res.json();
+        if (result.success) {
+          alert("✅ " + result.message);
+          // Redirect to exam portal after successful login
+          window.location.href = "examportal.html";
+        } else {
+          alert("❌ " + result.message);
+        }
+      });
+
+      // 🔹 Signup submit
+      document.getElementById("signup-form").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const email = document.getElementById("signup-email").value;
+        const password = document.getElementById("signup-password").value;
+        const companyId = document.getElementById("signup-company-id").value;
+
+        const res = await fetch("http://127.0.0.1:5000/signup", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({ email, password, company_id: companyId, role: loginType })
+        });
+
+        const result = await res.json();
+        if (result.success) {
+          alert("✅ " + result.message);
+          document.getElementById("signup-form").style.display = "none";
+          document.getElementById("login-form").style.display = "block";
+        } else {
+          alert("❌ " + result.message);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
