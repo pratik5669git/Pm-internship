@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Data Analyst Listings — Apply</title>
+  <style>
+    :root {
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7; --glass:rgba(255,255,255,0.03);
+    }
+    body { 
+      font-family: Inter, sans-serif; 
+      margin:0; 
+      background:linear-gradient(180deg,#041025,#071427); 
+      color:#e6eef6; 
+      padding:20px; 
+      min-height: 100vh;
+    }
+    h1 { 
+      text-align:center; 
+      margin-bottom:30px; 
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #0ea5a0, #22c1c3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding-bottom: 10px;
+    }
+    .container { 
+      display:grid; 
+      grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); 
+      gap:20px; 
+      max-width:1200px; 
+      margin:0 auto; 
+    }
+    .card { 
+      background:linear-gradient(180deg,var(--card),#071021); 
+      border-radius:12px; 
+      padding:20px; 
+      border:1px solid rgba(255,255,255,0.03); 
+      box-shadow:0 4px 12px rgba(2,6,23,0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(2,6,23,0.8);
+    }
+    .title { 
+      font-weight:700; 
+      font-size:18px; 
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .company {
+      color: var(--accent);
+      font-size: 14px;
+      background: var(--glass);
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .meta { 
+      color:var(--muted); 
+      font-size:14px; 
+      margin:8px 0; 
+      display: flex;
+      align-items: center;
+    }
+    .meta svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      fill: var(--muted);
+    }
+    .chips { 
+      display:flex; 
+      gap:8px; 
+      flex-wrap:wrap; 
+      margin:16px 0; 
+    }
+    .chip { 
+      background:rgba(255,255,255,0.04); 
+      padding:6px 12px; 
+      border-radius:999px; 
+      font-size:12px; 
+      color:var(--muted); 
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .stipend {
+      font-weight: 600;
+      color: #6ee7b7;
+      margin: 12px 0;
+      font-size: 15px;
+    }
+    .apply { 
+      background: linear-gradient(90deg,#0ea5a0,#22c1c3); 
+      color:#012; 
+      padding:10px 16px; 
+      border-radius:8px; 
+      font-weight:700; 
+      cursor:pointer; 
+      border:none;
+      width: 100%;
+      transition: opacity 0.2s ease;
+    }
+    .apply:hover { 
+      opacity:0.9; 
+    }
+    
+    /* Filter section */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.05);
+      color: var(--muted);
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: linear-gradient(90deg,#0ea5a0,#22c1c3);
+      color: #012;
+    }
+    
+    /* No results message */
+    .no-results {
+      text-align: center;
+      grid-column: 1 / -1;
+      padding: 40px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <h1>Data Analyst Opportunities</h1>
+  
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All Listings</button>
+    <button class="filter-btn" data-filter="remote">Remote</button>
+    <button class="filter-btn" data-filter="hybrid">Hybrid</button>
+    <button class="filter-btn" data-filter="intern">Internships</button>
+  </div>
+
+  <div class="container">
+    <div class="card" data-type="remote intern">
+      <div class="title">
+        <span>Data Analyst Intern</span>
+        <span class="company">Internshala</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Remote (India)
+      </div>
+      <div class="chips">
+        <span class="chip">Remote</span>
+        <span class="chip">Internship</span>
+      </div>
+      <div class="stipend">₹8,000 / month</div>
+      <button class="apply" onclick="saveCSV('Internshala','Data Analyst Intern','Remote (India)','Remote','₹8,000 / month')">Apply Now</button>
+    </div>
+
+    <div class="card" data-type="hybrid intern">
+      <div class="title">
+        <span>Data Analyst Intern</span>
+        <span class="company">Flipkart</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Bangalore
+      </div>
+      <div class="chips">
+        <span class="chip">Hybrid/WFH</span>
+        <span class="chip">Internship</span>
+      </div>
+      <div class="stipend">Competitive Stipend</div>
+      <button class="apply" onclick="saveCSV('Flipkart','Data Analyst Intern','Bangalore','Hybrid/WFH','Competitive')">Apply Now</button>
+    </div>
+
+    <div class="card" data-type="hybrid">
+      <div class="title">
+        <span>Data Analyst</span>
+        <span class="company">Indeed</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Bangalore
+      </div>
+      <div class="chips">
+        <span class="chip">Hybrid</span>
+        <span class="chip">Full-time</span>
+      </div>
+      <div class="stipend">₹12,000 / month</div>
+      <button class="apply" onclick="saveCSV('Indeed','Data Analyst','Bangalore','Hybrid','₹12,000 / month')">Apply Now</button>
+    </div>
+
+    <div class="card" data-type="remote">
+      <div class="title">
+        <span>Data Analyst</span>
+        <span class="company">Glassdoor</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Remote
+      </div>
+      <div class="chips">
+        <span class="chip">Remote</span>
+        <span class="chip">Full-time</span>
+      </div>
+      <div class="stipend">Negotiable / Paid</div>
+      <button class="apply" onclick="saveCSV('Glassdoor','Data Analyst','Remote','Remote','Negotiable / Paid')">Apply Now</button>
+    </div>
+
+    <div class="card" data-type="remote intern">
+      <div class="title">
+        <span>Data Analyst Intern</span>
+        <span class="company">Puch AI</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Remote
+      </div>
+      <div class="chips">
+        <span class="chip">Remote</span>
+        <span class="chip">Internship</span>
+      </div>
+      <div class="stipend">Competitive Stipend</div>
+      <button class="apply" onclick="saveCSV('Puch AI','Data Analyst Intern','Remote','Remote','Competitive')">Apply Now</button>
+    </div>
+
+    <div class="card" data-type="remote intern">
+      <div class="title">
+        <span>Data Analyst Intern</span>
+        <span class="company">Optimspace</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Remote
+      </div>
+      <div class="chips">
+        <span class="chip">Remote</span>
+        <span class="chip">Internship</span>
+      </div>
+      <div class="stipend">₹7,500 – ₹15,000</div>
+      <button class="apply" onclick="saveCSV('Optimspace','Data Analyst Intern','Remote','Remote','₹7,500 – ₹15,000')">Apply Now</button>
+    </div>
+
+    <div class="card" data-type="hybrid intern">
+      <div class="title">
+        <span>Data Analyst Internship</span>
+        <span class="company">InnovatexIQ</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Pune
+      </div>
+      <div class="chips">
+        <span class="chip">Hybrid</span>
+        <span class="chip">Internship</span>
+      </div>
+      <div class="stipend">Up to ₹40,000</div>
+      <button class="apply" onclick="saveCSV('InnovatexIQ','Data Analyst Internship','Pune','Hybrid','Up to ₹40,000')">Apply Now</button>
+    </div>
+
+    <div class="card" data-type="hybrid intern">
+      <div class="title">
+        <span>Data Analyst Intern</span>
+        <span class="company">Tech Mahindra</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Hyderabad
+      </div>
+      <div class="chips">
+        <span class="chip">Hybrid</span>
+        <span class="chip">Internship</span>
+      </div>
+      <div class="stipend">₹15,000 / month</div>
+      <button class="apply" onclick="saveCSV('Tech Mahindra','Data Analyst Intern','Hyderabad','Hybrid','₹15,000 / month')">Apply Now</button>
+    </div>
+
+    <div class="card" data-type="hybrid">
+      <div class="title">
+        <span>Data Analyst</span>
+        <span class="company">Cognizant</span>
+      </div>
+      <div class="meta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        Chennai
+      </div>
+      <div class="chips">
+        <span class="chip">Hybrid</span>
+        <span class="chip">Full-time</span>
+      </div>
+      <div class="stipend">₹20,000 / month</div>
+      <button class="apply" onclick="saveCSV('Cognizant','Data Analyst','Chennai','Hybrid','₹20,000 / month')">Apply Now</button>
+    </div>
+  </div>
+
+  <script>
+    function saveCSV(company, role, location, mode, stipend) {
+      const csvContent = `Company,Role,Location,Mode,Stipend\n${company},${role},${location},${mode},${stipend}`;
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'industry.csv';
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filter = button.getAttribute('data-filter');
+          
+          cards.forEach(card => {
+            if (filter === 'all') {
+              card.style.display = 'block';
+            } else {
+              if (card.getAttribute('data-type').includes(filter)) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Allocation</title>
+  <style>
+    body {font-family:Arial, sans-serif; background:#f4f6f8; padding:40px;}
+    .container {max-width:700px; margin:auto; background:white; padding:30px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+    h1 {color:#2c3e50;}
+    table {width:100%; border-collapse:collapse; margin-top:20px;}
+    th,td {border:1px solid #ddd; padding:10px; text-align:center;}
+    th {background:#3498db; color:white;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Company Allocation Based on Preferred Role</h1>
+    <table>
+      <thead>
+        <tr><th>Candidate</th><th>Preferred Role</th><th>Allocated Company</th></tr>
+      </thead>
+      <tbody id="companyTable"></tbody>
+    </table>
+    <br>
+    <button onclick="window.location.href='index.html'">⬅ Back to Registration</button>
+  </div>
+
+<script>
+  const companyAllocation = {
+    "summer": ["Google","Microsoft","Amazon"],
+    "winter": ["IBM","Oracle","Intel"],
+    "parttime": ["Deloitte","PwC","KPMG"],
+    "remote": ["TCS","Infosys","Wipro"]
+  };
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    const candidates = JSON.parse(localStorage.getItem("candidates")) || [];
+    const table=document.getElementById("companyTable");
+    candidates.forEach(c=>{
+      const companies=companyAllocation[c.role]||["Not Available"];
+      // Assign first company from the list
+      const assigned=companies[0];
+      const row=document.createElement("tr");
+      row.innerHTML=`<td>${c.name}</td><td>${c.role}</td><td>${assigned}</td>`;
+      table.appendChild(row);
+    });
+  });
+</script>
+</body>
+</html>

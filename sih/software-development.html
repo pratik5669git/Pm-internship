@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Development</title>
+  <style>
+    :root {
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7; --glass:rgba(255,255,255,0.03);
+      --primary: #0ea5a0; --primary-light: #22c1c3;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #041025, #071427);
+      color: #e6eef6;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      background: rgba(7, 16, 33, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: var(--accent);
+    }
+    
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+      background: var(--glass);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--muted);
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .filter-btn:hover, .filter-btn.active {
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      color: #012;
+    }
+    
+    .job-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    
+    .card {
+      background: linear-gradient(180deg, var(--card), #071021);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      box-shadow: 0 4px 12px rgba(2, 6, 23, 0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.8);
+    }
+    
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .company {
+      color: var(--accent);
+      font-size: 14px;
+      background: var(--glass);
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .meta svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      fill: var(--muted);
+    }
+    
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    
+    .chip {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+    }
+    
+    .stipend {
+      font-weight: 600;
+      color: #6ee7b7;
+      margin: 12px 0;
+      font-size: 15px;
+    }
+    
+    .apply {
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      color: #012;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      transition: opacity 0.2s ease;
+    }
+    
+    .apply:hover {
+      opacity: 0.9;
+    }
+    
+    .no-results {
+      text-align: center;
+      grid-column: 1 / -1;
+      padding: 40px;
+      color: var(--muted);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <div class="container">
+    <h1>Software Development Opportunities</h1>
+    
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All Listings</button>
+      <button class="filter-btn" data-filter="remote">Remote</button>
+      <button class="filter-btn" data-filter="hybrid">Hybrid</button>
+      <button class="filter-btn" data-filter="intern">Internships</button>
+    </div>
+
+    <div class="job-grid">
+      <div class="card" data-type="remote">
+        <div class="title">
+          <span>Backend Developer</span>
+          <span class="company">Google</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Remote (Global)
+        </div>
+        <div class="chips">
+          <span class="chip">Node.js</span>
+          <span class="chip">Python</span>
+          <span class="chip">API</span>
+        </div>
+        <div class="stipend">$120,000 - $150,000</div>
+        <button class="apply" onclick="saveCSV('Google','Backend Developer','Remote (Global)','Remote','$120,000 - $150,000')">Apply Now</button>
+      </div>
+
+      <div class="card" data-type="hybrid intern">
+        <div class="title">
+          <span>Software Engineer Intern</span>
+          <span class="company">Microsoft</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Redmond, WA
+        </div>
+        <div class="chips">
+          <span class="chip">C#</span>
+          <span class="chip">.NET</span>
+          <span class="chip">Internship</span>
+        </div>
+        <div class="stipend">$7,500 / month</div>
+        <button class="apply" onclick="saveCSV('Microsoft','Software Engineer Intern','Redmond, WA','Hybrid','$7,500 / month')">Apply Now</button>
+      </div>
+
+      <div class="card" data-type="hybrid">
+        <div class="title">
+          <span>Full Stack Developer</span>
+          <span class="company">Amazon</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Seattle, WA
+        </div>
+        <div class="chips">
+          <span class="chip">React</span>
+          <span class="chip">Java</span>
+          <span class="chip">AWS</span>
+        </div>
+        <div class="stipend">$130,000 - $160,000</div>
+        <button class="apply" onclick="saveCSV('Amazon','Full Stack Developer','Seattle, WA','Hybrid','$130,000 - $160,000')">Apply Now</button>
+      </div>
+
+      <div class="card" data-type="remote">
+        <div class="title">
+          <span>DevOps Engineer</span>
+          <span class="company">Netflix</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Remote (US)
+        </div>
+        <div class="chips">
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Docker</span>
+          <span class="chip">CI/CD</span>
+        </div>
+        <div class="stipend">$140,000 - $180,000</div>
+        <button class="apply" onclick="saveCSV('Netflix','DevOps Engineer','Remote (US)','Remote','$140,000 - $180,000')">Apply Now</button>
+      </div>
+
+      <div class="card" data-type="hybrid intern">
+        <div class="title">
+          <span>Software Development Intern</span>
+          <span class="company">Apple</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Cupertino, CA
+        </div>
+        <div class="chips">
+          <span class="chip">Swift</span>
+          <span class="chip">Objective-C</span>
+          <span class="chip">Internship</span>
+        </div>
+        <div class="stipend">$8,000 / month</div>
+        <button class="apply" onclick="saveCSV('Apple','Software Development Intern','Cupertino, CA','Hybrid','$8,000 / month')">Apply Now</button>
+      </div>
+
+      <div class="card" data-type="remote">
+        <div class="title">
+          <span>Java Developer</span>
+          <span class="company">Oracle</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Remote
+        </div>
+        <div class="chips">
+          <span class="chip">Java</span>
+          <span class="chip">Spring</span>
+          <span class="chip">SQL</span>
+        </div>
+        <div class="stipend">$110,000 - $140,000</div>
+        <button class="apply" onclick="saveCSV('Oracle','Java Developer','Remote','Remote','$110,000 - $140,000')">Apply Now</button>
+      </div>
+
+      <div class="card" data-type="hybrid">
+        <div class="title">
+          <span>Software Engineer</span>
+          <span class="company">Meta</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Menlo Park, CA
+        </div>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">PHP</span>
+          <span class="chip">React</span>
+        </div>
+        <div class="stipend">$130,000 - $170,000</div>
+        <button class="apply" onclick="saveCSV('Meta','Software Engineer','Menlo Park, CA','Hybrid','$130,000 - $170,000')">Apply Now</button>
+      </div>
+
+      <div class="card" data-type="remote intern">
+        <div class="title">
+          <span>Backend Intern</span>
+          <span class="company">Twitter</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Remote
+        </div>
+        <div class="chips">
+          <span class="chip">Scala</span>
+          <span class="chip">Java</span>
+          <span class="chip">Internship</span>
+        </div>
+        <div class="stipend">$6,500 / month</div>
+        <button class="apply" onclick="saveCSV('Twitter','Backend Intern','Remote','Remote','$6,500 / month')">Apply Now</button>
+      </div>
+
+      <div class="card" data-type="hybrid">
+        <div class="title">
+          <span>Systems Engineer</span>
+          <span class="company">IBM</span>
+        </div>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Austin, TX
+        </div>
+        <div class="chips">
+          <span class="chip">C++</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Systems</span>
+        </div>
+        <div class="stipend">$115,000 - $145,000</div>
+        <button class="apply" onclick="saveCSV('IBM','Systems Engineer','Austin, TX','Hybrid','$115,000 - $145,000')">Apply Now</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 TechCareerHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function saveCSV(company, role, location, mode, stipend) {
+      const csvContent = `Company,Role,Location,Mode,Stipend\n${company},${role},${location},${mode},${stipend}`;
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'software_job_application.csv';
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filter = button.getAttribute('data-filter');
+          
+          cards.forEach(card => {
+            if (filter === 'all') {
+              card.style.display = 'block';
+            } else {
+              if (card.getAttribute('data-type').includes(filter)) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

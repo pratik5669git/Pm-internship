@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Candidate Registration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .match-score {
+        font-weight: bold;
+        color: #3498db;
+        margin: 5px 0;
+        font-size: 16px;
+      }
+
+      .apply-btn {
+        background: #2ecc71;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.3s;
+        width: 100%;
+      }
+
+      .apply-btn:hover {
+        background: #27ae60;
+      }
+
+      .info-item h4 {
+        margin: 10px 0 5px;
+        color: #2c3e50;
+      }
+
+      .info-item p {
+        margin: 5px 0;
+        color: #7f8c8d;
+      }
+
+      body {
+        background: linear-gradient(135deg, #1a3a8f 0%, #2575fc 100%);
+        min-height: 100vh;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      header {
+        text-align: center;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+      }
+
+      .tagline {
+        color: #7f8c8d;
+        font-size: 1.2rem;
+      }
+
+      .content {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .form-section {
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .results-section {
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+      }
+
+      h2 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #2c3e50;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #3498db;
+        outline: none;
+      }
+
+      .btn {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn:hover {
+        background: #2980b9;
+      }
+
+      .btn:disabled {
+        background: #95a5a6;
+        cursor: not-allowed;
+      }
+
+      .upload-area {
+        border: 2px dashed #3498db;
+        border-radius: 5px;
+        padding: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .upload-area:hover {
+        background: #f8f9fa;
+      }
+
+      .upload-icon {
+        font-size: 50px;
+        color: #3498db;
+        margin-bottom: 15px;
+      }
+
+      .result-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .result-placeholder {
+        text-align: center;
+        color: #7f8c8d;
+        padding: 40px 0;
+      }
+
+      .placeholder-icon {
+        font-size: 70px;
+        margin-bottom: 20px;
+        color: #e0e0e0;
+      }
+
+      .analysis-result {
+        display: none;
+      }
+
+      .score {
+        font-size: 24px;
+        font-weight: 700;
+        color: #2c3e50;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .score-value {
+        font-size: 48px;
+        color: #3498db;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .skill {
+        background: #e8f4fc;
+        color: #3498db;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+
+      .summary {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+        line-height: 1.6;
+      }
+
+      .suggestion {
+        background: #fff4e6;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+        line-height: 1.6;
+        border-left: 4px solid #ffa94d;
+      }
+
+      .progress-bar {
+        height: 10px;
+        background: #ecf0f1;
+        border-radius: 5px;
+        margin: 10px 0;
+        overflow: hidden;
+      }
+
+      .progress {
+        height: 100%;
+        background: #3498db;
+        border-radius: 5px;
+      }
+
+      .internship-info {
+        background: #e8f4fc;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+
+      .internship-info h3 {
+        color: #3498db;
+        margin-bottom: 10px;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .info-item {
+        background: white;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+      }
+
+      .info-item i {
+        font-size: 24px;
+        color: #3498db;
+        margin-bottom: 10px;
+      }
+
+      .error-message {
+        background: #ffe6e6;
+        color: #d63031;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+        display: none;
+      }
+
+      .allocation-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      .allocation-table th,
+      .allocation-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+      }
+
+      .allocation-table th {
+        background: #3498db;
+        color: white;
+      }
+
+      .allocation-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      .allocation-table tr:hover {
+        background-color: #e8f4fc;
+      }
+
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .allocation-table {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Internship Candidate Registration</h1>
+        <p class="tagline">
+          Apply for internships with AI-powered resume analysis
+        </p>
+      </header>
+
+      <div class="content">
+        <section class="form-section">
+          <h2>Candidate Information</h2>
+          <form id="candidateForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email-id"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="university">University/College</label>
+              <input
+                type="text"
+                id="university"
+                placeholder="Enter your University"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="major">Major/Field of Study</label>
+              <input
+                type="text"
+                id="major"
+                placeholder="Enter your field"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="gradYear">Expected Graduation Year</label>
+              <input
+                type="number"
+                id="gradYear"
+                min="2023"
+                max="2030"
+                placeholder="Enter your graduation year"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="gpa">CGPA</label>
+              <input
+                type="number"
+                id="gpa"
+                min="0"
+                max="10.0"
+                step="0.1"
+                placeholder="out of 10"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="internshipType">Desired Internship Type</label>
+              <select id="internshipType" required>
+                <option value="">Select Internship Type</option>
+                <option value="summer">Summer Internship</option>
+                <option value="winter">Winter Internship</option>
+                <option value="parttime">Part-time during semester</option>
+                <option value="remote">Remote Internship</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="skills">Technical Skills (comma separated)</label>
+              <input
+                type="text"
+                id="skills"
+                placeholder="Python, JavaScript, React, Data Analysis"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="projects">Notable Projects</label>
+              <textarea
+                id="projects"
+                placeholder="Describe your academic or personal projects..."
+                rows="3"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Upload Resume (PDF)</label>
+              <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">
+                  <i class="fas fa-file-upload"></i>
+                </div>
+                <p>Click to upload or drag and drop</p>
+                <p>PDF format only</p>
+                <input
+                  type="file"
+                  id="resume"
+                  accept=".pdf"
+                  style="display: none"
+                />
+              </div>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+
+            <button type="submit" class="btn" id="submitBtn">
+              <i class="fas fa-robot"></i> Analyze & Submit Application
+            </button>
+          </form>
+        </section>
+
+        <section class="results-section">
+          <h2>Application Analysis & Ranked Allocation</h2>
+          <div class="result-content">
+            <div class="result-placeholder" id="resultPlaceholder">
+              <div class="placeholder-icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <p>Submit your information to see AI analysis results</p>
+              <p>Get matched with the best internship opportunities!</p>
+            </div>
+
+            <div class="analysis-result" id="analysisResult">
+              <div class="score">
+                Application Score:
+                <span class="score-value" id="scoreValue">87%</span>
+              </div>
+
+              <div class="internship-info">
+                <h3>Recommended Internships</h3>
+                <p>Based on your profile, we recommend these opportunities:</p>
+                <div class="info-grid">
+                  <div
+                    class="info-item"
+                    onclick="window.open('software-development.html', '_blank')"
+                  >
+                    <i class="fas fa-laptop-code"></i>
+                    <p>Software Development</p>
+                  </div>
+                  <div
+                    class="info-item"
+                    onclick="window.open('data-analysis.html', '_blank')"
+                  >
+                    <i class="fas fa-chart-line"></i>
+                    <p>Data Analysis</p>
+                  </div>
+                  <div
+                    class="info-item"
+                    onclick="window.open('frontend-development.html', '_blank')"
+                  >
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>Frontend Development</p>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Skills Analysis</h3>
+              <div class="skills-list" id="skillsList">
+                <!-- Skills will be inserted here by JavaScript -->
+              </div>
+
+              <h3>Experience Level</h3>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%"></div>
+              </div>
+
+              <h3>Summary</h3>
+              <div class="summary" id="summaryText">
+                <!-- Summary will be inserted here by JavaScript -->
+              </div>
+
+              <h3>Suggestions</h3>
+              <div class="suggestion" id="suggestionText">
+                <!-- Suggestions will be inserted here by JavaScript -->
+              </div>
+
+              <h3>Ranked Allocation</h3>
+              <table class="allocation-table" id="allocationTable">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Allocated Internship</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Allocation data will be inserted here by JavaScript -->
+                </tbody>
+              </table>
+
+              <br />
+              <button
+                class="btn"
+                onclick="window.location.href='company-allocation.html'"
+              >
+                <i class="fas fa-building"></i> View Company Allocation
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const uploadArea = document.getElementById("uploadArea");
+        const resumeInput = document.getElementById("resume");
+        const candidateForm = document.getElementById("candidateForm");
+        const resultPlaceholder = document.getElementById("resultPlaceholder");
+        const analysisResult = document.getElementById("analysisResult");
+        const scoreValue = document.getElementById("scoreValue");
+        const skillsList = document.getElementById("skillsList");
+        const summaryText = document.getElementById("summaryText");
+        const suggestionText = document.getElementById("suggestionText");
+        const errorMessage = document.getElementById("errorMessage");
+        const submitBtn = document.getElementById("submitBtn");
+        const allocationTable = document
+          .getElementById("allocationTable")
+          .querySelector("tbody");
+
+        let candidates = JSON.parse(localStorage.getItem("candidates")) || [];
+        const internships = [
+          "Software Development",
+          "Data Analysis",
+          "Frontend Development",
+          "AI Research",
+          "Cloud Computing",
+        ];
+
+        // Upload area click handler
+        uploadArea.addEventListener("click", function () {
+          resumeInput.click();
+        });
+
+        // Drag and drop functionality
+        uploadArea.addEventListener("dragover", function (e) {
+          e.preventDefault();
+          uploadArea.style.background = "#f8f9fa";
+        });
+
+        uploadArea.addEventListener("dragleave", function () {
+          uploadArea.style.background = "";
+        });
+
+        uploadArea.addEventListener("drop", function (e) {
+          e.preventDefault();
+          uploadArea.style.background = "";
+          if (e.dataTransfer.files.length) {
+            resumeInput.files = e.dataTransfer.files;
+            const fileName = e.dataTransfer.files[0].name;
+            uploadArea.innerHTML = `
+            <div class="upload-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <p>Resume uploaded: ${fileName}</p>
+          `;
+          }
+        });
+
+        // Form submission handler
+        candidateForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const university = document.getElementById("university").value;
+          const major = document.getElementById("major").value;
+          const gradYear = document.getElementById("gradYear").value;
+          const gpa = parseFloat(document.getElementById("gpa").value) || 0;
+          const internshipType =
+            document.getElementById("internshipType").value;
+          const skills = document
+            .getElementById("skills")
+            .value.split(",")
+            .map((s) => s.trim())
+            .filter((s) => s);
+          const projects = document.getElementById("projects").value;
+          const resumeFile = resumeInput.files[0];
+
+          // Validate form
+          if (!resumeFile) {
+            showError("Please upload a resume file.");
+            return;
+          }
+
+          if (!resumeFile.name.toLowerCase().endsWith(".pdf")) {
+            showError("Please upload a PDF file.");
+            return;
+          }
+
+          // Disable submit button and show loading state
+          submitBtn.disabled = true;
+          submitBtn.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> Analyzing Resume...';
+
+          // Simulate AI analysis (in a real app, this would be an API call)
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+
+          // Calculate score based on profile
+          let baseScore = 50;
+          if (gpa >= 9.5) baseScore += 20;
+          else if (gpa >= 7.0) baseScore += 10;
+          else if (gpa >= 4.5) baseScore += 5;
+
+          baseScore += Math.min(skills.length * 3, 15);
+          if (projects.length > 0) baseScore += 10;
+          if (resumeFile) baseScore += 5;
+
+          const finalScore = Math.min(Math.max(baseScore, 0), 100);
+
+          // Create candidate object
+          const candidate = {
+            name,
+            email,
+            university,
+            major,
+            gradYear,
+            gpa,
+            internshipType,
+            skills,
+            projects,
+            score: finalScore,
+          };
+
+          // Add to candidates array and save to localStorage
+          let roleKey = "";
+          if (internshipType.toLowerCase().includes("summer"))
+            roleKey = "summer";
+          else if (internshipType.toLowerCase().includes("winter"))
+            roleKey = "winter";
+          else if (internshipType.toLowerCase().includes("part"))
+            roleKey = "parttime";
+          else if (internshipType.toLowerCase().includes("remote"))
+            roleKey = "remote";
+
+          candidates.push({ name, score: finalScore, role: roleKey });
+
+          localStorage.setItem("candidates", JSON.stringify(candidates));
+
+          // Update UI with results
+          updateAnalysisResult(candidate);
+          updateAllocationTable();
+
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.innerHTML =
+            '<i class="fas fa-robot"></i> Analyze & Submit Application';
+        });
+
+        // Function to update the analysis result section
+        function updateAnalysisResult(candidate) {
+          // Update score
+          scoreValue.textContent = `${candidate.score}%`;
+
+          // Update skills list
+          skillsList.innerHTML = "";
+          candidate.skills.forEach((skill) => {
+            const skillEl = document.createElement("div");
+            skillEl.className = "skill";
+            skillEl.textContent = skill;
+            skillsList.appendChild(skillEl);
+          });
+
+          // Update summary
+          summaryText.innerHTML = `
+          <p>${candidate.name} is a ${candidate.major} student at ${
+            candidate.university
+          } with a CGPA of ${candidate.gpa}/10. 
+          They have experience with ${
+            candidate.skills.length
+          } technical skills and have worked on ${
+            candidate.projects.split("\n").length
+          } notable projects.</p>
+          <p>Their preferred internship type is ${
+            document.getElementById("internshipType").options[
+              document.getElementById("internshipType").selectedIndex
+            ].text
+          }.</p>
+        `;
+
+          // Update suggestions
+          if (candidate.score < 70) {
+            suggestionText.innerHTML = `
+            <p>Consider improving your profile by:</p>
+            <ul>
+              <li>Adding more technical skills to your repertoire</li>
+              <li>Working on personal projects to demonstrate practical knowledge</li>
+              <li>Improving your GPA if possible</li>
+              <li>Gaining experience through volunteer work or open-source contributions</li>
+            </ul>
+          `;
+          } else {
+            suggestionText.innerHTML = `
+            <p>Your profile is strong! To further improve:</p>
+            <ul>
+              <li>Consider obtaining certifications in your field</li>
+              <li>Build a portfolio website to showcase your projects</li>
+              <li>Network with professionals in your desired industry</li>
+              <li>Practice your interview skills</li>
+            </ul>
+          `;
+          }
+
+          // Show results and hide placeholder
+          resultPlaceholder.style.display = "none";
+          analysisResult.style.display = "block";
+        }
+
+        // Function to update the allocation table
+        function updateAllocationTable() {
+          // Sort candidates by score
+          candidates.sort((a, b) => b.score - a.score);
+
+          // Clear table
+          allocationTable.innerHTML = "";
+
+          // Add rows for each candidate
+          candidates.forEach((candidate, index) => {
+            const row = document.createElement("tr");
+            const internship = internships[index % internships.length];
+
+            row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${candidate.name}</td>
+            <td>${candidate.score}%</td>
+            <td>${internship}</td>
+          `;
+
+            allocationTable.appendChild(row);
+          });
+        }
+
+        // Function to show error messages
+        function showError(msg) {
+          errorMessage.textContent = msg;
+          errorMessage.style.display = "block";
+          setTimeout(() => {
+            errorMessage.style.display = "none";
+          }, 5000);
+        }
+
+        // Initialize the allocation table if there are existing candidates
+        if (candidates.length > 0) {
+          updateAllocationTable();
+        }
+      });
+    </script>
+  </body>
+</html>
